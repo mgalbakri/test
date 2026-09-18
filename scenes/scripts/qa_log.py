@@ -30,6 +30,10 @@ FIXED = [
  ('The plan view was a flat grey rectangle.',
   'The orthographic camera sits at 6000 mm, above the ceiling slab at 3000 mm. '
   'The ceiling is now hidden for plan renders.'),
+ ('The plan view was cropped - the room ran off the top and bottom.',
+  'Blender maps ortho_scale to the render\'s longer axis, so a room taller '
+  'than the 16:9 frame loses its ends. The plan camera now stores the required '
+  'extents and the renderer sets the frame aspect from them.'),
  ('Window glazing looked frosted.',
   'It had been given the shower-screen material. Added mat_glass_clear() and '
   'assigned it.'),

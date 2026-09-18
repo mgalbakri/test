@@ -11,6 +11,7 @@ Every frame is checked automatically for mean luminance, lit fraction and blown 
 | master_bedroom_cam01 | 162 | 0.561 | 100.0% | 0.00% | pass |
 | master_bedroom_cam02 | 165 | 0.560 | 100.0% | 0.00% | pass |
 | master_bedroom_cam03 | 168 | 0.552 | 100.0% | 0.00% | pass |
+| master_bedroom_plan | 164 | 0.653 | 81.3% | 0.00% | pass |
 
 ## Automated frame checks - final
 
@@ -22,6 +23,7 @@ No final render log found at `/tmp/mbr_final.log`.
 - **Camera 01 saw nothing but a flat plane.** The eye point was inside the TV joinery (x 0-500). All cameras now keep 500 mm clear of every joinery face.
 - **Modelled clear size was 3195 x 4020, not the measured 3435 x 4260.** Walls were centred on the room's inner-face lines, so each one ate 120 mm of the room. Walls are now built outside the clear box.
 - **The plan view was a flat grey rectangle.** The orthographic camera sits at 6000 mm, above the ceiling slab at 3000 mm. The ceiling is now hidden for plan renders.
+- **The plan view was cropped - the room ran off the top and bottom.** Blender maps ortho_scale to the render's longer axis, so a room taller than the 16:9 frame loses its ends. The plan camera now stores the required extents and the renderer sets the frame aspect from them.
 - **Window glazing looked frosted.** It had been given the shower-screen material. Added mat_glass_clear() and assigned it.
 - **Joinery read as featureless slabs.** Rebuilt as framed leaves with mouldings, recessed panels, a drawer stack, an upper tier and a set-back plinth, per the BOQ wording.
 - **Frames were too tight to show the room.** At 24-28 mm a 3000 mm wall needs about 4.4 m of standoff. In a 3435 x 4260 room only the diagonals give that, so all three perspectives now shoot corner to corner.

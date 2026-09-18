@@ -32,12 +32,38 @@ for c in cams:
         o.hide_render = plan
     if plan:
         name = f'{room}_plan'
+        # Match the frame aspect to the room, then ortho_scale = the longer
+        # side. Otherwise Blender crops whichever axis is not the long one.
+        pw, ph = c.get('plan_w_m'), c.get('plan_h_m')
+        if pw and ph:
+            base = 1920 if draft else 3840
+            if pw >= ph:
+                bpy.context.scene.render.resolution_x = base
+                bpy.context.scene.render.resolution_y = max(2, int(round(base*ph/pw)))
+                c.data.ortho_scale = pw
+            else:
+                bpy.context.scene.render.resolution_y = base
+                bpy.context.scene.render.resolution_x = max(2, int(round(base*pw/ph)))
+                c.data.ortho_scale = ph
+            plan_res = (bpy.context.scene.render.resolution_x,
+                        bpy.context.scene.render.resolution_y)
+        else:
+            plan_res = None
     else:
         parts = c.name.split('_')
         name = f'{room}_cam{parts[1]}'
     path = os.path.join(outdir, f'{name}.png')
     t = time.time()
-    V.render_to(c, path, draft=draft, samples=None, time_limit=secs)
+    if plan and plan_res:
+        sc = bpy.context.scene
+        sc.camera = c
+        V.set_quality(draft=draft, time_limit=secs)
+        sc.render.resolution_x, sc.render.resolution_y = plan_res
+        os.makedirs(os.path.dirname(path), exist_ok=True)
+        sc.render.filepath = path
+        bpy.ops.render.render(write_still=True)
+    else:
+        V.render_to(c, path, draft=draft, samples=None, time_limit=secs)
     st = V.frame_stats(path)
     flag = ''
     if st['lit_pct'] < 5.0:    flag = '  **QA FAIL: frame is black**'

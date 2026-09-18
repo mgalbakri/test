@@ -488,6 +488,12 @@ def add_camera(name, x, y, z, target, lens_mm=24, eye_mm=1600, shift_y=None):
     return ob
 
 def add_plan_camera(name, x0, y0, x1, y1, height_mm=6000, margin_mm=300):
+    """Top-down orthographic plan.
+
+    Blender maps ortho_scale to the render's LONGER axis, so the frame aspect
+    has to match the room or the plan is cropped. The required extents are
+    stored on the camera and render_room() sets the resolution from them.
+    """
     cam = bpy.data.cameras.new(name)
     cam.type = 'ORTHO'
     w = (abs(x1-x0) + 2*margin_mm)*MM
@@ -499,6 +505,8 @@ def add_plan_camera(name, x0, y0, x1, y1, height_mm=6000, margin_mm=300):
     ob.location = ((x0+x1)/2*MM, (y0+y1)/2*MM, height_mm*MM)
     ob.rotation_euler = (0.0, 0.0, 0.0)              # straight down
     ob['view'] = 'top-down orthographic plan'
+    ob['plan_w_m'] = w
+    ob['plan_h_m'] = h
     return ob
 
 # -------------------------------------------------------------------- output

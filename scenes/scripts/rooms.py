@@ -30,8 +30,10 @@ SPACES = [
   'Shower tray + WC + basin. Drawing dim 1.76 = measured 1755 mm.'),
  ('FF-BATH-S', 'FF',  4365,   225,  5715,  2655, 'bathroom', None,
   'Shower tray + WC + basin. Drawing dim 2.43 = measured 2430 mm.'),
- ('FF-BATH-C', 'FF',  8535,  3210, 11340,  4545, 'bathroom', None,
-  'Shower tray + WC + basin. Drawing dims 2.79 / 1.33.'),
+ ('FF-BATH-C', 'FF',  8535,  2745, 11340,  4335, 'bathroom', None,
+  'Shower tray + WC + basin. Bounded by wall runs at y=2745 and y=4335 '
+  '(door gap x 9340-9460) and by x=8535 and x=11340. Drawing dim 2.79 = '
+  'measured 2805 mm.'),
  ('FF-BATH-N', 'FF',  8685,  8130, 10245, 11085, 'bathroom', None,
   'Shower tray + WC + basin, off the stair landing.'),
  ('FF-STAIR',  'FF',  5910,  6290,  8460,  9790, 'circulation', 'hallways',
@@ -43,7 +45,12 @@ SPACES = [
  ('FF-RM-S2',  'FF',  8535,   630,  9915,  2595, 'room', None,
   'Drawing dim 1.97 = measured 1965 mm.'),
  ('FF-RM-S3',  'FF', 10125,   630, 13035,  2595, 'room', None,
-  'Drawing dims 2.92 / 1.97.'),
+  'Drawing dims 2.92 / 1.97. Open to FF-LOBBY-E on its north-east side - the '
+  'wall run at y=2595 stops at x=11490.'),
+ ('FF-LOBBY-E','FF', 11340,  2745, 13035,  4095, 'circulation', None,
+  'Bounded by the bathroom partition at x=11340 (door gap y 3075-3875) and by '
+  'x=13035. Open on its south and part of its north side, so it reads as '
+  'circulation between FF-BATH-C, FF-RM-S3 and the east bedrooms.'),
  ('GF-WEST',   'GF',   285,   250,  5710, 10790, 'open shell', None,
   'Unpartitioned. No internal walls drawn over 57 m2.'),
  ('GF-EAST',   'GF', 11265,   240, 17325,  9790, 'open shell', 'entrance_salon',

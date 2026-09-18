@@ -39,13 +39,14 @@ Quotation R1-M.A.740-26 (20/07/2026) - report generated 2026-09-18
 | FF-SE-BED | FF | 4185 x 5265 | 22.03 | bedroom |
 | FF-BATH-W | FF | 2195 x 1755 | 3.85 | bathroom |
 | FF-BATH-S | FF | 1350 x 2430 | 3.28 | bathroom |
-| FF-BATH-C | FF | 2805 x 1335 | 3.74 | bathroom |
+| FF-BATH-C | FF | 2805 x 1590 | 4.46 | bathroom |
 | FF-BATH-N | FF | 1560 x 2955 | 4.61 | bathroom |
 | FF-STAIR | FF | 2550 x 3500 | 8.93 | circulation |
 | FF-VOID | FF | 1290 x 3500 | 4.51 | void |
 | FF-RM-S1 | FF | 2430 x 2380 | 5.78 | room |
 | FF-RM-S2 | FF | 1380 x 1965 | 2.71 | room |
 | FF-RM-S3 | FF | 2910 x 1965 | 5.72 | room |
+| FF-LOBBY-E | FF | 1695 x 1350 | 2.29 | circulation |
 | GF-WEST | GF | 5425 x 10540 | 57.18 | open shell |
 | GF-EAST | GF | 6060 x 9550 | 57.87 | open shell |
 | GF-WC | GF | 2230 x 3895 | 8.69 | wc |

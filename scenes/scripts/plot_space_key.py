@@ -58,6 +58,14 @@ for floor in ('GF','FF'):
     ax.set_title(f'{name} - space key (as-built DWG, no room names in source)\n'
                  'Please mark which space is which; north is NOT given on the '
                  'drawings (conflict C-05)', fontsize=13)
+    ax.text(0.01, -0.075,
+            'Each box gives the space ID, its measured clear size and its floor '
+            'area, taken from the as-built DWG. Colours group space types only.\n'
+            'Where a space is open on one side (a cased opening, a stair, or a '
+            'run of circulation), its boundary is taken from the adjoining walls; '
+            'logs/room_schedule.json records how much of each side is backed by '
+            'a real wall.',
+            transform=ax.transAxes, fontsize=8.5, va='top', color='#333333')
     fig.tight_layout()
     p = os.path.join(OUT, f'space_key_{floor}.png')
     fig.savefig(p, dpi=105); plt.close(fig)
