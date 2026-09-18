@@ -30,11 +30,19 @@ ROOM_TITLES = {
 
 # room key -> (space id or None, confidence, reasoning)
 LOCATION = {
- 'master_bedroom': ('FF-NW-BED', 'ASSUMED - high',
-   'Only first-floor bedroom whose two facing walls measure exactly 4260 mm. '
-   'BOQ items 31 and 33 are both joinery runs of exactly W=4260 mm, i.e. '
-   'designed wall-to-wall. The other three bedrooms measure 3930x4170, '
-   '4140x4950 and 4185x5265; none gives a 4260 mm wall.'),
+ 'master_bedroom': ('FF-NW-BED', 'ASSUMED - medium',
+   'This is the only first-floor bedroom with a wall measuring exactly 4260 mm, '
+   'and it has two of them, facing each other. BOQ items 31 and 33 are both '
+   'joinery runs of exactly W=4260 mm on facing walls, which is what joinery '
+   'made to fill a wall looks like. '
+   'This is suggestive, not conclusive: FF-NE-BED (4140x4950) and FF-SE-BED '
+   '(4185x5265) have longer walls on which a 4260 mm run would also fit, with '
+   'a gap, so neither can be ruled out. FF-SW-BED (3930x4170) can: no wall is '
+   'long enough. '
+   'Against this reading: once modelled, the 4260 mm runs do NOT fit '
+   'FF-NW-BED either, because one 4260 wall carries a window and the other '
+   'carries a 2630 mm recess (V-01, V-02). Either the joinery needs '
+   're-measuring or this room assumption is wrong.'),
  'entrance_salon': ('GF-EAST', 'ASSUMED - low',
    'The main entrance door (1095 mm leaf, the largest on either drawing) opens '
    'into this space, and its 5425 mm clear wall can take the W=5000 mm cladding '
@@ -155,6 +163,20 @@ PHASE2 = [
   'master bedroom'),
  ('Headboard fabric', f'Item {Q}/32: "The Fabric supply By Client"',
   'master bedroom'),
+]
+
+DECISIONS = [
+ ('D-01', 'Room identification',
+  'Owner will mark up logs/space_key_GF.png and logs/space_key_FF.png to '
+  'name each measured space. The remaining eight rooms are HELD until that '
+  'mark-up arrives - nothing is modelled on a guessed location.'),
+ ('D-02', 'Master bedroom joinery (items 31 and 33)',
+  'Owner instructed that the joinery be re-measured to the room rather than '
+  'the room re-assigned. Items 31 and 33 are modelled and reported at their '
+  'installable lengths (2630 mm and 3140 mm), and a change note has been '
+  'issued for the contractor to re-quote: '
+  'logs/change_note_master_bedroom_joinery.md. Indicative delta '
+  'SAR -8,922 excl. VAT.'),
 ]
 
 def items_for(room):
@@ -334,9 +356,9 @@ def write_summary():
     A('# Mr. Mohammed & Mrs. Aziza Villa, Jeddah - 3D room package')
     A(f'\nQuotation {Q} (20/07/2026) - report generated {TODAY}\n')
     A('## BLUF\n')
-    A(f'**{len(built)} of 9 rooms modelled. 7 of 9 cannot be modelled at all, '
-      'because the as-built drawings contain no room names and nothing else '
-      'identifies where those rooms are.**\n')
+    A(f'**{len(built)} of 9 rooms modelled. The other 8 are on hold: the '
+      'as-built drawings contain no room names, so their locations are '
+      'unknown until the owner marks up the space key (decision D-01).**\n')
     A('- The drawings are dimensionally sound. Scale was verified twice: the '
       'PDFs reproduce six independent dimensions each to within 3.3 mm at '
       '1:100, and the DWG\'s own DIMENSION entities return nine values that '
@@ -344,12 +366,16 @@ def write_summary():
     A('- What is missing is **identity**, not measurement. The DWG\'s text '
       'layers (A_TEXT, ara-TEXT) are empty; all 64 MTEXT entities are dimension '
       'values. No room on either floor is labelled.')
-    A('- Only the **master bedroom** could be pinned down with confidence, and '
-      'only because BOQ items 31 and 33 are both exactly 4260 mm wide and one '
-      'bedroom has walls of exactly 4260 mm.')
-    A('- When that room was modelled to the measured geometry, **the quoted '
-      'joinery did not fit** (V-01, V-02). That is a real cost and programme '
-      'risk today, not a modelling artefact.')
+    A('- The **master bedroom** is the one room with a usable clue: BOQ items 31 '
+      'and 33 are both exactly 4260 mm wide, on facing walls, and exactly one '
+      'bedroom has a pair of facing 4260 mm walls. That is suggestive, not '
+      'proof - two other bedrooms have longer walls that would also take the '
+      'run. It has been modelled on that basis and tagged ASSUMED throughout.')
+    A('- Modelling it surfaced a harder problem: **the quoted joinery does not '
+      'fit that room either.** One 4260 mm wall carries a window, the other '
+      'carries a 2630 mm recess (V-01, V-02). So either the joinery needs '
+      're-measuring before fabrication, or the room assumption is wrong. Both '
+      'are worth knowing now rather than on site.')
     A('- **A stale quotation for a different villa (SAR 255,535.75) is sitting '
       'in the same workbook.** Make sure nobody is pricing this job off it.\n')
     A('## Rooms completed and outstanding\n')
@@ -358,8 +384,9 @@ def write_summary():
     for r, t in ROOM_TITLES.items():
         v = sum(i['total'] or 0 for i in items_for(r))
         sid, conf, _ = LOCATION[r]
-        st = 'Modelled + rendered' if r in built else (
-             'Located, not yet modelled' if sid else '**BLOCKED - not located**')
+        st = ('Modelled + rendered' if r in built else
+              ('Located (low confidence), on hold under D-01' if sid else
+               '**HELD under D-01** - awaiting the owner\'s space-key mark-up'))
         A(f'| {t} | {v:,.0f} | {sid or "-"} ({conf}) | {st} |')
     A(f'| **Total** | **{total:,.0f}** | | |\n')
     A('## Owner decisions required\n')
@@ -376,6 +403,12 @@ def write_summary():
       '"NOT THE ACTUAL AS-BUILT" (C-02).')
     A('\n**4. Identify the "G.F. Guests Bathroom"** priced in item 5 but absent '
       'from the nine-room register (C-08).\n')
+    A('## Owner decisions taken\n')
+    A('| Ref | Subject | Decision |')
+    A('|---|---|---|')
+    for did, subj, txt in DECISIONS:
+        A(f'| {did} | {subj} | {txt} |')
+    A('')
     A('## Top conflicts\n')
     A('| Ref | Severity | Source | Conflict | Resolution applied |')
     A('|---|---|---|---|---|')

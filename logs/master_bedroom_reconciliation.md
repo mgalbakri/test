@@ -4,11 +4,11 @@ Quotation R1-M.A.740-26 - generated 2026-09-18
 
 ## 1. Location
 
-- Space ID: **FF-NW-BED**  (confidence: **ASSUMED - high**)
+- Space ID: **FF-NW-BED**  (confidence: **ASSUMED - medium**)
 - Measured clear size: **3435 x 4260 mm**
 - Floor area: **14.63 m2**, wall perimeter **15.39 m**
 - Ceiling height: **3000 mm** - BOQ items 31/33 specify H=3000 mm floor-to-ceiling joinery
-- Basis: Only first-floor bedroom whose two facing walls measure exactly 4260 mm. BOQ items 31 and 33 are both joinery runs of exactly W=4260 mm, i.e. designed wall-to-wall. The other three bedrooms measure 3930x4170, 4140x4950 and 4185x5265; none gives a 4260 mm wall.
+- Basis: This is the only first-floor bedroom with a wall measuring exactly 4260 mm, and it has two of them, facing each other. BOQ items 31 and 33 are both joinery runs of exactly W=4260 mm on facing walls, which is what joinery made to fill a wall looks like. This is suggestive, not conclusive: FF-NE-BED (4140x4950) and FF-SE-BED (4185x5265) have longer walls on which a 4260 mm run would also fit, with a gap, so neither can be ruled out. FF-SW-BED (3930x4170) can: no wall is long enough. Against this reading: once modelled, the 4260 mm runs do NOT fit FF-NW-BED either, because one 4260 wall carries a window and the other carries a 2630 mm recess (V-01, V-02). Either the joinery needs re-measuring or this room assumption is wrong.
 
 ## 2. BOQ lines for this room
 

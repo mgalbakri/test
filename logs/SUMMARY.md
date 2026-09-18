@@ -4,27 +4,27 @@ Quotation R1-M.A.740-26 (20/07/2026) - report generated 2026-09-18
 
 ## BLUF
 
-**1 of 9 rooms modelled. 7 of 9 cannot be modelled at all, because the as-built drawings contain no room names and nothing else identifies where those rooms are.**
+**1 of 9 rooms modelled. The other 8 are on hold: the as-built drawings contain no room names, so their locations are unknown until the owner marks up the space key (decision D-01).**
 
 - The drawings are dimensionally sound. Scale was verified twice: the PDFs reproduce six independent dimensions each to within 3.3 mm at 1:100, and the DWG's own DIMENSION entities return nine values that match the printed text exactly. Geometry is trustworthy.
 - What is missing is **identity**, not measurement. The DWG's text layers (A_TEXT, ara-TEXT) are empty; all 64 MTEXT entities are dimension values. No room on either floor is labelled.
-- Only the **master bedroom** could be pinned down with confidence, and only because BOQ items 31 and 33 are both exactly 4260 mm wide and one bedroom has walls of exactly 4260 mm.
-- When that room was modelled to the measured geometry, **the quoted joinery did not fit** (V-01, V-02). That is a real cost and programme risk today, not a modelling artefact.
+- The **master bedroom** is the one room with a usable clue: BOQ items 31 and 33 are both exactly 4260 mm wide, on facing walls, and exactly one bedroom has a pair of facing 4260 mm walls. That is suggestive, not proof - two other bedrooms have longer walls that would also take the run. It has been modelled on that basis and tagged ASSUMED throughout.
+- Modelling it surfaced a harder problem: **the quoted joinery does not fit that room either.** One 4260 mm wall carries a window, the other carries a 2630 mm recess (V-01, V-02). So either the joinery needs re-measuring before fabrication, or the room assumption is wrong. Both are worth knowing now rather than on site.
 - **A stale quotation for a different villa (SAR 255,535.75) is sitting in the same workbook.** Make sure nobody is pricing this job off it.
 
 ## Rooms completed and outstanding
 
 | Room | BOQ value (SAR) | Location | Status |
 |---|---|---|---|
-| Ground Floor - Entrance Salon | 44,911 | GF-EAST (ASSUMED - low) | Located, not yet modelled |
-| First Floor - Powder Room, Mrs. Aziza | 14,450 | - (NOT LOCATED) | **BLOCKED - not located** |
-| First Floor - Bathroom, Mrs. Aziza | 22,260 | - (NOT LOCATED) | **BLOCKED - not located** |
-| First Floor - Office | 19,350 | - (NOT LOCATED) | **BLOCKED - not located** |
-| First Floor - Powder Room, Mr. Mohammed | 9,950 | - (NOT LOCATED) | **BLOCKED - not located** |
-| First Floor - Bathroom, Mr. Mohammed | 17,110 | - (NOT LOCATED) | **BLOCKED - not located** |
-| First Floor - Hallways | 2,800 | FF-STAIR (ASSUMED - low) | Located, not yet modelled |
-| First Floor - Kitchenette | 8,466 | - (NOT LOCATED) | **BLOCKED - not located** |
-| First Floor - Master Bedroom | 30,830 | FF-NW-BED (ASSUMED - high) | Modelled + rendered |
+| Ground Floor - Entrance Salon | 44,911 | GF-EAST (ASSUMED - low) | Located (low confidence), on hold under D-01 |
+| First Floor - Powder Room, Mrs. Aziza | 14,450 | - (NOT LOCATED) | **HELD under D-01** - awaiting the owner's space-key mark-up |
+| First Floor - Bathroom, Mrs. Aziza | 22,260 | - (NOT LOCATED) | **HELD under D-01** - awaiting the owner's space-key mark-up |
+| First Floor - Office | 19,350 | - (NOT LOCATED) | **HELD under D-01** - awaiting the owner's space-key mark-up |
+| First Floor - Powder Room, Mr. Mohammed | 9,950 | - (NOT LOCATED) | **HELD under D-01** - awaiting the owner's space-key mark-up |
+| First Floor - Bathroom, Mr. Mohammed | 17,110 | - (NOT LOCATED) | **HELD under D-01** - awaiting the owner's space-key mark-up |
+| First Floor - Hallways | 2,800 | FF-STAIR (ASSUMED - low) | Located (low confidence), on hold under D-01 |
+| First Floor - Kitchenette | 8,466 | - (NOT LOCATED) | **HELD under D-01** - awaiting the owner's space-key mark-up |
+| First Floor - Master Bedroom | 30,830 | FF-NW-BED (ASSUMED - medium) | Modelled + rendered |
 | **Total** | **170,127** | | |
 
 ## Owner decisions required
@@ -56,6 +56,13 @@ Quotation R1-M.A.740-26 (20/07/2026) - report generated 2026-09-18
 **3. Release a re-survey of the ground-floor WC block** stamped "NOT THE ACTUAL AS-BUILT" (C-02).
 
 **4. Identify the "G.F. Guests Bathroom"** priced in item 5 but absent from the nine-room register (C-08).
+
+## Owner decisions taken
+
+| Ref | Subject | Decision |
+|---|---|---|
+| D-01 | Room identification | Owner will mark up logs/space_key_GF.png and logs/space_key_FF.png to name each measured space. The remaining eight rooms are HELD until that mark-up arrives - nothing is modelled on a guessed location. |
+| D-02 | Master bedroom joinery (items 31 and 33) | Owner instructed that the joinery be re-measured to the room rather than the room re-assigned. Items 31 and 33 are modelled and reported at their installable lengths (2630 mm and 3140 mm), and a change note has been issued for the contractor to re-quote: logs/change_note_master_bedroom_joinery.md. Indicative delta SAR -8,922 excl. VAT. |
 
 ## Top conflicts
 
