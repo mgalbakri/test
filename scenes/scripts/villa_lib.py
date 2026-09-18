@@ -243,37 +243,53 @@ def _principled(name, base, rough=0.5, metallic=0.0, spec=0.5,
         b.inputs['Coat Weight'].default_value = coat
     return m
 
-def _add_tex_scale(mat, size_mm_x, size_mm_y):
-    """Real-world UV scale: a tile of size_mm maps to that many metres."""
+def _add_tex_scale(mat, size_mm_x, size_mm_y, size_mm_z=None):
+    """Real-world texture scale: a feature of size_mm maps to that many metres.
+
+    size_mm_z defaults to size_mm_y. Leaving the third axis unscaled makes a 3D
+    procedural texture vary very slowly through the object, so any face cut
+    across that axis (a cabinet return, an end panel) shows low-frequency blobs
+    that read as staining rather than grain.
+    """
+    if size_mm_z is None: size_mm_z = size_mm_y
     nt = mat.node_tree
     tc = nt.nodes.new('ShaderNodeTexCoord')
     mp = nt.nodes.new('ShaderNodeMapping')
-    mp.inputs['Scale'].default_value = (1.0/(size_mm_x*MM), 1.0/(size_mm_y*MM), 1.0)
+    mp.inputs['Scale'].default_value = (1.0/(size_mm_x*MM), 1.0/(size_mm_y*MM),
+                                        1.0/(size_mm_z*MM))
     nt.links.new(tc.outputs['Object'], mp.inputs['Vector'])
     mat['uv_scale_mm'] = f'{size_mm_x} x {size_mm_y}'
     return mp
 
-def mat_procedural_wood(name, base=(0.38,0.22,0.11), rough=0.32, grain_mm=900):
+def mat_procedural_wood(name, base=(0.38,0.22,0.11), rough=0.32, grain_mm=900,
+                        across_ratio=7.0):
     """Beech veneer stain -- procedural grain, real-world scale."""
     m = bpy.data.materials.get(name)
     if m: return m
     m = _principled(name, base, rough=rough, coat=0.25)
     nt = m.node_tree; b = nt.nodes['Principled BSDF']
-    mp = _add_tex_scale(m, grain_mm, grain_mm/18.0)
+    # Grain runs long along one axis and is coarser across it. Too fine a
+    # cross-grain figure reads as speckled particleboard on narrow rails.
+    mp = _add_tex_scale(m, grain_mm, grain_mm/across_ratio)
     nz = nt.nodes.new('ShaderNodeTexNoise')
-    nz.inputs['Scale'].default_value = 6.0
-    nz.inputs['Detail'].default_value = 8.0
-    nz.inputs['Roughness'].default_value = 0.6
+    nz.inputs['Scale'].default_value = 4.0
+    nz.inputs['Detail'].default_value = 3.0
+    nz.inputs['Roughness'].default_value = 0.45
     nt.links.new(mp.outputs['Vector'], nz.inputs['Vector'])
     ramp = nt.nodes.new('ShaderNodeValToRGB')
-    ramp.color_ramp.elements[0].color = (*[c*0.72 for c in base], 1)
-    ramp.color_ramp.elements[1].color = (*[min(1,c*1.35) for c in base], 1)
-    ramp.color_ramp.elements[0].position = 0.35
-    ramp.color_ramp.elements[1].position = 0.66
+    # Beech veneer is a quiet, fine, fairly uniform finish. The figure is kept
+    # deliberately low-contrast: the grain direction is fixed in object space,
+    # so a strong figure runs the wrong way on parts whose long axis is not X
+    # (vertical stiles, cabinet returns) and reads as burl or as staining.
+    # A subtle figure stays convincing whichever way a part is oriented.
+    ramp.color_ramp.elements[0].color = (*[c*0.90 for c in base], 1)
+    ramp.color_ramp.elements[1].color = (*[min(1,c*1.12) for c in base], 1)
+    ramp.color_ramp.elements[0].position = 0.40
+    ramp.color_ramp.elements[1].position = 0.62
     nt.links.new(nz.outputs['Fac'], ramp.inputs['Fac'])
     nt.links.new(ramp.outputs['Color'], b.inputs['Base Color'])
     bump = nt.nodes.new('ShaderNodeBump')
-    bump.inputs['Strength'].default_value = 0.08
+    bump.inputs['Strength'].default_value = 0.04
     nt.links.new(nz.outputs['Fac'], bump.inputs['Height'])
     nt.links.new(bump.outputs['Normal'], b.inputs['Normal'])
     return m

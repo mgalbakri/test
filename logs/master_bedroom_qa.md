@@ -15,7 +15,10 @@ Every frame is checked automatically for mean luminance, lit fraction and blown 
 
 ## Automated frame checks - final
 
-No final render log found at `/tmp/mbr_final.log`.
+| Frame | Seconds | Mean luminance | Lit | Blown | Verdict |
+|---|---|---|---|---|---|
+| master_bedroom_cam01 | 961 | 0.560 | 99.9% | 0.00% | pass |
+| master_bedroom_cam02 | 948 | 0.560 | 100.0% | 0.00% | pass |
 
 ## Found and fixed
 
@@ -32,6 +35,7 @@ No final render log found at `/tmp/mbr_final.log`.
 
 - **Headboard reads flatter than it should.** It is modelled as a single upholstered plane with the specified LED wash above it. The BOQ gives no buttoning, panel or profile detail, so nothing more is modelled rather than invented. Worth a detail drawing before fabrication.
 - **No bed, no loose furniture.** Nothing of the kind appears in the BOQ, so nothing is modelled. Adding it would put unpriced items into a package the contractor prices from.
+- **Wood veneer went blotchy on cabinet return faces - it read as staining.** The real-world texture mapping scaled only two axes, leaving the third nearly unscaled, so the 3D grain varied very slowly through the panel and any face cut across that axis showed low-frequency blobs. All three axes are now scaled and the grain ramp is tightened. Found on the 4K cam02 frame; all finals re-rendered.
 - **Final frames took four times their stated cap on the first attempt.** Cycles applies time_limit per TILE, and the auto-tiler splits a 3840x2160 frame into four, so a 600 s cap became 40 minutes a frame. Auto-tiling is now off for finals, so the cap is per frame and the whole image converges evenly.
 - **Frames are time-boxed.** Cycles runs on 4 CPU cores with no GPU here, so each frame is capped and the denoiser carries the rest. Fine detail is softer than a full sample budget would give. A GPU box would remove the cap.
 

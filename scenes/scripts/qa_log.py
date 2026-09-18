@@ -55,6 +55,12 @@ OPEN_ITEMS = [
  ('No bed, no loose furniture.',
   'Nothing of the kind appears in the BOQ, so nothing is modelled. Adding it '
   'would put unpriced items into a package the contractor prices from.'),
+ ('Wood veneer went blotchy on cabinet return faces - it read as staining.',
+  'The real-world texture mapping scaled only two axes, leaving the third '
+  'nearly unscaled, so the 3D grain varied very slowly through the panel and '
+  'any face cut across that axis showed low-frequency blobs. All three axes '
+  'are now scaled and the grain ramp is tightened. Found on the 4K cam02 '
+  'frame; all finals re-rendered.'),
  ('Final frames took four times their stated cap on the first attempt.',
   'Cycles applies time_limit per TILE, and the auto-tiler splits a 3840x2160 '
   'frame into four, so a 600 s cap became 40 minutes a frame. Auto-tiling is '
