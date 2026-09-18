@@ -1,0 +1,306 @@
+{
+ "FF": [
+  {
+   "id": "FF-R02",
+   "bbox_mm": [
+    300,
+    300,
+    17300,
+    11025
+   ],
+   "size_mm": [
+    17000,
+    10725
+   ],
+   "area_m2": 108.66,
+   "rect_fill_pct": 59.6,
+   "centroid_mm": [
+    10269,
+    5200
+   ],
+   "fixtures_inside": 93
+  },
+  {
+   "id": "FF-R07",
+   "bbox_mm": [
+    300,
+    6600,
+    4100,
+    10725
+   ],
+   "size_mm": [
+    3800,
+    4125
+   ],
+   "area_m2": 14.86,
+   "rect_fill_pct": 94.8,
+   "centroid_mm": [
+    2097,
+    8634
+   ],
+   "fixtures_inside": 0
+  },
+  {
+   "id": "FF-R01",
+   "bbox_mm": [
+    75,
+    75,
+    17550,
+    7200
+   ],
+   "size_mm": [
+    17475,
+    7125
+   ],
+   "area_m2": 5.63,
+   "rect_fill_pct": 4.5,
+   "centroid_mm": [
+    10513,
+    2509
+   ],
+   "fixtures_inside": 69
+  },
+  {
+   "id": "FF-R03",
+   "bbox_mm": [
+    5975,
+    700,
+    8275,
+    2950
+   ],
+   "size_mm": [
+    2300,
+    2250
+   ],
+   "area_m2": 3.5,
+   "rect_fill_pct": 67.6,
+   "centroid_mm": [
+    7071,
+    1554
+   ],
+   "fixtures_inside": 0
+  },
+  {
+   "id": "FF-R04",
+   "bbox_mm": [
+    8600,
+    700,
+    9850,
+    2550
+   ],
+   "size_mm": [
+    1250,
+    1850
+   ],
+   "area_m2": 2.31,
+   "rect_fill_pct": 100.0,
+   "centroid_mm": [
+    9212,
+    1612
+   ],
+   "fixtures_inside": 0
+  },
+  {
+   "id": "FF-R08",
+   "bbox_mm": [
+    9825,
+    7950,
+    17550,
+    11275
+   ],
+   "size_mm": [
+    7725,
+    3325
+   ],
+   "area_m2": 1.75,
+   "rect_fill_pct": 6.8,
+   "centroid_mm": [
+    13972,
+    10581
+   ],
+   "fixtures_inside": 0
+  },
+  {
+   "id": "FF-R06",
+   "bbox_mm": [
+    75,
+    5675,
+    4550,
+    10975
+   ],
+   "size_mm": [
+    4475,
+    5300
+   ],
+   "area_m2": 1.35,
+   "rect_fill_pct": 5.7,
+   "centroid_mm": [
+    2902,
+    9384
+   ],
+   "fixtures_inside": 23
+  },
+  {
+   "id": "FF-R05",
+   "bbox_mm": [
+    75,
+    2875,
+    4550,
+    7925
+   ],
+   "size_mm": [
+    4475,
+    5050
+   ],
+   "area_m2": 1.25,
+   "rect_fill_pct": 5.5,
+   "centroid_mm": [
+    999,
+    5434
+   ],
+   "fixtures_inside": 23
+  }
+ ],
+ "GF": [
+  {
+   "id": "GF-R02",
+   "bbox_mm": [
+    300,
+    300,
+    9000,
+    10725
+   ],
+   "size_mm": [
+    8700,
+    10425
+   ],
+   "area_m2": 61.19,
+   "rect_fill_pct": 67.5,
+   "centroid_mm": [
+    3397,
+    5258
+   ],
+   "fixtures_inside": 14
+  },
+  {
+   "id": "GF-R05",
+   "bbox_mm": [
+    10375,
+    300,
+    17550,
+    9725
+   ],
+   "size_mm": [
+    7175,
+    9425
+   ],
+   "area_m2": 52.59,
+   "rect_fill_pct": 77.8,
+   "centroid_mm": [
+    13974,
+    4650
+   ],
+   "fixtures_inside": 1
+  },
+  {
+   "id": "GF-R07",
+   "bbox_mm": [
+    8525,
+    6025,
+    17550,
+    11275
+   ],
+   "size_mm": [
+    9025,
+    5250
+   ],
+   "area_m2": 14.48,
+   "rect_fill_pct": 30.6,
+   "centroid_mm": [
+    14105,
+    9973
+   ],
+   "fixtures_inside": 24
+  },
+  {
+   "id": "GF-R06",
+   "bbox_mm": [
+    8775,
+    4325,
+    10925,
+    9725
+   ],
+   "size_mm": [
+    2150,
+    5400
+   ],
+   "area_m2": 9.64,
+   "rect_fill_pct": 83.0,
+   "centroid_mm": [
+    9890,
+    7189
+   ],
+   "fixtures_inside": 18
+  },
+  {
+   "id": "GF-R04",
+   "bbox_mm": [
+    8725,
+    300,
+    10950,
+    3950
+   ],
+   "size_mm": [
+    2225,
+    3650
+   ],
+   "area_m2": 6.09,
+   "rect_fill_pct": 74.9,
+   "centroid_mm": [
+    9608,
+    2355
+   ],
+   "fixtures_inside": 0
+  },
+  {
+   "id": "GF-R01",
+   "bbox_mm": [
+    75,
+    75,
+    17550,
+    10975
+   ],
+   "size_mm": [
+    17475,
+    10900
+   ],
+   "area_m2": 5.88,
+   "rect_fill_pct": 3.1,
+   "centroid_mm": [
+    6264,
+    4038
+   ],
+   "fixtures_inside": 24
+  },
+  {
+   "id": "GF-R03",
+   "bbox_mm": [
+    5975,
+    300,
+    8400,
+    2950
+   ],
+   "size_mm": [
+    2425,
+    2650
+   ],
+   "area_m2": 4.75,
+   "rect_fill_pct": 73.9,
+   "centroid_mm": [
+    7166,
+    1351
+   ],
+   "fixtures_inside": 0
+  }
+ ]
+}

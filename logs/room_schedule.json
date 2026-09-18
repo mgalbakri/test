@@ -1,0 +1,444 @@
+[
+ {
+  "id": "FF-NW-BED",
+  "floor": "FF",
+  "kind": "bedroom",
+  "identity_inferred": "master_bedroom",
+  "bbox_mm": [
+   240,
+   6525,
+   3675,
+   10785
+  ],
+  "size_mm": [
+   3435,
+   4260
+  ],
+  "area_m2": 14.63,
+  "perimeter_m": 15.39,
+  "wall_coverage": {
+   "W": 0.76,
+   "E": 0.38,
+   "S": 0.72,
+   "N": 1.0
+  },
+  "verified": false,
+  "evidence": "Two opposite walls measure exactly 4260 mm; BOQ items 31 and 33 are both joinery runs of W=4260 mm. Exact fit on both facing walls."
+ },
+ {
+  "id": "FF-SW-BED",
+  "floor": "FF",
+  "kind": "bedroom",
+  "identity_inferred": null,
+  "bbox_mm": [
+   285,
+   225,
+   4215,
+   4395
+  ],
+  "size_mm": [
+   3930,
+   4170
+  ],
+  "area_m2": 16.39,
+  "perimeter_m": 16.2,
+  "wall_coverage": {
+   "W": 0.76,
+   "E": 0.46,
+   "S": 1.0,
+   "N": 1.0
+  },
+  "verified": false,
+  "evidence": "Drawing dims 3.94 x 4.16. No 4260 wall -> cannot take BOQ item 31/33."
+ },
+ {
+  "id": "FF-NE-BED",
+  "floor": "FF",
+  "kind": "bedroom",
+  "identity_inferred": null,
+  "bbox_mm": [
+   13095,
+   6135,
+   17235,
+   11085
+  ],
+  "size_mm": [
+   4140,
+   4950
+  ],
+  "area_m2": 20.49,
+  "perimeter_m": 18.18,
+  "wall_coverage": {
+   "W": 0.65,
+   "E": 0.64,
+   "S": 1.0,
+   "N": 1.0
+  },
+  "verified": true,
+  "evidence": "Drawing dims 4.14 x 4.95."
+ },
+ {
+  "id": "FF-SE-BED",
+  "floor": "FF",
+  "kind": "bedroom",
+  "identity_inferred": null,
+  "bbox_mm": [
+   13185,
+   630,
+   17370,
+   5895
+  ],
+  "size_mm": [
+   4185,
+   5265
+  ],
+  "area_m2": 22.03,
+  "perimeter_m": 18.9,
+  "wall_coverage": {
+   "W": 0.97,
+   "E": 1.0,
+   "S": 1.0,
+   "N": 1.0
+  },
+  "verified": true,
+  "evidence": "Drawing dims 4.18 x 5.27. Largest bedroom on the floor."
+ },
+ {
+  "id": "FF-BATH-W",
+  "floor": "FF",
+  "kind": "bathroom",
+  "identity_inferred": null,
+  "bbox_mm": [
+   285,
+   4530,
+   2480,
+   6285
+  ],
+  "size_mm": [
+   2195,
+   1755
+  ],
+  "area_m2": 3.85,
+  "perimeter_m": 7.9,
+  "wall_coverage": {
+   "W": 1.0,
+   "E": 0.54,
+   "S": 0.93,
+   "N": 1.0
+  },
+  "verified": true,
+  "evidence": "Shower tray + WC + basin. Drawing dim 1.76 = measured 1755 mm."
+ },
+ {
+  "id": "FF-BATH-S",
+  "floor": "FF",
+  "kind": "bathroom",
+  "identity_inferred": null,
+  "bbox_mm": [
+   4365,
+   225,
+   5715,
+   2655
+  ],
+  "size_mm": [
+   1350,
+   2430
+  ],
+  "area_m2": 3.28,
+  "perimeter_m": 7.56,
+  "wall_coverage": {
+   "W": 0.67,
+   "E": 0.94,
+   "S": 0.99,
+   "N": 0.99
+  },
+  "verified": true,
+  "evidence": "Shower tray + WC + basin. Drawing dim 2.43 = measured 2430 mm."
+ },
+ {
+  "id": "FF-BATH-C",
+  "floor": "FF",
+  "kind": "bathroom",
+  "identity_inferred": null,
+  "bbox_mm": [
+   8535,
+   3210,
+   11340,
+   4545
+  ],
+  "size_mm": [
+   2805,
+   1335
+  ],
+  "area_m2": 3.74,
+  "perimeter_m": 8.28,
+  "wall_coverage": {
+   "W": 0.85,
+   "E": 0.35,
+   "S": 0.0,
+   "N": 0.91
+  },
+  "verified": false,
+  "evidence": "Shower tray + WC + basin. Drawing dims 2.79 / 1.33."
+ },
+ {
+  "id": "FF-BATH-N",
+  "floor": "FF",
+  "kind": "bathroom",
+  "identity_inferred": null,
+  "bbox_mm": [
+   8685,
+   8130,
+   10245,
+   11085
+  ],
+  "size_mm": [
+   1560,
+   2955
+  ],
+  "area_m2": 4.61,
+  "perimeter_m": 9.03,
+  "wall_coverage": {
+   "W": 0.95,
+   "E": 0.73,
+   "S": 1.0,
+   "N": 0.61
+  },
+  "verified": true,
+  "evidence": "Shower tray + WC + basin, off the stair landing."
+ },
+ {
+  "id": "FF-STAIR",
+  "floor": "FF",
+  "kind": "circulation",
+  "identity_inferred": "hallways",
+  "bbox_mm": [
+   5910,
+   6290,
+   8460,
+   9790
+  ],
+  "size_mm": [
+   2550,
+   3500
+  ],
+  "area_m2": 8.93,
+  "perimeter_m": 12.1,
+  "wall_coverage": {
+   "W": 1.0,
+   "E": 1.0,
+   "S": 0.0,
+   "N": 0.37
+  },
+  "verified": false,
+  "evidence": "Stair flight on layer A_STAIR; the only vertical circulation."
+ },
+ {
+  "id": "FF-VOID",
+  "floor": "FF",
+  "kind": "void",
+  "identity_inferred": null,
+  "bbox_mm": [
+   4395,
+   6290,
+   5685,
+   9790
+  ],
+  "size_mm": [
+   1290,
+   3500
+  ],
+  "area_m2": 4.51,
+  "perimeter_m": 9.58,
+  "wall_coverage": {
+   "W": 0.93,
+   "E": 1.0,
+   "S": 0.0,
+   "N": 0.22
+  },
+  "verified": false,
+  "evidence": "Cross-hatched box on the plan - slab void / shaft. Not habitable."
+ },
+ {
+  "id": "FF-RM-S1",
+  "floor": "FF",
+  "kind": "room",
+  "identity_inferred": null,
+  "bbox_mm": [
+   5910,
+   630,
+   8340,
+   3010
+  ],
+  "size_mm": [
+   2430,
+   2380
+  ],
+  "area_m2": 5.78,
+  "perimeter_m": 9.62,
+  "wall_coverage": {
+   "W": 1.0,
+   "E": 1.0,
+   "S": 1.0,
+   "N": 0.64
+  },
+  "verified": true,
+  "evidence": "Contains a hatched square (duct/void). Drawing dim 2.47."
+ },
+ {
+  "id": "FF-RM-S2",
+  "floor": "FF",
+  "kind": "room",
+  "identity_inferred": null,
+  "bbox_mm": [
+   8535,
+   630,
+   9915,
+   2595
+  ],
+  "size_mm": [
+   1380,
+   1965
+  ],
+  "area_m2": 2.71,
+  "perimeter_m": 6.69,
+  "wall_coverage": {
+   "W": 1.0,
+   "E": 1.0,
+   "S": 1.0,
+   "N": 1.0
+  },
+  "verified": true,
+  "evidence": "Drawing dim 1.97 = measured 1965 mm."
+ },
+ {
+  "id": "FF-RM-S3",
+  "floor": "FF",
+  "kind": "room",
+  "identity_inferred": null,
+  "bbox_mm": [
+   10125,
+   630,
+   13035,
+   2595
+  ],
+  "size_mm": [
+   2910,
+   1965
+  ],
+  "area_m2": 5.72,
+  "perimeter_m": 9.75,
+  "wall_coverage": {
+   "W": 1.0,
+   "E": 1.0,
+   "S": 1.0,
+   "N": 0.47
+  },
+  "verified": false,
+  "evidence": "Drawing dims 2.92 / 1.97."
+ },
+ {
+  "id": "GF-WEST",
+  "floor": "GF",
+  "kind": "open shell",
+  "identity_inferred": null,
+  "bbox_mm": [
+   285,
+   250,
+   5710,
+   10790
+  ],
+  "size_mm": [
+   5425,
+   10540
+  ],
+  "area_m2": 57.18,
+  "perimeter_m": 31.93,
+  "wall_coverage": {
+   "W": 1.0,
+   "E": 0.39,
+   "S": 1.0,
+   "N": 0.71
+  },
+  "verified": false,
+  "evidence": "Unpartitioned. No internal walls drawn over 57 m2."
+ },
+ {
+  "id": "GF-EAST",
+  "floor": "GF",
+  "kind": "open shell",
+  "identity_inferred": "entrance_salon",
+  "bbox_mm": [
+   11265,
+   240,
+   17325,
+   9790
+  ],
+  "size_mm": [
+   6060,
+   9550
+  ],
+  "area_m2": 57.87,
+  "perimeter_m": 31.22,
+  "wall_coverage": {
+   "W": 0.39,
+   "E": 0.44,
+   "S": 1.0,
+   "N": 0.53
+  },
+  "verified": false,
+  "evidence": "Main entrance door (1095 mm leaf, largest on the drawing) opens into this space. 5425 mm clear wall can take BOQ item 1 (cladding W=5000)."
+ },
+ {
+  "id": "GF-WC",
+  "floor": "GF",
+  "kind": "wc",
+  "identity_inferred": null,
+  "bbox_mm": [
+   8700,
+   5895,
+   10930,
+   9790
+  ],
+  "size_mm": [
+   2230,
+   3895
+  ],
+  "area_m2": 8.69,
+  "perimeter_m": 12.25,
+  "wall_coverage": {
+   "W": 0.96,
+   "E": 0.96,
+   "S": 0.57,
+   "N": 0.73
+  },
+  "verified": true,
+  "evidence": "Red \"NOT THE ACTUAL AS-BUILT\" hatch covers this block - see conflict C-02."
+ },
+ {
+  "id": "GF-STAIR",
+  "floor": "GF",
+  "kind": "circulation",
+  "identity_inferred": null,
+  "bbox_mm": [
+   5910,
+   6290,
+   8460,
+   9790
+  ],
+  "size_mm": [
+   2550,
+   3500
+  ],
+  "area_m2": 8.93,
+  "perimeter_m": 12.1,
+  "wall_coverage": {
+   "W": 1.0,
+   "E": 1.0,
+   "S": 0.0,
+   "N": 0.37
+  },
+  "verified": false,
+  "evidence": "Stair flight, aligns with FF-STAIR."
+ }
+]

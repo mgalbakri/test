@@ -1,0 +1,321 @@
+{
+  "quotation": "R1-M.A.740-26",
+  "sheet": "nabati rest. (3)",
+  "items": [
+    {
+      "boq_item": "R1-M.A.740-26/1",
+      "room": "entrance_salon",
+      "description": "Supply and installation wall cladding included 2 cabinet Made of MDF W/R with Beech veneer stain finish size 5000 x H = 2800 mm x (D= 450 mm for shelving cabinet & D = 600 mm for ABAYA cabinet include LED Light under the cladding @ G.F. Entrance as per desgin",
+      "unit": "m2",
+      "qty": 14.0,
+      "unit_price": 1100.0,
+      "total": 15400.0
+    },
+    {
+      "boq_item": "R1-M.A.740-26/1a",
+      "room": "entrance_salon",
+      "description": "Supply and installation Soundproog Rubber wall Cladding with Gybsum board and Rock wool base paint @ G.F. TV Wall",
+      "unit": "m2",
+      "qty": 21.0,
+      "unit_price": 475.0,
+      "total": 9975.0
+    },
+    {
+      "boq_item": "R1-M.A.740-26/2",
+      "room": "entrance_salon",
+      "description": "Supply and installation open shelves made of MDF W/R with doku paint size W= 1400 x H = 2800 mmx D = 350mm @ G.F. salon ( on either side of the TV ) as per desgin",
+      "unit": "unit",
+      "qty": 2.0,
+      "unit_price": 4893.0,
+      "total": 9786.0
+    },
+    {
+      "boq_item": "R1-M.A.740-26/3",
+      "room": "entrance_salon",
+      "description": "Supply and installation 6 wall shelves different sizes MDF W/R with doku paint @ G.F. Salon as per design",
+      "unit": "LS",
+      "qty": 1.0,
+      "unit_price": 2200.0,
+      "total": 2000.0
+    },
+    {
+      "boq_item": "R1-M.A.740-26/4",
+      "room": "entrance_salon",
+      "description": "Supply and installation wall cladding included Niche Made of Gypsumn Board with Paint finish size W = 2400 x H = 2800 mm x D = 350 mm@ G.F. salon( TV backround ) as per design",
+      "unit": "Unit",
+      "qty": 1.0,
+      "unit_price": 2500.0,
+      "total": 2500.0
+    },
+    {
+      "boq_item": "R1-M.A.740-26/5",
+      "room": "entrance_salon",
+      "description": "Supply and installation wall Cladding Cement board with base paint & Ceiling paint @ G.F. Guests Bathroom",
+      "unit": "LS",
+      "qty": 1.0,
+      "unit_price": 2000.0,
+      "total": 2000.0
+    },
+    {
+      "boq_item": "R1-M.A.740-26/6",
+      "room": "entrance_salon",
+      "description": "removing the decorative Gypsum on the ceiling and paint @ G.F. Entrance",
+      "unit": "LS",
+      "qty": 1.0,
+      "unit_price": 800.0,
+      "total": 800.0
+    },
+    {
+      "boq_item": "R1-M.A.740-26/7",
+      "room": "entrance_salon",
+      "description": "supply and Apply wall & Ceiling paint @ Entarnce Salon",
+      "unit": "M2",
+      "qty": 70.0,
+      "unit_price": 35.0,
+      "total": 2450.0
+    },
+    {
+      "boq_item": "R1-M.A.740-26/8",
+      "room": "powder_room_aziza",
+      "description": "Supply and installation Dressing cabinet with drawers makeup table Made of MDF and the solid wood molding door leaf doku paint finish size W = 2400 x H = 2800 mmx D =500 mm as per design",
+      "unit": "unit",
+      "qty": 1.0,
+      "unit_price": 6850.0,
+      "total": 6850.0
+    },
+    {
+      "boq_item": "R1-M.A.740-26/9",
+      "room": "powder_room_aziza",
+      "description": "Supply and installation Closet with shelves Made of MDF and solid wood molding door leaf size W = 1200 x H = 2800 mmx D =350 mm",
+      "unit": "Unit",
+      "qty": 2.0,
+      "unit_price": 3800.0,
+      "total": 7600.0
+    },
+    {
+      "boq_item": "R1-M.A.740-26/10",
+      "room": "bathroom_aziza",
+      "description": "Removing the porcelain floors and walls in tow bathroom and glass of the shower and sink included the making new insulation",
+      "unit": "LS",
+      "qty": 1.0,
+      "unit_price": 2500.0,
+      "total": 2500.0
+    },
+    {
+      "boq_item": "R1-M.A.740-26/11",
+      "room": "bathroom_aziza",
+      "description": "Installation of porcelain for flooring and wall @ shower area",
+      "unit": "LS",
+      "qty": 1.0,
+      "unit_price": 3250.0,
+      "total": 3250.0
+    },
+    {
+      "boq_item": "R1-M.A.740-26/12",
+      "room": "bathroom_aziza",
+      "description": "Supply and installation 3 leaf cabinet Made of MDF with Beech veneer finish size W = 1700 x H = 2800 mmx D =500 mm @ as per design",
+      "unit": "Unit",
+      "qty": 1.0,
+      "unit_price": 4760.0,
+      "total": 4760.0
+    },
+    {
+      "boq_item": "R1-M.A.740-26/13",
+      "room": "bathroom_aziza",
+      "description": "Supply and installation Vanity cabinet Made of MDF with Beech veneer finish size W = 1100 x H = 850 mmx D =500 mm as per design",
+      "unit": "Unit",
+      "qty": 1.0,
+      "unit_price": 2500.0,
+      "total": 2500.0
+    },
+    {
+      "boq_item": "R1-M.A.740-26/14",
+      "room": "bathroom_aziza",
+      "description": "Supply and installation Marble Top for Vanity kind of Rossi Levanto size W = 1100 x D = 500 mm x Thk.20 mm with Marble skirting size L = 1100 x H= 150 x Tkh. 20 mm",
+      "unit": "Unit",
+      "qty": 1.0,
+      "unit_price": 5650.0,
+      "total": 5650.0
+    },
+    {
+      "boq_item": "R1-M.A.740-26/15",
+      "room": "bathroom_aziza",
+      "description": "Supply and installation Shower Forsted Galss door & Partition Thk.10mmwith size W= 1600 x H = 1500 mm",
+      "unit": "Unit",
+      "qty": 1.0,
+      "unit_price": 2750.0,
+      "total": 2750.0
+    },
+    {
+      "boq_item": "R1-M.A.740-26/16",
+      "room": "bathroom_aziza",
+      "description": "supply and Apply wall & Ceiling paint",
+      "unit": "LS",
+      "qty": 1.0,
+      "unit_price": 850.0,
+      "total": 850.0
+    },
+    {
+      "boq_item": "R1-M.A.740-26/17",
+      "room": "office",
+      "description": "Supply and installation open shelves with small low cabinet made of MDF W/R with doku paint size W= 2650 x H = 3000 mmx D = 500 mmx Tkh. 36mm as per desgin",
+      "unit": "Unit",
+      "qty": 1.0,
+      "unit_price": 7850.0,
+      "total": 7850.0
+    },
+    {
+      "boq_item": "R1-M.A.740-26/18",
+      "room": "office",
+      "description": "Supply and installation cabinet Made of MDF with Beech veneer and with decorative moulding door finish size W = 1440 x H = 3000 mmx D =400 mm",
+      "unit": "Unit",
+      "qty": 2.0,
+      "unit_price": 5250.0,
+      "total": 10500.0
+    },
+    {
+      "boq_item": "R1-M.A.740-26/19",
+      "room": "office",
+      "description": "supply and Apply wall & Ceiling paint",
+      "unit": "LS",
+      "qty": 1.0,
+      "unit_price": 1000.0,
+      "total": 1000.0
+    },
+    {
+      "boq_item": "R1-M.A.740-26/20",
+      "room": "powder_room_mohammed",
+      "description": "Supply and installation 2 cabinet and wall teble Made of MDF W/R with Beech veneer with solid Beech wood stain finish size W = 2500 x H = 2860 mmx D =500 mm as per design",
+      "unit": "Unit",
+      "qty": 1.0,
+      "unit_price": 8450.0,
+      "total": 8450.0
+    },
+    {
+      "boq_item": "R1-M.A.740-26/21",
+      "room": "powder_room_mohammed",
+      "description": "supply and Apply wall & Ceiling paint",
+      "unit": "LS",
+      "qty": 1.0,
+      "unit_price": 1500.0,
+      "total": 1500.0
+    },
+    {
+      "boq_item": "R1-M.A.740-26/22",
+      "room": "bathroom_mohammed",
+      "description": "Removing the porcelain floors and walls and glass of the shower and sink included the making new insulation",
+      "unit": "LS",
+      "qty": 1.0,
+      "unit_price": 2500.0,
+      "total": 2500.0
+    },
+    {
+      "boq_item": "R1-M.A.740-26/23",
+      "room": "bathroom_mohammed",
+      "description": "Installation of porcelain for flooring and wall @ shower area",
+      "unit": "LS",
+      "qty": 1.0,
+      "unit_price": 3250.0,
+      "total": 3250.0
+    },
+    {
+      "boq_item": "R1-M.A.740-26/24",
+      "room": "bathroom_mohammed",
+      "description": "Supply and installation Marble Top for Vanity kind of Rossi Levanto size W = 1100 x D = 500 mm x Thk.20 mm with Marble skirting",
+      "unit": "Unit",
+      "qty": 1.0,
+      "unit_price": 5260.0,
+      "total": 5260.0
+    },
+    {
+      "boq_item": "R1-M.A.740-26/25",
+      "room": "bathroom_mohammed",
+      "description": "Supply and installation Shower Forsted Galss door & Partition Thk.10mmwith size W= 1600 x H = 1500 mm",
+      "unit": "Unit",
+      "qty": 1.0,
+      "unit_price": 2750.0,
+      "total": 2750.0
+    },
+    {
+      "boq_item": "R1-M.A.740-26/26",
+      "room": "bathroom_mohammed",
+      "description": "Supply and installation Vanity cabinet Made of MDF with Beech veneer finish size W = 1100 x H = 850 mmx D =500 mm as per design",
+      "unit": "Unit",
+      "qty": 1.0,
+      "unit_price": 2500.0,
+      "total": 2500.0
+    },
+    {
+      "boq_item": "R1-M.A.740-26/27",
+      "room": "bathroom_mohammed",
+      "description": "supply and Apply wall & Ceiling paint",
+      "unit": "LS",
+      "qty": 1.0,
+      "unit_price": 850.0,
+      "total": 850.0
+    },
+    {
+      "boq_item": "R1-M.A.740-26/28",
+      "room": "hallways",
+      "description": "supply and Apply wall & Ceiling paint",
+      "unit": "m2",
+      "qty": 80.0,
+      "unit_price": 35.0,
+      "total": 2800.0
+    },
+    {
+      "boq_item": "R1-M.A.740-26/29",
+      "room": "kitchenette",
+      "description": "Supply and installation Marble wall Bar kind of Verde Guatemale size L = 1090 x D = 500 mm x Thk.20mm with Cladding same Marble size L = 1090 x H= 400 x Tkh. 20 mm",
+      "unit": "Unit",
+      "qty": 1.0,
+      "unit_price": 4666.0,
+      "total": 4666.0
+    },
+    {
+      "boq_item": "R1-M.A.740-26/30",
+      "room": "kitchenette",
+      "description": "Supply and installation Folding door Made of solid Beech wood frame and the panel made of Acrylic class paint finish with special Rail size W = 1750 x H = 2800 mm",
+      "unit": "Unit",
+      "qty": 1.0,
+      "unit_price": 3800.0,
+      "total": 3800.0
+    },
+    {
+      "boq_item": "R1-M.A.740-26/31",
+      "room": "master_bedroom",
+      "description": "Supply and installation 2 cabinet and upper samll cabinet and 2 side wall drawers Made of MDF W/R with Beech veneer with solid Beech wood moulding( the panel for door leaf will be wall paper or fabric the price will be separate ) stain finish size W = 4260 x H = 3000 mmx D =500 mm as per design",
+      "unit": "Unit",
+      "qty": 1.0,
+      "unit_price": 13300.0,
+      "total": 13300.0
+    },
+    {
+      "boq_item": "R1-M.A.740-26/32",
+      "room": "master_bedroom",
+      "description": "Supply and installation Headboard Made of MDF/WR with Upholstery & LED Up the H.B. size L = 2600mm x H = 1000 mm ( The Fabric supply By Client )",
+      "unit": "Unit",
+      "qty": 1.0,
+      "unit_price": 2950.0,
+      "total": 2950.0
+    },
+    {
+      "boq_item": "R1-M.A.740-26/33",
+      "room": "master_bedroom",
+      "description": "Supply and installation 2 cabinet and lower Drawers and upper cabinet on either side of the TV Made of MDF W/R with Beech veneer with solid Beech wood moulding ( the panel for door leaf will be wall paper or fabric the price will be separate ) stain finish size W = 4260 x H = 3000 mmx D =500 mm @ TV area as per design Item No. 14",
+      "unit": "Unit",
+      "qty": 1.0,
+      "unit_price": 14580.0,
+      "total": 14580.0
+    }
+  ],
+  "notes": [
+    "all lighting are not included ( will be submited The Price after selecting the type and model",
+    "The Electrice work will be submit price after checking what is required",
+    "The Sink and Mixer and other Sanitary will be priced after checking what kind of required",
+    "Any changes in dimensions and specification after fabrication, 100% of changed item price will be charged accordingly",
+    "Prices are strctly based on the above proposed specification ,any changes will be subject to review and re-pricing",
+    "The project is re-measured for all items Excepet some of the items mentioned above the B.O.Q.",
+    "if the price rate is increased due to a major force, a new quotation shall be submitted"
+  ]
+}
