@@ -23,8 +23,14 @@ draft = (mode == 'draft')
 cams = sorted((o for o in bpy.data.objects if o.type == 'CAMERA'), key=lambda o: o.name)
 outdir = os.path.join(ROOT, 'renders')
 print(f'RENDERING {room} [{mode}] {len(cams)} cameras, {secs:.0f}s/frame', flush=True)
+ceilings = [o for o in bpy.data.objects if o.name.startswith('CEIL_')]
 for c in cams:
-    if 'PLAN' in c.name.upper():
+    plan = 'PLAN' in c.name.upper()
+    # The plan camera looks straight down from above the slab, so the ceiling
+    # has to be hidden or every plan render is a flat grey rectangle.
+    for o in ceilings:
+        o.hide_render = plan
+    if plan:
         name = f'{room}_plan'
     else:
         parts = c.name.split('_')
@@ -32,5 +38,11 @@ for c in cams:
     path = os.path.join(outdir, f'{name}.png')
     t = time.time()
     V.render_to(c, path, draft=draft, samples=None, time_limit=secs)
-    print(f'RENDERED {name} in {time.time()-t:.0f}s -> {path}', flush=True)
+    st = V.frame_stats(path)
+    flag = ''
+    if st['lit_pct'] < 5.0:    flag = '  **QA FAIL: frame is black**'
+    elif st['blown_pct'] > 5.0: flag = '  **QA FAIL: highlights blown**'
+    print(f'RENDERED {name} in {time.time()-t:.0f}s  mean={st["mean"]:.3f} '
+          f'lit={st["lit_pct"]:.1f}% blown={st["blown_pct"]:.2f}%{flag} -> {path}',
+          flush=True)
 print('ALL_RENDERS_DONE', flush=True)

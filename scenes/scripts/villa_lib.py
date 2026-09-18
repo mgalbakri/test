@@ -134,6 +134,90 @@ def floor_slab(name, x0, y0, x1, y1, thickness=40.0, top=0.0):
 def ceiling_slab(name, x0, y0, x1, y1, height, thickness=40.0):
     return box(name, x0, y0, height, x1, y1, height+thickness)
 
+def cabinet_run(name, x0, y0, x1, y1, height, face,
+                leaves=None, leaf_w=650, plinth=100, plinth_set=40,
+                gap=5, rail=70, panel_mat=None, upper_band=None,
+                drawers_at=None, drawer_rows=3, proud=18, panel_recess=10):
+    """A veneered cabinet run with real articulation.
+
+    Carcass + set-back plinth + a row of framed door leaves. Each leaf is a
+    four-rail moulded frame with a panel recessed behind it, which is how the
+    BOQ describes this joinery ("solid wood molding door leaf", "the panel for
+    door leaf will be wall paper or fabric"). `face` is the outward direction:
+    'X+', 'X-', 'Y+' or 'Y-'. All dimensions in mm.
+
+    Returns (carcass, [all parts]).
+    """
+    horiz = face in ('Y+', 'Y-')          # run travels along X
+    run_lo, run_hi = (x0, x1) if horiz else (y0, y1)
+    run = run_hi - run_lo
+    if leaves is None:
+        leaves = max(1, int(round(run/float(leaf_w))))
+    drawers_at = set(drawers_at or ())
+    parts = []
+
+    car = box(f'{name}_Carcass', x0, y0, plinth, x1, y1, height)
+    parts.append(car)
+
+    # plinth, set back from the visible face only
+    px0, py0, px1, py1 = x0, y0, x1, y1
+    if   face == 'X+': px1 -= plinth_set
+    elif face == 'X-': px0 += plinth_set
+    elif face == 'Y+': py1 -= plinth_set
+    else:              py0 += plinth_set
+    parts.append(box(f'{name}_Plinth', px0, py0, 0, px1, py1, plinth))
+
+    # depth band the leaf occupies: d0 = outermost, d1 = carcass face
+    if   face == 'X+': d0, d1 = x1 + proud, x1
+    elif face == 'X-': d0, d1 = x0 - proud, x0
+    elif face == 'Y+': d0, d1 = y1 + proud, y1
+    else:              d0, d1 = y0 - proud, y0
+    dlo, dhi = min(d0, d1), max(d0, d1)
+
+    def part(nm, u0, u1, z0, z1, e0, e1):
+        """u = along the run, z = height, e = depth."""
+        if horiz: return box(nm, u0, e0, z0, u1, e1, z1)
+        return box(nm, e0, u0, z0, e1, u1, z1)
+
+    def leaf(idx, lo, hi, z0, z1, kind):
+        lo, hi = lo + gap/2.0, hi - gap/2.0
+        z0, z1 = z0 + gap/2.0, z1 - gap/2.0
+        if hi - lo < 60 or z1 - z0 < 60: return
+        r = min(rail, (hi-lo)/2.2, (z1-z0)/2.2)
+        # four moulded rails
+        for tagn, a, b, c, d in (('RailB', lo, hi, z0, z0+r),
+                                 ('RailT', lo, hi, z1-r, z1),
+                                 ('RailL', lo, lo+r, z0+r, z1-r),
+                                 ('RailR', hi-r, hi, z0+r, z1-r)):
+            parts.append(part(f'{name}_{kind}{idx:02d}_{tagn}', a, b, c, d, dlo, dhi))
+        if panel_mat is None:
+            parts.append(part(f'{name}_{kind}{idx:02d}_Panel',
+                              lo+r, hi-r, z0+r, z1-r, dlo, dhi))
+            return
+        # panel recessed behind the frame front
+        if d0 > d1: pe0, pe1 = dlo + panel_recess, dhi
+        else:       pe0, pe1 = dlo, dhi - panel_recess
+        pn = part(f'{name}_{kind}{idx:02d}_Panel', lo+r, hi-r, z0+r, z1-r, pe0, pe1)
+        assign(pn, panel_mat)
+        parts.append(pn)
+
+    top = height - (upper_band or 0)
+    step = run/float(leaves)
+    for i in range(leaves):
+        lo, hi = run_lo + i*step, run_lo + (i+1)*step
+        if i in drawers_at:
+            n = max(1, int(drawer_rows))
+            for k in range(n):
+                leaf(i*10+k, lo, hi,
+                     plinth + k*(top-plinth)/n,
+                     plinth + (k+1)*(top-plinth)/n, 'Dwr')
+        else:
+            leaf(i, lo, hi, plinth, top, 'Leaf')
+        if upper_band:
+            leaf(i, lo, hi, top, height, 'Upr')
+    return car, parts
+
+
 # ----------------------------------------------------------------- materials
 def _principled(name, base, rough=0.5, metallic=0.0, spec=0.5,
                 ior=1.45, transmission=0.0, coat=0.0):
@@ -242,6 +326,12 @@ def mat_porcelain_tile(name, base=(0.80,0.78,0.75), tile_mm=(600,1200), rough=0.
 def mat_paint(name, base=(0.90,0.885,0.86), rough=0.62):
     return _principled(name, base, rough=rough)
 
+def mat_glass_clear(name='GLS_Clear_6mm', base=(0.96,0.97,0.97)):
+    """Clear glazing for windows. Frosted is for shower screens only."""
+    m = bpy.data.materials.get(name)
+    if m: return m
+    return _principled(name, base, rough=0.02, transmission=1.0, ior=1.52)
+
 def mat_glass_frosted(name='GLS_Frosted_10mm', base=(0.92,0.94,0.94)):
     m = bpy.data.materials.get(name)
     if m: return m
@@ -346,7 +436,10 @@ def add_fixture(name, x, y, z, power_w=None, lumens=None, cct=3000,
     ob = bpy.data.objects.new(name, l)
     bpy.context.scene.collection.objects.link(ob)
     ob.location = (x*MM, y*MM, z*MM)
-    ob.rotation_euler = (math.pi, 0, 0)
+    # Blender lights emit along local -Z, so identity rotation already aims the
+    # luminaire at the floor. A pi rotation here pointed them at the ceiling and
+    # produced black frames.
+    ob.rotation_euler = (0.0, 0.0, 0.0)
     ob['cct_K'] = cct
     tag(ob, boq_item, status,
         'Lighting excluded from BOQ (note: "all lighting are not included")',
@@ -446,6 +539,18 @@ def export_objects(room, path=None):
     os.makedirs(os.path.dirname(p), exist_ok=True)
     with open(p, 'w') as f: _json.dump(rows, f, indent=1)
     return p
+
+def frame_stats(path):
+    """Mean/max luminance of a rendered PNG. Used by the self-QA pass to catch
+    black or blown frames without eyeballing every one."""
+    img = bpy.data.images.load(path)
+    px = list(img.pixels)
+    rgb = [px[i] for i in range(len(px)) if i % 4 != 3]
+    bpy.data.images.remove(img)
+    n = len(rgb) or 1
+    return {'mean': sum(rgb)/n, 'max': max(rgb) if rgb else 0.0,
+            'lit_pct': 100.0*sum(1 for v in rgb if v > 0.004)/n,
+            'blown_pct': 100.0*sum(1 for v in rgb if v > 0.99)/n}
 
 def save_blend(path):
     os.makedirs(os.path.dirname(path), exist_ok=True)

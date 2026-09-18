@@ -1,0 +1,2416 @@
+[
+ {
+  "object": "FLR_MasterBedroom",
+  "type": "MESH",
+  "material": "POR_Floor_600x1200",
+  "boq_item": "NONE",
+  "status": "Confirmed",
+  "dims_mm": [
+   3435,
+   4260,
+   40
+  ],
+  "boq_width_mm": null,
+  "boq_length_mm": null,
+  "modelled_width_mm": null,
+  "assumed": "",
+  "note": "Floor finish not in BOQ scope for this room (no flooring line item)"
+ },
+ {
+  "object": "GLZ_Window_West",
+  "type": "MESH",
+  "material": "GLS_Clear_6mm",
+  "boq_item": "NONE",
+  "status": "Assumed",
+  "dims_mm": [
+   16,
+   1000,
+   1500
+  ],
+  "boq_width_mm": null,
+  "boq_length_mm": null,
+  "modelled_width_mm": null,
+  "assumed": "window sill 900 / head 2400 mm, door height 2100 mm",
+  "note": "Existing window, not in BOQ scope"
+ },
+ {
+  "object": "PH2_Downlight_01",
+  "type": "LIGHT",
+  "material": "",
+  "boq_item": "NONE",
+  "status": "Phase 2",
+  "dims_mm": [
+   0,
+   0,
+   0
+  ],
+  "boq_width_mm": null,
+  "boq_length_mm": null,
+  "modelled_width_mm": null,
+  "assumed": "",
+  "note": "Lighting excluded from BOQ (note: \"all lighting are not included\")"
+ },
+ {
+  "object": "PH2_Downlight_02",
+  "type": "LIGHT",
+  "material": "",
+  "boq_item": "NONE",
+  "status": "Phase 2",
+  "dims_mm": [
+   0,
+   0,
+   0
+  ],
+  "boq_width_mm": null,
+  "boq_length_mm": null,
+  "modelled_width_mm": null,
+  "assumed": "",
+  "note": "Lighting excluded from BOQ (note: \"all lighting are not included\")"
+ },
+ {
+  "object": "PH2_Downlight_03",
+  "type": "LIGHT",
+  "material": "",
+  "boq_item": "NONE",
+  "status": "Phase 2",
+  "dims_mm": [
+   0,
+   0,
+   0
+  ],
+  "boq_width_mm": null,
+  "boq_length_mm": null,
+  "modelled_width_mm": null,
+  "assumed": "",
+  "note": "Lighting excluded from BOQ (note: \"all lighting are not included\")"
+ },
+ {
+  "object": "PH2_Downlight_04",
+  "type": "LIGHT",
+  "material": "",
+  "boq_item": "NONE",
+  "status": "Phase 2",
+  "dims_mm": [
+   0,
+   0,
+   0
+  ],
+  "boq_width_mm": null,
+  "boq_length_mm": null,
+  "modelled_width_mm": null,
+  "assumed": "",
+  "note": "Lighting excluded from BOQ (note: \"all lighting are not included\")"
+ },
+ {
+  "object": "SUN_Daylight",
+  "type": "LIGHT",
+  "material": "",
+  "boq_item": "NONE",
+  "status": "Assumed",
+  "dims_mm": [
+   0,
+   0,
+   0
+  ],
+  "boq_width_mm": null,
+  "boq_length_mm": null,
+  "modelled_width_mm": null,
+  "assumed": "plan north orientation (no north arrow on drawings)",
+  "note": "Daylight; site 21.49N 39.19E"
+ },
+ {
+  "object": "JOI_Wardrobe_Run_Carcass",
+  "type": "MESH",
+  "material": "WD_Beech_Veneer_Stain",
+  "boq_item": "R1-M.A.740-26/31",
+  "status": "Confirmed",
+  "dims_mm": [
+   480,
+   2630,
+   2900
+  ],
+  "boq_width_mm": 4260,
+  "boq_length_mm": null,
+  "modelled_width_mm": 2630,
+  "assumed": "",
+  "note": "BOQ W=4260 D=500 H=3000; modelled to the measured 2630 x 480 mm recess. Shortfall 1630 mm - see variance V-01."
+ },
+ {
+  "object": "JOI_Wardrobe_Run_Dwr00_RailB",
+  "type": "MESH",
+  "material": "WD_Beech_Veneer_Stain",
+  "boq_item": "R1-M.A.740-26/31",
+  "status": "Confirmed",
+  "dims_mm": [
+   18,
+   652,
+   70
+  ],
+  "boq_width_mm": null,
+  "boq_length_mm": null,
+  "modelled_width_mm": null,
+  "assumed": "",
+  "note": "BOQ W=4260 D=500 H=3000; modelled to the measured 2630 x 480 mm recess. Shortfall 1630 mm - see variance V-01."
+ },
+ {
+  "object": "JOI_Wardrobe_Run_Dwr00_RailL",
+  "type": "MESH",
+  "material": "WD_Beech_Veneer_Stain",
+  "boq_item": "R1-M.A.740-26/31",
+  "status": "Confirmed",
+  "dims_mm": [
+   18,
+   70,
+   622
+  ],
+  "boq_width_mm": null,
+  "boq_length_mm": null,
+  "modelled_width_mm": null,
+  "assumed": "",
+  "note": "BOQ W=4260 D=500 H=3000; modelled to the measured 2630 x 480 mm recess. Shortfall 1630 mm - see variance V-01."
+ },
+ {
+  "object": "JOI_Wardrobe_Run_Dwr00_RailR",
+  "type": "MESH",
+  "material": "WD_Beech_Veneer_Stain",
+  "boq_item": "R1-M.A.740-26/31",
+  "status": "Confirmed",
+  "dims_mm": [
+   18,
+   70,
+   622
+  ],
+  "boq_width_mm": null,
+  "boq_length_mm": null,
+  "modelled_width_mm": null,
+  "assumed": "",
+  "note": "BOQ W=4260 D=500 H=3000; modelled to the measured 2630 x 480 mm recess. Shortfall 1630 mm - see variance V-01."
+ },
+ {
+  "object": "JOI_Wardrobe_Run_Dwr00_RailT",
+  "type": "MESH",
+  "material": "WD_Beech_Veneer_Stain",
+  "boq_item": "R1-M.A.740-26/31",
+  "status": "Confirmed",
+  "dims_mm": [
+   18,
+   652,
+   70
+  ],
+  "boq_width_mm": null,
+  "boq_length_mm": null,
+  "modelled_width_mm": null,
+  "assumed": "",
+  "note": "BOQ W=4260 D=500 H=3000; modelled to the measured 2630 x 480 mm recess. Shortfall 1630 mm - see variance V-01."
+ },
+ {
+  "object": "JOI_Wardrobe_Run_Dwr01_RailB",
+  "type": "MESH",
+  "material": "WD_Beech_Veneer_Stain",
+  "boq_item": "R1-M.A.740-26/31",
+  "status": "Confirmed",
+  "dims_mm": [
+   18,
+   652,
+   70
+  ],
+  "boq_width_mm": null,
+  "boq_length_mm": null,
+  "modelled_width_mm": null,
+  "assumed": "",
+  "note": "BOQ W=4260 D=500 H=3000; modelled to the measured 2630 x 480 mm recess. Shortfall 1630 mm - see variance V-01."
+ },
+ {
+  "object": "JOI_Wardrobe_Run_Dwr01_RailL",
+  "type": "MESH",
+  "material": "WD_Beech_Veneer_Stain",
+  "boq_item": "R1-M.A.740-26/31",
+  "status": "Confirmed",
+  "dims_mm": [
+   18,
+   70,
+   622
+  ],
+  "boq_width_mm": null,
+  "boq_length_mm": null,
+  "modelled_width_mm": null,
+  "assumed": "",
+  "note": "BOQ W=4260 D=500 H=3000; modelled to the measured 2630 x 480 mm recess. Shortfall 1630 mm - see variance V-01."
+ },
+ {
+  "object": "JOI_Wardrobe_Run_Dwr01_RailR",
+  "type": "MESH",
+  "material": "WD_Beech_Veneer_Stain",
+  "boq_item": "R1-M.A.740-26/31",
+  "status": "Confirmed",
+  "dims_mm": [
+   18,
+   70,
+   622
+  ],
+  "boq_width_mm": null,
+  "boq_length_mm": null,
+  "modelled_width_mm": null,
+  "assumed": "",
+  "note": "BOQ W=4260 D=500 H=3000; modelled to the measured 2630 x 480 mm recess. Shortfall 1630 mm - see variance V-01."
+ },
+ {
+  "object": "JOI_Wardrobe_Run_Dwr01_RailT",
+  "type": "MESH",
+  "material": "WD_Beech_Veneer_Stain",
+  "boq_item": "R1-M.A.740-26/31",
+  "status": "Confirmed",
+  "dims_mm": [
+   18,
+   652,
+   70
+  ],
+  "boq_width_mm": null,
+  "boq_length_mm": null,
+  "modelled_width_mm": null,
+  "assumed": "",
+  "note": "BOQ W=4260 D=500 H=3000; modelled to the measured 2630 x 480 mm recess. Shortfall 1630 mm - see variance V-01."
+ },
+ {
+  "object": "JOI_Wardrobe_Run_Dwr02_RailB",
+  "type": "MESH",
+  "material": "WD_Beech_Veneer_Stain",
+  "boq_item": "R1-M.A.740-26/31",
+  "status": "Confirmed",
+  "dims_mm": [
+   18,
+   652,
+   70
+  ],
+  "boq_width_mm": null,
+  "boq_length_mm": null,
+  "modelled_width_mm": null,
+  "assumed": "",
+  "note": "BOQ W=4260 D=500 H=3000; modelled to the measured 2630 x 480 mm recess. Shortfall 1630 mm - see variance V-01."
+ },
+ {
+  "object": "JOI_Wardrobe_Run_Dwr02_RailL",
+  "type": "MESH",
+  "material": "WD_Beech_Veneer_Stain",
+  "boq_item": "R1-M.A.740-26/31",
+  "status": "Confirmed",
+  "dims_mm": [
+   18,
+   70,
+   622
+  ],
+  "boq_width_mm": null,
+  "boq_length_mm": null,
+  "modelled_width_mm": null,
+  "assumed": "",
+  "note": "BOQ W=4260 D=500 H=3000; modelled to the measured 2630 x 480 mm recess. Shortfall 1630 mm - see variance V-01."
+ },
+ {
+  "object": "JOI_Wardrobe_Run_Dwr02_RailR",
+  "type": "MESH",
+  "material": "WD_Beech_Veneer_Stain",
+  "boq_item": "R1-M.A.740-26/31",
+  "status": "Confirmed",
+  "dims_mm": [
+   18,
+   70,
+   622
+  ],
+  "boq_width_mm": null,
+  "boq_length_mm": null,
+  "modelled_width_mm": null,
+  "assumed": "",
+  "note": "BOQ W=4260 D=500 H=3000; modelled to the measured 2630 x 480 mm recess. Shortfall 1630 mm - see variance V-01."
+ },
+ {
+  "object": "JOI_Wardrobe_Run_Dwr02_RailT",
+  "type": "MESH",
+  "material": "WD_Beech_Veneer_Stain",
+  "boq_item": "R1-M.A.740-26/31",
+  "status": "Confirmed",
+  "dims_mm": [
+   18,
+   652,
+   70
+  ],
+  "boq_width_mm": null,
+  "boq_length_mm": null,
+  "modelled_width_mm": null,
+  "assumed": "",
+  "note": "BOQ W=4260 D=500 H=3000; modelled to the measured 2630 x 480 mm recess. Shortfall 1630 mm - see variance V-01."
+ },
+ {
+  "object": "JOI_Wardrobe_Run_Dwr30_RailB",
+  "type": "MESH",
+  "material": "WD_Beech_Veneer_Stain",
+  "boq_item": "R1-M.A.740-26/31",
+  "status": "Confirmed",
+  "dims_mm": [
+   18,
+   653,
+   70
+  ],
+  "boq_width_mm": null,
+  "boq_length_mm": null,
+  "modelled_width_mm": null,
+  "assumed": "",
+  "note": "BOQ W=4260 D=500 H=3000; modelled to the measured 2630 x 480 mm recess. Shortfall 1630 mm - see variance V-01."
+ },
+ {
+  "object": "JOI_Wardrobe_Run_Dwr30_RailL",
+  "type": "MESH",
+  "material": "WD_Beech_Veneer_Stain",
+  "boq_item": "R1-M.A.740-26/31",
+  "status": "Confirmed",
+  "dims_mm": [
+   18,
+   70,
+   622
+  ],
+  "boq_width_mm": null,
+  "boq_length_mm": null,
+  "modelled_width_mm": null,
+  "assumed": "",
+  "note": "BOQ W=4260 D=500 H=3000; modelled to the measured 2630 x 480 mm recess. Shortfall 1630 mm - see variance V-01."
+ },
+ {
+  "object": "JOI_Wardrobe_Run_Dwr30_RailR",
+  "type": "MESH",
+  "material": "WD_Beech_Veneer_Stain",
+  "boq_item": "R1-M.A.740-26/31",
+  "status": "Confirmed",
+  "dims_mm": [
+   18,
+   70,
+   622
+  ],
+  "boq_width_mm": null,
+  "boq_length_mm": null,
+  "modelled_width_mm": null,
+  "assumed": "",
+  "note": "BOQ W=4260 D=500 H=3000; modelled to the measured 2630 x 480 mm recess. Shortfall 1630 mm - see variance V-01."
+ },
+ {
+  "object": "JOI_Wardrobe_Run_Dwr30_RailT",
+  "type": "MESH",
+  "material": "WD_Beech_Veneer_Stain",
+  "boq_item": "R1-M.A.740-26/31",
+  "status": "Confirmed",
+  "dims_mm": [
+   18,
+   653,
+   70
+  ],
+  "boq_width_mm": null,
+  "boq_length_mm": null,
+  "modelled_width_mm": null,
+  "assumed": "",
+  "note": "BOQ W=4260 D=500 H=3000; modelled to the measured 2630 x 480 mm recess. Shortfall 1630 mm - see variance V-01."
+ },
+ {
+  "object": "JOI_Wardrobe_Run_Dwr31_RailB",
+  "type": "MESH",
+  "material": "WD_Beech_Veneer_Stain",
+  "boq_item": "R1-M.A.740-26/31",
+  "status": "Confirmed",
+  "dims_mm": [
+   18,
+   653,
+   70
+  ],
+  "boq_width_mm": null,
+  "boq_length_mm": null,
+  "modelled_width_mm": null,
+  "assumed": "",
+  "note": "BOQ W=4260 D=500 H=3000; modelled to the measured 2630 x 480 mm recess. Shortfall 1630 mm - see variance V-01."
+ },
+ {
+  "object": "JOI_Wardrobe_Run_Dwr31_RailL",
+  "type": "MESH",
+  "material": "WD_Beech_Veneer_Stain",
+  "boq_item": "R1-M.A.740-26/31",
+  "status": "Confirmed",
+  "dims_mm": [
+   18,
+   70,
+   622
+  ],
+  "boq_width_mm": null,
+  "boq_length_mm": null,
+  "modelled_width_mm": null,
+  "assumed": "",
+  "note": "BOQ W=4260 D=500 H=3000; modelled to the measured 2630 x 480 mm recess. Shortfall 1630 mm - see variance V-01."
+ },
+ {
+  "object": "JOI_Wardrobe_Run_Dwr31_RailR",
+  "type": "MESH",
+  "material": "WD_Beech_Veneer_Stain",
+  "boq_item": "R1-M.A.740-26/31",
+  "status": "Confirmed",
+  "dims_mm": [
+   18,
+   70,
+   622
+  ],
+  "boq_width_mm": null,
+  "boq_length_mm": null,
+  "modelled_width_mm": null,
+  "assumed": "",
+  "note": "BOQ W=4260 D=500 H=3000; modelled to the measured 2630 x 480 mm recess. Shortfall 1630 mm - see variance V-01."
+ },
+ {
+  "object": "JOI_Wardrobe_Run_Dwr31_RailT",
+  "type": "MESH",
+  "material": "WD_Beech_Veneer_Stain",
+  "boq_item": "R1-M.A.740-26/31",
+  "status": "Confirmed",
+  "dims_mm": [
+   18,
+   653,
+   70
+  ],
+  "boq_width_mm": null,
+  "boq_length_mm": null,
+  "modelled_width_mm": null,
+  "assumed": "",
+  "note": "BOQ W=4260 D=500 H=3000; modelled to the measured 2630 x 480 mm recess. Shortfall 1630 mm - see variance V-01."
+ },
+ {
+  "object": "JOI_Wardrobe_Run_Dwr32_RailB",
+  "type": "MESH",
+  "material": "WD_Beech_Veneer_Stain",
+  "boq_item": "R1-M.A.740-26/31",
+  "status": "Confirmed",
+  "dims_mm": [
+   18,
+   653,
+   70
+  ],
+  "boq_width_mm": null,
+  "boq_length_mm": null,
+  "modelled_width_mm": null,
+  "assumed": "",
+  "note": "BOQ W=4260 D=500 H=3000; modelled to the measured 2630 x 480 mm recess. Shortfall 1630 mm - see variance V-01."
+ },
+ {
+  "object": "JOI_Wardrobe_Run_Dwr32_RailL",
+  "type": "MESH",
+  "material": "WD_Beech_Veneer_Stain",
+  "boq_item": "R1-M.A.740-26/31",
+  "status": "Confirmed",
+  "dims_mm": [
+   18,
+   70,
+   622
+  ],
+  "boq_width_mm": null,
+  "boq_length_mm": null,
+  "modelled_width_mm": null,
+  "assumed": "",
+  "note": "BOQ W=4260 D=500 H=3000; modelled to the measured 2630 x 480 mm recess. Shortfall 1630 mm - see variance V-01."
+ },
+ {
+  "object": "JOI_Wardrobe_Run_Dwr32_RailR",
+  "type": "MESH",
+  "material": "WD_Beech_Veneer_Stain",
+  "boq_item": "R1-M.A.740-26/31",
+  "status": "Confirmed",
+  "dims_mm": [
+   18,
+   70,
+   622
+  ],
+  "boq_width_mm": null,
+  "boq_length_mm": null,
+  "modelled_width_mm": null,
+  "assumed": "",
+  "note": "BOQ W=4260 D=500 H=3000; modelled to the measured 2630 x 480 mm recess. Shortfall 1630 mm - see variance V-01."
+ },
+ {
+  "object": "JOI_Wardrobe_Run_Dwr32_RailT",
+  "type": "MESH",
+  "material": "WD_Beech_Veneer_Stain",
+  "boq_item": "R1-M.A.740-26/31",
+  "status": "Confirmed",
+  "dims_mm": [
+   18,
+   653,
+   70
+  ],
+  "boq_width_mm": null,
+  "boq_length_mm": null,
+  "modelled_width_mm": null,
+  "assumed": "",
+  "note": "BOQ W=4260 D=500 H=3000; modelled to the measured 2630 x 480 mm recess. Shortfall 1630 mm - see variance V-01."
+ },
+ {
+  "object": "JOI_Wardrobe_Run_Leaf01_RailB",
+  "type": "MESH",
+  "material": "WD_Beech_Veneer_Stain",
+  "boq_item": "R1-M.A.740-26/31",
+  "status": "Confirmed",
+  "dims_mm": [
+   18,
+   653,
+   70
+  ],
+  "boq_width_mm": null,
+  "boq_length_mm": null,
+  "modelled_width_mm": null,
+  "assumed": "",
+  "note": "BOQ W=4260 D=500 H=3000; modelled to the measured 2630 x 480 mm recess. Shortfall 1630 mm - see variance V-01."
+ },
+ {
+  "object": "JOI_Wardrobe_Run_Leaf01_RailL",
+  "type": "MESH",
+  "material": "WD_Beech_Veneer_Stain",
+  "boq_item": "R1-M.A.740-26/31",
+  "status": "Confirmed",
+  "dims_mm": [
+   18,
+   70,
+   2155
+  ],
+  "boq_width_mm": null,
+  "boq_length_mm": null,
+  "modelled_width_mm": null,
+  "assumed": "",
+  "note": "BOQ W=4260 D=500 H=3000; modelled to the measured 2630 x 480 mm recess. Shortfall 1630 mm - see variance V-01."
+ },
+ {
+  "object": "JOI_Wardrobe_Run_Leaf01_RailR",
+  "type": "MESH",
+  "material": "WD_Beech_Veneer_Stain",
+  "boq_item": "R1-M.A.740-26/31",
+  "status": "Confirmed",
+  "dims_mm": [
+   18,
+   70,
+   2155
+  ],
+  "boq_width_mm": null,
+  "boq_length_mm": null,
+  "modelled_width_mm": null,
+  "assumed": "",
+  "note": "BOQ W=4260 D=500 H=3000; modelled to the measured 2630 x 480 mm recess. Shortfall 1630 mm - see variance V-01."
+ },
+ {
+  "object": "JOI_Wardrobe_Run_Leaf01_RailT",
+  "type": "MESH",
+  "material": "WD_Beech_Veneer_Stain",
+  "boq_item": "R1-M.A.740-26/31",
+  "status": "Confirmed",
+  "dims_mm": [
+   18,
+   653,
+   70
+  ],
+  "boq_width_mm": null,
+  "boq_length_mm": null,
+  "modelled_width_mm": null,
+  "assumed": "",
+  "note": "BOQ W=4260 D=500 H=3000; modelled to the measured 2630 x 480 mm recess. Shortfall 1630 mm - see variance V-01."
+ },
+ {
+  "object": "JOI_Wardrobe_Run_Leaf02_RailB",
+  "type": "MESH",
+  "material": "WD_Beech_Veneer_Stain",
+  "boq_item": "R1-M.A.740-26/31",
+  "status": "Confirmed",
+  "dims_mm": [
+   18,
+   653,
+   70
+  ],
+  "boq_width_mm": null,
+  "boq_length_mm": null,
+  "modelled_width_mm": null,
+  "assumed": "",
+  "note": "BOQ W=4260 D=500 H=3000; modelled to the measured 2630 x 480 mm recess. Shortfall 1630 mm - see variance V-01."
+ },
+ {
+  "object": "JOI_Wardrobe_Run_Leaf02_RailL",
+  "type": "MESH",
+  "material": "WD_Beech_Veneer_Stain",
+  "boq_item": "R1-M.A.740-26/31",
+  "status": "Confirmed",
+  "dims_mm": [
+   18,
+   70,
+   2155
+  ],
+  "boq_width_mm": null,
+  "boq_length_mm": null,
+  "modelled_width_mm": null,
+  "assumed": "",
+  "note": "BOQ W=4260 D=500 H=3000; modelled to the measured 2630 x 480 mm recess. Shortfall 1630 mm - see variance V-01."
+ },
+ {
+  "object": "JOI_Wardrobe_Run_Leaf02_RailR",
+  "type": "MESH",
+  "material": "WD_Beech_Veneer_Stain",
+  "boq_item": "R1-M.A.740-26/31",
+  "status": "Confirmed",
+  "dims_mm": [
+   18,
+   70,
+   2155
+  ],
+  "boq_width_mm": null,
+  "boq_length_mm": null,
+  "modelled_width_mm": null,
+  "assumed": "",
+  "note": "BOQ W=4260 D=500 H=3000; modelled to the measured 2630 x 480 mm recess. Shortfall 1630 mm - see variance V-01."
+ },
+ {
+  "object": "JOI_Wardrobe_Run_Leaf02_RailT",
+  "type": "MESH",
+  "material": "WD_Beech_Veneer_Stain",
+  "boq_item": "R1-M.A.740-26/31",
+  "status": "Confirmed",
+  "dims_mm": [
+   18,
+   653,
+   70
+  ],
+  "boq_width_mm": null,
+  "boq_length_mm": null,
+  "modelled_width_mm": null,
+  "assumed": "",
+  "note": "BOQ W=4260 D=500 H=3000; modelled to the measured 2630 x 480 mm recess. Shortfall 1630 mm - see variance V-01."
+ },
+ {
+  "object": "JOI_Wardrobe_Run_Plinth",
+  "type": "MESH",
+  "material": "WD_Beech_Veneer_Stain",
+  "boq_item": "R1-M.A.740-26/31",
+  "status": "Confirmed",
+  "dims_mm": [
+   440,
+   2630,
+   100
+  ],
+  "boq_width_mm": null,
+  "boq_length_mm": null,
+  "modelled_width_mm": null,
+  "assumed": "",
+  "note": "BOQ W=4260 D=500 H=3000; modelled to the measured 2630 x 480 mm recess. Shortfall 1630 mm - see variance V-01."
+ },
+ {
+  "object": "JOI_Wardrobe_Run_Upr00_RailB",
+  "type": "MESH",
+  "material": "WD_Beech_Veneer_Stain",
+  "boq_item": "R1-M.A.740-26/31",
+  "status": "Confirmed",
+  "dims_mm": [
+   18,
+   652,
+   70
+  ],
+  "boq_width_mm": null,
+  "boq_length_mm": null,
+  "modelled_width_mm": null,
+  "assumed": "",
+  "note": "BOQ W=4260 D=500 H=3000; modelled to the measured 2630 x 480 mm recess. Shortfall 1630 mm - see variance V-01."
+ },
+ {
+  "object": "JOI_Wardrobe_Run_Upr00_RailL",
+  "type": "MESH",
+  "material": "WD_Beech_Veneer_Stain",
+  "boq_item": "R1-M.A.740-26/31",
+  "status": "Confirmed",
+  "dims_mm": [
+   18,
+   70,
+   455
+  ],
+  "boq_width_mm": null,
+  "boq_length_mm": null,
+  "modelled_width_mm": null,
+  "assumed": "",
+  "note": "BOQ W=4260 D=500 H=3000; modelled to the measured 2630 x 480 mm recess. Shortfall 1630 mm - see variance V-01."
+ },
+ {
+  "object": "JOI_Wardrobe_Run_Upr00_RailR",
+  "type": "MESH",
+  "material": "WD_Beech_Veneer_Stain",
+  "boq_item": "R1-M.A.740-26/31",
+  "status": "Confirmed",
+  "dims_mm": [
+   18,
+   70,
+   455
+  ],
+  "boq_width_mm": null,
+  "boq_length_mm": null,
+  "modelled_width_mm": null,
+  "assumed": "",
+  "note": "BOQ W=4260 D=500 H=3000; modelled to the measured 2630 x 480 mm recess. Shortfall 1630 mm - see variance V-01."
+ },
+ {
+  "object": "JOI_Wardrobe_Run_Upr00_RailT",
+  "type": "MESH",
+  "material": "WD_Beech_Veneer_Stain",
+  "boq_item": "R1-M.A.740-26/31",
+  "status": "Confirmed",
+  "dims_mm": [
+   18,
+   652,
+   70
+  ],
+  "boq_width_mm": null,
+  "boq_length_mm": null,
+  "modelled_width_mm": null,
+  "assumed": "",
+  "note": "BOQ W=4260 D=500 H=3000; modelled to the measured 2630 x 480 mm recess. Shortfall 1630 mm - see variance V-01."
+ },
+ {
+  "object": "JOI_Wardrobe_Run_Upr01_RailB",
+  "type": "MESH",
+  "material": "WD_Beech_Veneer_Stain",
+  "boq_item": "R1-M.A.740-26/31",
+  "status": "Confirmed",
+  "dims_mm": [
+   18,
+   653,
+   70
+  ],
+  "boq_width_mm": null,
+  "boq_length_mm": null,
+  "modelled_width_mm": null,
+  "assumed": "",
+  "note": "BOQ W=4260 D=500 H=3000; modelled to the measured 2630 x 480 mm recess. Shortfall 1630 mm - see variance V-01."
+ },
+ {
+  "object": "JOI_Wardrobe_Run_Upr01_RailL",
+  "type": "MESH",
+  "material": "WD_Beech_Veneer_Stain",
+  "boq_item": "R1-M.A.740-26/31",
+  "status": "Confirmed",
+  "dims_mm": [
+   18,
+   70,
+   455
+  ],
+  "boq_width_mm": null,
+  "boq_length_mm": null,
+  "modelled_width_mm": null,
+  "assumed": "",
+  "note": "BOQ W=4260 D=500 H=3000; modelled to the measured 2630 x 480 mm recess. Shortfall 1630 mm - see variance V-01."
+ },
+ {
+  "object": "JOI_Wardrobe_Run_Upr01_RailR",
+  "type": "MESH",
+  "material": "WD_Beech_Veneer_Stain",
+  "boq_item": "R1-M.A.740-26/31",
+  "status": "Confirmed",
+  "dims_mm": [
+   18,
+   70,
+   455
+  ],
+  "boq_width_mm": null,
+  "boq_length_mm": null,
+  "modelled_width_mm": null,
+  "assumed": "",
+  "note": "BOQ W=4260 D=500 H=3000; modelled to the measured 2630 x 480 mm recess. Shortfall 1630 mm - see variance V-01."
+ },
+ {
+  "object": "JOI_Wardrobe_Run_Upr01_RailT",
+  "type": "MESH",
+  "material": "WD_Beech_Veneer_Stain",
+  "boq_item": "R1-M.A.740-26/31",
+  "status": "Confirmed",
+  "dims_mm": [
+   18,
+   653,
+   70
+  ],
+  "boq_width_mm": null,
+  "boq_length_mm": null,
+  "modelled_width_mm": null,
+  "assumed": "",
+  "note": "BOQ W=4260 D=500 H=3000; modelled to the measured 2630 x 480 mm recess. Shortfall 1630 mm - see variance V-01."
+ },
+ {
+  "object": "JOI_Wardrobe_Run_Upr02_RailB",
+  "type": "MESH",
+  "material": "WD_Beech_Veneer_Stain",
+  "boq_item": "R1-M.A.740-26/31",
+  "status": "Confirmed",
+  "dims_mm": [
+   18,
+   653,
+   70
+  ],
+  "boq_width_mm": null,
+  "boq_length_mm": null,
+  "modelled_width_mm": null,
+  "assumed": "",
+  "note": "BOQ W=4260 D=500 H=3000; modelled to the measured 2630 x 480 mm recess. Shortfall 1630 mm - see variance V-01."
+ },
+ {
+  "object": "JOI_Wardrobe_Run_Upr02_RailL",
+  "type": "MESH",
+  "material": "WD_Beech_Veneer_Stain",
+  "boq_item": "R1-M.A.740-26/31",
+  "status": "Confirmed",
+  "dims_mm": [
+   18,
+   70,
+   455
+  ],
+  "boq_width_mm": null,
+  "boq_length_mm": null,
+  "modelled_width_mm": null,
+  "assumed": "",
+  "note": "BOQ W=4260 D=500 H=3000; modelled to the measured 2630 x 480 mm recess. Shortfall 1630 mm - see variance V-01."
+ },
+ {
+  "object": "JOI_Wardrobe_Run_Upr02_RailR",
+  "type": "MESH",
+  "material": "WD_Beech_Veneer_Stain",
+  "boq_item": "R1-M.A.740-26/31",
+  "status": "Confirmed",
+  "dims_mm": [
+   18,
+   70,
+   455
+  ],
+  "boq_width_mm": null,
+  "boq_length_mm": null,
+  "modelled_width_mm": null,
+  "assumed": "",
+  "note": "BOQ W=4260 D=500 H=3000; modelled to the measured 2630 x 480 mm recess. Shortfall 1630 mm - see variance V-01."
+ },
+ {
+  "object": "JOI_Wardrobe_Run_Upr02_RailT",
+  "type": "MESH",
+  "material": "WD_Beech_Veneer_Stain",
+  "boq_item": "R1-M.A.740-26/31",
+  "status": "Confirmed",
+  "dims_mm": [
+   18,
+   653,
+   70
+  ],
+  "boq_width_mm": null,
+  "boq_length_mm": null,
+  "modelled_width_mm": null,
+  "assumed": "",
+  "note": "BOQ W=4260 D=500 H=3000; modelled to the measured 2630 x 480 mm recess. Shortfall 1630 mm - see variance V-01."
+ },
+ {
+  "object": "JOI_Wardrobe_Run_Upr03_RailB",
+  "type": "MESH",
+  "material": "WD_Beech_Veneer_Stain",
+  "boq_item": "R1-M.A.740-26/31",
+  "status": "Confirmed",
+  "dims_mm": [
+   18,
+   653,
+   70
+  ],
+  "boq_width_mm": null,
+  "boq_length_mm": null,
+  "modelled_width_mm": null,
+  "assumed": "",
+  "note": "BOQ W=4260 D=500 H=3000; modelled to the measured 2630 x 480 mm recess. Shortfall 1630 mm - see variance V-01."
+ },
+ {
+  "object": "JOI_Wardrobe_Run_Upr03_RailL",
+  "type": "MESH",
+  "material": "WD_Beech_Veneer_Stain",
+  "boq_item": "R1-M.A.740-26/31",
+  "status": "Confirmed",
+  "dims_mm": [
+   18,
+   70,
+   455
+  ],
+  "boq_width_mm": null,
+  "boq_length_mm": null,
+  "modelled_width_mm": null,
+  "assumed": "",
+  "note": "BOQ W=4260 D=500 H=3000; modelled to the measured 2630 x 480 mm recess. Shortfall 1630 mm - see variance V-01."
+ },
+ {
+  "object": "JOI_Wardrobe_Run_Upr03_RailR",
+  "type": "MESH",
+  "material": "WD_Beech_Veneer_Stain",
+  "boq_item": "R1-M.A.740-26/31",
+  "status": "Confirmed",
+  "dims_mm": [
+   18,
+   70,
+   455
+  ],
+  "boq_width_mm": null,
+  "boq_length_mm": null,
+  "modelled_width_mm": null,
+  "assumed": "",
+  "note": "BOQ W=4260 D=500 H=3000; modelled to the measured 2630 x 480 mm recess. Shortfall 1630 mm - see variance V-01."
+ },
+ {
+  "object": "JOI_Wardrobe_Run_Upr03_RailT",
+  "type": "MESH",
+  "material": "WD_Beech_Veneer_Stain",
+  "boq_item": "R1-M.A.740-26/31",
+  "status": "Confirmed",
+  "dims_mm": [
+   18,
+   653,
+   70
+  ],
+  "boq_width_mm": null,
+  "boq_length_mm": null,
+  "modelled_width_mm": null,
+  "assumed": "",
+  "note": "BOQ W=4260 D=500 H=3000; modelled to the measured 2630 x 480 mm recess. Shortfall 1630 mm - see variance V-01."
+ },
+ {
+  "object": "PH2_Wardrobe_Run_Dwr00_Panel",
+  "type": "MESH",
+  "material": "PH2_MBR_door_leaf_panel_wallpaper_or_fabric",
+  "boq_item": "R1-M.A.740-26/31",
+  "status": "Phase 2",
+  "dims_mm": [
+   8,
+   513,
+   622
+  ],
+  "boq_width_mm": null,
+  "boq_length_mm": null,
+  "modelled_width_mm": null,
+  "assumed": "",
+  "note": "Door-leaf panel is wallpaper or fabric, priced separately"
+ },
+ {
+  "object": "PH2_Wardrobe_Run_Dwr01_Panel",
+  "type": "MESH",
+  "material": "PH2_MBR_door_leaf_panel_wallpaper_or_fabric",
+  "boq_item": "R1-M.A.740-26/31",
+  "status": "Phase 2",
+  "dims_mm": [
+   8,
+   513,
+   622
+  ],
+  "boq_width_mm": null,
+  "boq_length_mm": null,
+  "modelled_width_mm": null,
+  "assumed": "",
+  "note": "Door-leaf panel is wallpaper or fabric, priced separately"
+ },
+ {
+  "object": "PH2_Wardrobe_Run_Dwr02_Panel",
+  "type": "MESH",
+  "material": "PH2_MBR_door_leaf_panel_wallpaper_or_fabric",
+  "boq_item": "R1-M.A.740-26/31",
+  "status": "Phase 2",
+  "dims_mm": [
+   8,
+   513,
+   622
+  ],
+  "boq_width_mm": null,
+  "boq_length_mm": null,
+  "modelled_width_mm": null,
+  "assumed": "",
+  "note": "Door-leaf panel is wallpaper or fabric, priced separately"
+ },
+ {
+  "object": "PH2_Wardrobe_Run_Dwr30_Panel",
+  "type": "MESH",
+  "material": "PH2_MBR_door_leaf_panel_wallpaper_or_fabric",
+  "boq_item": "R1-M.A.740-26/31",
+  "status": "Phase 2",
+  "dims_mm": [
+   8,
+   513,
+   622
+  ],
+  "boq_width_mm": null,
+  "boq_length_mm": null,
+  "modelled_width_mm": null,
+  "assumed": "",
+  "note": "Door-leaf panel is wallpaper or fabric, priced separately"
+ },
+ {
+  "object": "PH2_Wardrobe_Run_Dwr31_Panel",
+  "type": "MESH",
+  "material": "PH2_MBR_door_leaf_panel_wallpaper_or_fabric",
+  "boq_item": "R1-M.A.740-26/31",
+  "status": "Phase 2",
+  "dims_mm": [
+   8,
+   513,
+   622
+  ],
+  "boq_width_mm": null,
+  "boq_length_mm": null,
+  "modelled_width_mm": null,
+  "assumed": "",
+  "note": "Door-leaf panel is wallpaper or fabric, priced separately"
+ },
+ {
+  "object": "PH2_Wardrobe_Run_Dwr32_Panel",
+  "type": "MESH",
+  "material": "PH2_MBR_door_leaf_panel_wallpaper_or_fabric",
+  "boq_item": "R1-M.A.740-26/31",
+  "status": "Phase 2",
+  "dims_mm": [
+   8,
+   513,
+   622
+  ],
+  "boq_width_mm": null,
+  "boq_length_mm": null,
+  "modelled_width_mm": null,
+  "assumed": "",
+  "note": "Door-leaf panel is wallpaper or fabric, priced separately"
+ },
+ {
+  "object": "PH2_Wardrobe_Run_Leaf01_Panel",
+  "type": "MESH",
+  "material": "PH2_MBR_door_leaf_panel_wallpaper_or_fabric",
+  "boq_item": "R1-M.A.740-26/31",
+  "status": "Phase 2",
+  "dims_mm": [
+   8,
+   513,
+   2155
+  ],
+  "boq_width_mm": null,
+  "boq_length_mm": null,
+  "modelled_width_mm": null,
+  "assumed": "",
+  "note": "Door-leaf panel is wallpaper or fabric, priced separately"
+ },
+ {
+  "object": "PH2_Wardrobe_Run_Leaf02_Panel",
+  "type": "MESH",
+  "material": "PH2_MBR_door_leaf_panel_wallpaper_or_fabric",
+  "boq_item": "R1-M.A.740-26/31",
+  "status": "Phase 2",
+  "dims_mm": [
+   8,
+   513,
+   2155
+  ],
+  "boq_width_mm": null,
+  "boq_length_mm": null,
+  "modelled_width_mm": null,
+  "assumed": "",
+  "note": "Door-leaf panel is wallpaper or fabric, priced separately"
+ },
+ {
+  "object": "PH2_Wardrobe_Run_Upr00_Panel",
+  "type": "MESH",
+  "material": "PH2_MBR_door_leaf_panel_wallpaper_or_fabric",
+  "boq_item": "R1-M.A.740-26/31",
+  "status": "Phase 2",
+  "dims_mm": [
+   8,
+   513,
+   455
+  ],
+  "boq_width_mm": null,
+  "boq_length_mm": null,
+  "modelled_width_mm": null,
+  "assumed": "",
+  "note": "Door-leaf panel is wallpaper or fabric, priced separately"
+ },
+ {
+  "object": "PH2_Wardrobe_Run_Upr01_Panel",
+  "type": "MESH",
+  "material": "PH2_MBR_door_leaf_panel_wallpaper_or_fabric",
+  "boq_item": "R1-M.A.740-26/31",
+  "status": "Phase 2",
+  "dims_mm": [
+   8,
+   513,
+   455
+  ],
+  "boq_width_mm": null,
+  "boq_length_mm": null,
+  "modelled_width_mm": null,
+  "assumed": "",
+  "note": "Door-leaf panel is wallpaper or fabric, priced separately"
+ },
+ {
+  "object": "PH2_Wardrobe_Run_Upr02_Panel",
+  "type": "MESH",
+  "material": "PH2_MBR_door_leaf_panel_wallpaper_or_fabric",
+  "boq_item": "R1-M.A.740-26/31",
+  "status": "Phase 2",
+  "dims_mm": [
+   8,
+   513,
+   455
+  ],
+  "boq_width_mm": null,
+  "boq_length_mm": null,
+  "modelled_width_mm": null,
+  "assumed": "",
+  "note": "Door-leaf panel is wallpaper or fabric, priced separately"
+ },
+ {
+  "object": "PH2_Wardrobe_Run_Upr03_Panel",
+  "type": "MESH",
+  "material": "PH2_MBR_door_leaf_panel_wallpaper_or_fabric",
+  "boq_item": "R1-M.A.740-26/31",
+  "status": "Phase 2",
+  "dims_mm": [
+   8,
+   513,
+   455
+  ],
+  "boq_width_mm": null,
+  "boq_length_mm": null,
+  "modelled_width_mm": null,
+  "assumed": "",
+  "note": "Door-leaf panel is wallpaper or fabric, priced separately"
+ },
+ {
+  "object": "JOI_Headboard",
+  "type": "MESH",
+  "material": "FAB_Headboard_Upholstery",
+  "boq_item": "R1-M.A.740-26/32",
+  "status": "Confirmed",
+  "dims_mm": [
+   2600,
+   60,
+   1000
+  ],
+  "boq_width_mm": null,
+  "boq_length_mm": 2600,
+  "modelled_width_mm": null,
+  "assumed": "",
+  "note": "BOQ L=2600 H=1000 upholstered MDF/WR with LED over. Fabric supplied by client (unpriced)."
+ },
+ {
+  "object": "PH2_LED_Over_Headboard",
+  "type": "LIGHT",
+  "material": "",
+  "boq_item": "R1-M.A.740-26/32",
+  "status": "Phase 2",
+  "dims_mm": [
+   0,
+   0,
+   0
+  ],
+  "boq_width_mm": null,
+  "boq_length_mm": null,
+  "modelled_width_mm": null,
+  "assumed": "3000K residential, output ASSUMED",
+  "note": "Lighting excluded from BOQ (note: \"all lighting are not included\")"
+ },
+ {
+  "object": "JOI_TV_Run_N_Carcass",
+  "type": "MESH",
+  "material": "WD_Beech_Veneer_Stain",
+  "boq_item": "R1-M.A.740-26/33",
+  "status": "Confirmed",
+  "dims_mm": [
+   500,
+   1690,
+   2900
+  ],
+  "boq_width_mm": 4260,
+  "boq_length_mm": null,
+  "modelled_width_mm": null,
+  "assumed": "",
+  "note": "BOQ W=4260 D=500 H=3000 @ TV area; the west wall is 4260 long but is interrupted by a 1000 mm window - see V-02."
+ },
+ {
+  "object": "JOI_TV_Run_N_Dwr10_RailB",
+  "type": "MESH",
+  "material": "WD_Beech_Veneer_Stain",
+  "boq_item": "R1-M.A.740-26/33",
+  "status": "Confirmed",
+  "dims_mm": [
+   18,
+   840,
+   70
+  ],
+  "boq_width_mm": null,
+  "boq_length_mm": null,
+  "modelled_width_mm": null,
+  "assumed": "",
+  "note": "BOQ W=4260 D=500 H=3000 @ TV area; the west wall is 4260 long but is interrupted by a 1000 mm window - see V-02."
+ },
+ {
+  "object": "JOI_TV_Run_N_Dwr10_RailL",
+  "type": "MESH",
+  "material": "WD_Beech_Veneer_Stain",
+  "boq_item": "R1-M.A.740-26/33",
+  "status": "Confirmed",
+  "dims_mm": [
+   18,
+   70,
+   622
+  ],
+  "boq_width_mm": null,
+  "boq_length_mm": null,
+  "modelled_width_mm": null,
+  "assumed": "",
+  "note": "BOQ W=4260 D=500 H=3000 @ TV area; the west wall is 4260 long but is interrupted by a 1000 mm window - see V-02."
+ },
+ {
+  "object": "JOI_TV_Run_N_Dwr10_RailR",
+  "type": "MESH",
+  "material": "WD_Beech_Veneer_Stain",
+  "boq_item": "R1-M.A.740-26/33",
+  "status": "Confirmed",
+  "dims_mm": [
+   18,
+   70,
+   622
+  ],
+  "boq_width_mm": null,
+  "boq_length_mm": null,
+  "modelled_width_mm": null,
+  "assumed": "",
+  "note": "BOQ W=4260 D=500 H=3000 @ TV area; the west wall is 4260 long but is interrupted by a 1000 mm window - see V-02."
+ },
+ {
+  "object": "JOI_TV_Run_N_Dwr10_RailT",
+  "type": "MESH",
+  "material": "WD_Beech_Veneer_Stain",
+  "boq_item": "R1-M.A.740-26/33",
+  "status": "Confirmed",
+  "dims_mm": [
+   18,
+   840,
+   70
+  ],
+  "boq_width_mm": null,
+  "boq_length_mm": null,
+  "modelled_width_mm": null,
+  "assumed": "",
+  "note": "BOQ W=4260 D=500 H=3000 @ TV area; the west wall is 4260 long but is interrupted by a 1000 mm window - see V-02."
+ },
+ {
+  "object": "JOI_TV_Run_N_Dwr11_RailB",
+  "type": "MESH",
+  "material": "WD_Beech_Veneer_Stain",
+  "boq_item": "R1-M.A.740-26/33",
+  "status": "Confirmed",
+  "dims_mm": [
+   18,
+   840,
+   70
+  ],
+  "boq_width_mm": null,
+  "boq_length_mm": null,
+  "modelled_width_mm": null,
+  "assumed": "",
+  "note": "BOQ W=4260 D=500 H=3000 @ TV area; the west wall is 4260 long but is interrupted by a 1000 mm window - see V-02."
+ },
+ {
+  "object": "JOI_TV_Run_N_Dwr11_RailL",
+  "type": "MESH",
+  "material": "WD_Beech_Veneer_Stain",
+  "boq_item": "R1-M.A.740-26/33",
+  "status": "Confirmed",
+  "dims_mm": [
+   18,
+   70,
+   622
+  ],
+  "boq_width_mm": null,
+  "boq_length_mm": null,
+  "modelled_width_mm": null,
+  "assumed": "",
+  "note": "BOQ W=4260 D=500 H=3000 @ TV area; the west wall is 4260 long but is interrupted by a 1000 mm window - see V-02."
+ },
+ {
+  "object": "JOI_TV_Run_N_Dwr11_RailR",
+  "type": "MESH",
+  "material": "WD_Beech_Veneer_Stain",
+  "boq_item": "R1-M.A.740-26/33",
+  "status": "Confirmed",
+  "dims_mm": [
+   18,
+   70,
+   622
+  ],
+  "boq_width_mm": null,
+  "boq_length_mm": null,
+  "modelled_width_mm": null,
+  "assumed": "",
+  "note": "BOQ W=4260 D=500 H=3000 @ TV area; the west wall is 4260 long but is interrupted by a 1000 mm window - see V-02."
+ },
+ {
+  "object": "JOI_TV_Run_N_Dwr11_RailT",
+  "type": "MESH",
+  "material": "WD_Beech_Veneer_Stain",
+  "boq_item": "R1-M.A.740-26/33",
+  "status": "Confirmed",
+  "dims_mm": [
+   18,
+   840,
+   70
+  ],
+  "boq_width_mm": null,
+  "boq_length_mm": null,
+  "modelled_width_mm": null,
+  "assumed": "",
+  "note": "BOQ W=4260 D=500 H=3000 @ TV area; the west wall is 4260 long but is interrupted by a 1000 mm window - see V-02."
+ },
+ {
+  "object": "JOI_TV_Run_N_Dwr12_RailB",
+  "type": "MESH",
+  "material": "WD_Beech_Veneer_Stain",
+  "boq_item": "R1-M.A.740-26/33",
+  "status": "Confirmed",
+  "dims_mm": [
+   18,
+   840,
+   70
+  ],
+  "boq_width_mm": null,
+  "boq_length_mm": null,
+  "modelled_width_mm": null,
+  "assumed": "",
+  "note": "BOQ W=4260 D=500 H=3000 @ TV area; the west wall is 4260 long but is interrupted by a 1000 mm window - see V-02."
+ },
+ {
+  "object": "JOI_TV_Run_N_Dwr12_RailL",
+  "type": "MESH",
+  "material": "WD_Beech_Veneer_Stain",
+  "boq_item": "R1-M.A.740-26/33",
+  "status": "Confirmed",
+  "dims_mm": [
+   18,
+   70,
+   622
+  ],
+  "boq_width_mm": null,
+  "boq_length_mm": null,
+  "modelled_width_mm": null,
+  "assumed": "",
+  "note": "BOQ W=4260 D=500 H=3000 @ TV area; the west wall is 4260 long but is interrupted by a 1000 mm window - see V-02."
+ },
+ {
+  "object": "JOI_TV_Run_N_Dwr12_RailR",
+  "type": "MESH",
+  "material": "WD_Beech_Veneer_Stain",
+  "boq_item": "R1-M.A.740-26/33",
+  "status": "Confirmed",
+  "dims_mm": [
+   18,
+   70,
+   622
+  ],
+  "boq_width_mm": null,
+  "boq_length_mm": null,
+  "modelled_width_mm": null,
+  "assumed": "",
+  "note": "BOQ W=4260 D=500 H=3000 @ TV area; the west wall is 4260 long but is interrupted by a 1000 mm window - see V-02."
+ },
+ {
+  "object": "JOI_TV_Run_N_Dwr12_RailT",
+  "type": "MESH",
+  "material": "WD_Beech_Veneer_Stain",
+  "boq_item": "R1-M.A.740-26/33",
+  "status": "Confirmed",
+  "dims_mm": [
+   18,
+   840,
+   70
+  ],
+  "boq_width_mm": null,
+  "boq_length_mm": null,
+  "modelled_width_mm": null,
+  "assumed": "",
+  "note": "BOQ W=4260 D=500 H=3000 @ TV area; the west wall is 4260 long but is interrupted by a 1000 mm window - see V-02."
+ },
+ {
+  "object": "JOI_TV_Run_N_Leaf00_RailB",
+  "type": "MESH",
+  "material": "WD_Beech_Veneer_Stain",
+  "boq_item": "R1-M.A.740-26/33",
+  "status": "Confirmed",
+  "dims_mm": [
+   18,
+   840,
+   70
+  ],
+  "boq_width_mm": null,
+  "boq_length_mm": null,
+  "modelled_width_mm": null,
+  "assumed": "",
+  "note": "BOQ W=4260 D=500 H=3000 @ TV area; the west wall is 4260 long but is interrupted by a 1000 mm window - see V-02."
+ },
+ {
+  "object": "JOI_TV_Run_N_Leaf00_RailL",
+  "type": "MESH",
+  "material": "WD_Beech_Veneer_Stain",
+  "boq_item": "R1-M.A.740-26/33",
+  "status": "Confirmed",
+  "dims_mm": [
+   18,
+   70,
+   2155
+  ],
+  "boq_width_mm": null,
+  "boq_length_mm": null,
+  "modelled_width_mm": null,
+  "assumed": "",
+  "note": "BOQ W=4260 D=500 H=3000 @ TV area; the west wall is 4260 long but is interrupted by a 1000 mm window - see V-02."
+ },
+ {
+  "object": "JOI_TV_Run_N_Leaf00_RailR",
+  "type": "MESH",
+  "material": "WD_Beech_Veneer_Stain",
+  "boq_item": "R1-M.A.740-26/33",
+  "status": "Confirmed",
+  "dims_mm": [
+   18,
+   70,
+   2155
+  ],
+  "boq_width_mm": null,
+  "boq_length_mm": null,
+  "modelled_width_mm": null,
+  "assumed": "",
+  "note": "BOQ W=4260 D=500 H=3000 @ TV area; the west wall is 4260 long but is interrupted by a 1000 mm window - see V-02."
+ },
+ {
+  "object": "JOI_TV_Run_N_Leaf00_RailT",
+  "type": "MESH",
+  "material": "WD_Beech_Veneer_Stain",
+  "boq_item": "R1-M.A.740-26/33",
+  "status": "Confirmed",
+  "dims_mm": [
+   18,
+   840,
+   70
+  ],
+  "boq_width_mm": null,
+  "boq_length_mm": null,
+  "modelled_width_mm": null,
+  "assumed": "",
+  "note": "BOQ W=4260 D=500 H=3000 @ TV area; the west wall is 4260 long but is interrupted by a 1000 mm window - see V-02."
+ },
+ {
+  "object": "JOI_TV_Run_N_Plinth",
+  "type": "MESH",
+  "material": "WD_Beech_Veneer_Stain",
+  "boq_item": "R1-M.A.740-26/33",
+  "status": "Confirmed",
+  "dims_mm": [
+   460,
+   1690,
+   100
+  ],
+  "boq_width_mm": null,
+  "boq_length_mm": null,
+  "modelled_width_mm": null,
+  "assumed": "",
+  "note": "BOQ W=4260 D=500 H=3000 @ TV area; the west wall is 4260 long but is interrupted by a 1000 mm window - see V-02."
+ },
+ {
+  "object": "JOI_TV_Run_N_Upr00_RailB",
+  "type": "MESH",
+  "material": "WD_Beech_Veneer_Stain",
+  "boq_item": "R1-M.A.740-26/33",
+  "status": "Confirmed",
+  "dims_mm": [
+   18,
+   840,
+   70
+  ],
+  "boq_width_mm": null,
+  "boq_length_mm": null,
+  "modelled_width_mm": null,
+  "assumed": "",
+  "note": "BOQ W=4260 D=500 H=3000 @ TV area; the west wall is 4260 long but is interrupted by a 1000 mm window - see V-02."
+ },
+ {
+  "object": "JOI_TV_Run_N_Upr00_RailL",
+  "type": "MESH",
+  "material": "WD_Beech_Veneer_Stain",
+  "boq_item": "R1-M.A.740-26/33",
+  "status": "Confirmed",
+  "dims_mm": [
+   18,
+   70,
+   455
+  ],
+  "boq_width_mm": null,
+  "boq_length_mm": null,
+  "modelled_width_mm": null,
+  "assumed": "",
+  "note": "BOQ W=4260 D=500 H=3000 @ TV area; the west wall is 4260 long but is interrupted by a 1000 mm window - see V-02."
+ },
+ {
+  "object": "JOI_TV_Run_N_Upr00_RailR",
+  "type": "MESH",
+  "material": "WD_Beech_Veneer_Stain",
+  "boq_item": "R1-M.A.740-26/33",
+  "status": "Confirmed",
+  "dims_mm": [
+   18,
+   70,
+   455
+  ],
+  "boq_width_mm": null,
+  "boq_length_mm": null,
+  "modelled_width_mm": null,
+  "assumed": "",
+  "note": "BOQ W=4260 D=500 H=3000 @ TV area; the west wall is 4260 long but is interrupted by a 1000 mm window - see V-02."
+ },
+ {
+  "object": "JOI_TV_Run_N_Upr00_RailT",
+  "type": "MESH",
+  "material": "WD_Beech_Veneer_Stain",
+  "boq_item": "R1-M.A.740-26/33",
+  "status": "Confirmed",
+  "dims_mm": [
+   18,
+   840,
+   70
+  ],
+  "boq_width_mm": null,
+  "boq_length_mm": null,
+  "modelled_width_mm": null,
+  "assumed": "",
+  "note": "BOQ W=4260 D=500 H=3000 @ TV area; the west wall is 4260 long but is interrupted by a 1000 mm window - see V-02."
+ },
+ {
+  "object": "JOI_TV_Run_N_Upr01_RailB",
+  "type": "MESH",
+  "material": "WD_Beech_Veneer_Stain",
+  "boq_item": "R1-M.A.740-26/33",
+  "status": "Confirmed",
+  "dims_mm": [
+   18,
+   840,
+   70
+  ],
+  "boq_width_mm": null,
+  "boq_length_mm": null,
+  "modelled_width_mm": null,
+  "assumed": "",
+  "note": "BOQ W=4260 D=500 H=3000 @ TV area; the west wall is 4260 long but is interrupted by a 1000 mm window - see V-02."
+ },
+ {
+  "object": "JOI_TV_Run_N_Upr01_RailL",
+  "type": "MESH",
+  "material": "WD_Beech_Veneer_Stain",
+  "boq_item": "R1-M.A.740-26/33",
+  "status": "Confirmed",
+  "dims_mm": [
+   18,
+   70,
+   455
+  ],
+  "boq_width_mm": null,
+  "boq_length_mm": null,
+  "modelled_width_mm": null,
+  "assumed": "",
+  "note": "BOQ W=4260 D=500 H=3000 @ TV area; the west wall is 4260 long but is interrupted by a 1000 mm window - see V-02."
+ },
+ {
+  "object": "JOI_TV_Run_N_Upr01_RailR",
+  "type": "MESH",
+  "material": "WD_Beech_Veneer_Stain",
+  "boq_item": "R1-M.A.740-26/33",
+  "status": "Confirmed",
+  "dims_mm": [
+   18,
+   70,
+   455
+  ],
+  "boq_width_mm": null,
+  "boq_length_mm": null,
+  "modelled_width_mm": null,
+  "assumed": "",
+  "note": "BOQ W=4260 D=500 H=3000 @ TV area; the west wall is 4260 long but is interrupted by a 1000 mm window - see V-02."
+ },
+ {
+  "object": "JOI_TV_Run_N_Upr01_RailT",
+  "type": "MESH",
+  "material": "WD_Beech_Veneer_Stain",
+  "boq_item": "R1-M.A.740-26/33",
+  "status": "Confirmed",
+  "dims_mm": [
+   18,
+   840,
+   70
+  ],
+  "boq_width_mm": null,
+  "boq_length_mm": null,
+  "modelled_width_mm": null,
+  "assumed": "",
+  "note": "BOQ W=4260 D=500 H=3000 @ TV area; the west wall is 4260 long but is interrupted by a 1000 mm window - see V-02."
+ },
+ {
+  "object": "JOI_TV_Run_S_Carcass",
+  "type": "MESH",
+  "material": "WD_Beech_Veneer_Stain",
+  "boq_item": "R1-M.A.740-26/33",
+  "status": "Confirmed",
+  "dims_mm": [
+   500,
+   1450,
+   2900
+  ],
+  "boq_width_mm": 4260,
+  "boq_length_mm": null,
+  "modelled_width_mm": null,
+  "assumed": "",
+  "note": "BOQ W=4260 D=500 H=3000 @ TV area; the west wall is 4260 long but is interrupted by a 1000 mm window - see V-02."
+ },
+ {
+  "object": "JOI_TV_Run_S_Dwr00_RailB",
+  "type": "MESH",
+  "material": "WD_Beech_Veneer_Stain",
+  "boq_item": "R1-M.A.740-26/33",
+  "status": "Confirmed",
+  "dims_mm": [
+   18,
+   720,
+   70
+  ],
+  "boq_width_mm": null,
+  "boq_length_mm": null,
+  "modelled_width_mm": null,
+  "assumed": "",
+  "note": "BOQ W=4260 D=500 H=3000 @ TV area; the west wall is 4260 long but is interrupted by a 1000 mm window - see V-02."
+ },
+ {
+  "object": "JOI_TV_Run_S_Dwr00_RailL",
+  "type": "MESH",
+  "material": "WD_Beech_Veneer_Stain",
+  "boq_item": "R1-M.A.740-26/33",
+  "status": "Confirmed",
+  "dims_mm": [
+   18,
+   70,
+   622
+  ],
+  "boq_width_mm": null,
+  "boq_length_mm": null,
+  "modelled_width_mm": null,
+  "assumed": "",
+  "note": "BOQ W=4260 D=500 H=3000 @ TV area; the west wall is 4260 long but is interrupted by a 1000 mm window - see V-02."
+ },
+ {
+  "object": "JOI_TV_Run_S_Dwr00_RailR",
+  "type": "MESH",
+  "material": "WD_Beech_Veneer_Stain",
+  "boq_item": "R1-M.A.740-26/33",
+  "status": "Confirmed",
+  "dims_mm": [
+   18,
+   70,
+   622
+  ],
+  "boq_width_mm": null,
+  "boq_length_mm": null,
+  "modelled_width_mm": null,
+  "assumed": "",
+  "note": "BOQ W=4260 D=500 H=3000 @ TV area; the west wall is 4260 long but is interrupted by a 1000 mm window - see V-02."
+ },
+ {
+  "object": "JOI_TV_Run_S_Dwr00_RailT",
+  "type": "MESH",
+  "material": "WD_Beech_Veneer_Stain",
+  "boq_item": "R1-M.A.740-26/33",
+  "status": "Confirmed",
+  "dims_mm": [
+   18,
+   720,
+   70
+  ],
+  "boq_width_mm": null,
+  "boq_length_mm": null,
+  "modelled_width_mm": null,
+  "assumed": "",
+  "note": "BOQ W=4260 D=500 H=3000 @ TV area; the west wall is 4260 long but is interrupted by a 1000 mm window - see V-02."
+ },
+ {
+  "object": "JOI_TV_Run_S_Dwr01_RailB",
+  "type": "MESH",
+  "material": "WD_Beech_Veneer_Stain",
+  "boq_item": "R1-M.A.740-26/33",
+  "status": "Confirmed",
+  "dims_mm": [
+   18,
+   720,
+   70
+  ],
+  "boq_width_mm": null,
+  "boq_length_mm": null,
+  "modelled_width_mm": null,
+  "assumed": "",
+  "note": "BOQ W=4260 D=500 H=3000 @ TV area; the west wall is 4260 long but is interrupted by a 1000 mm window - see V-02."
+ },
+ {
+  "object": "JOI_TV_Run_S_Dwr01_RailL",
+  "type": "MESH",
+  "material": "WD_Beech_Veneer_Stain",
+  "boq_item": "R1-M.A.740-26/33",
+  "status": "Confirmed",
+  "dims_mm": [
+   18,
+   70,
+   622
+  ],
+  "boq_width_mm": null,
+  "boq_length_mm": null,
+  "modelled_width_mm": null,
+  "assumed": "",
+  "note": "BOQ W=4260 D=500 H=3000 @ TV area; the west wall is 4260 long but is interrupted by a 1000 mm window - see V-02."
+ },
+ {
+  "object": "JOI_TV_Run_S_Dwr01_RailR",
+  "type": "MESH",
+  "material": "WD_Beech_Veneer_Stain",
+  "boq_item": "R1-M.A.740-26/33",
+  "status": "Confirmed",
+  "dims_mm": [
+   18,
+   70,
+   622
+  ],
+  "boq_width_mm": null,
+  "boq_length_mm": null,
+  "modelled_width_mm": null,
+  "assumed": "",
+  "note": "BOQ W=4260 D=500 H=3000 @ TV area; the west wall is 4260 long but is interrupted by a 1000 mm window - see V-02."
+ },
+ {
+  "object": "JOI_TV_Run_S_Dwr01_RailT",
+  "type": "MESH",
+  "material": "WD_Beech_Veneer_Stain",
+  "boq_item": "R1-M.A.740-26/33",
+  "status": "Confirmed",
+  "dims_mm": [
+   18,
+   720,
+   70
+  ],
+  "boq_width_mm": null,
+  "boq_length_mm": null,
+  "modelled_width_mm": null,
+  "assumed": "",
+  "note": "BOQ W=4260 D=500 H=3000 @ TV area; the west wall is 4260 long but is interrupted by a 1000 mm window - see V-02."
+ },
+ {
+  "object": "JOI_TV_Run_S_Dwr02_RailB",
+  "type": "MESH",
+  "material": "WD_Beech_Veneer_Stain",
+  "boq_item": "R1-M.A.740-26/33",
+  "status": "Confirmed",
+  "dims_mm": [
+   18,
+   720,
+   70
+  ],
+  "boq_width_mm": null,
+  "boq_length_mm": null,
+  "modelled_width_mm": null,
+  "assumed": "",
+  "note": "BOQ W=4260 D=500 H=3000 @ TV area; the west wall is 4260 long but is interrupted by a 1000 mm window - see V-02."
+ },
+ {
+  "object": "JOI_TV_Run_S_Dwr02_RailL",
+  "type": "MESH",
+  "material": "WD_Beech_Veneer_Stain",
+  "boq_item": "R1-M.A.740-26/33",
+  "status": "Confirmed",
+  "dims_mm": [
+   18,
+   70,
+   622
+  ],
+  "boq_width_mm": null,
+  "boq_length_mm": null,
+  "modelled_width_mm": null,
+  "assumed": "",
+  "note": "BOQ W=4260 D=500 H=3000 @ TV area; the west wall is 4260 long but is interrupted by a 1000 mm window - see V-02."
+ },
+ {
+  "object": "JOI_TV_Run_S_Dwr02_RailR",
+  "type": "MESH",
+  "material": "WD_Beech_Veneer_Stain",
+  "boq_item": "R1-M.A.740-26/33",
+  "status": "Confirmed",
+  "dims_mm": [
+   18,
+   70,
+   622
+  ],
+  "boq_width_mm": null,
+  "boq_length_mm": null,
+  "modelled_width_mm": null,
+  "assumed": "",
+  "note": "BOQ W=4260 D=500 H=3000 @ TV area; the west wall is 4260 long but is interrupted by a 1000 mm window - see V-02."
+ },
+ {
+  "object": "JOI_TV_Run_S_Dwr02_RailT",
+  "type": "MESH",
+  "material": "WD_Beech_Veneer_Stain",
+  "boq_item": "R1-M.A.740-26/33",
+  "status": "Confirmed",
+  "dims_mm": [
+   18,
+   720,
+   70
+  ],
+  "boq_width_mm": null,
+  "boq_length_mm": null,
+  "modelled_width_mm": null,
+  "assumed": "",
+  "note": "BOQ W=4260 D=500 H=3000 @ TV area; the west wall is 4260 long but is interrupted by a 1000 mm window - see V-02."
+ },
+ {
+  "object": "JOI_TV_Run_S_Leaf01_RailB",
+  "type": "MESH",
+  "material": "WD_Beech_Veneer_Stain",
+  "boq_item": "R1-M.A.740-26/33",
+  "status": "Confirmed",
+  "dims_mm": [
+   18,
+   720,
+   70
+  ],
+  "boq_width_mm": null,
+  "boq_length_mm": null,
+  "modelled_width_mm": null,
+  "assumed": "",
+  "note": "BOQ W=4260 D=500 H=3000 @ TV area; the west wall is 4260 long but is interrupted by a 1000 mm window - see V-02."
+ },
+ {
+  "object": "JOI_TV_Run_S_Leaf01_RailL",
+  "type": "MESH",
+  "material": "WD_Beech_Veneer_Stain",
+  "boq_item": "R1-M.A.740-26/33",
+  "status": "Confirmed",
+  "dims_mm": [
+   18,
+   70,
+   2155
+  ],
+  "boq_width_mm": null,
+  "boq_length_mm": null,
+  "modelled_width_mm": null,
+  "assumed": "",
+  "note": "BOQ W=4260 D=500 H=3000 @ TV area; the west wall is 4260 long but is interrupted by a 1000 mm window - see V-02."
+ },
+ {
+  "object": "JOI_TV_Run_S_Leaf01_RailR",
+  "type": "MESH",
+  "material": "WD_Beech_Veneer_Stain",
+  "boq_item": "R1-M.A.740-26/33",
+  "status": "Confirmed",
+  "dims_mm": [
+   18,
+   70,
+   2155
+  ],
+  "boq_width_mm": null,
+  "boq_length_mm": null,
+  "modelled_width_mm": null,
+  "assumed": "",
+  "note": "BOQ W=4260 D=500 H=3000 @ TV area; the west wall is 4260 long but is interrupted by a 1000 mm window - see V-02."
+ },
+ {
+  "object": "JOI_TV_Run_S_Leaf01_RailT",
+  "type": "MESH",
+  "material": "WD_Beech_Veneer_Stain",
+  "boq_item": "R1-M.A.740-26/33",
+  "status": "Confirmed",
+  "dims_mm": [
+   18,
+   720,
+   70
+  ],
+  "boq_width_mm": null,
+  "boq_length_mm": null,
+  "modelled_width_mm": null,
+  "assumed": "",
+  "note": "BOQ W=4260 D=500 H=3000 @ TV area; the west wall is 4260 long but is interrupted by a 1000 mm window - see V-02."
+ },
+ {
+  "object": "JOI_TV_Run_S_Plinth",
+  "type": "MESH",
+  "material": "WD_Beech_Veneer_Stain",
+  "boq_item": "R1-M.A.740-26/33",
+  "status": "Confirmed",
+  "dims_mm": [
+   460,
+   1450,
+   100
+  ],
+  "boq_width_mm": null,
+  "boq_length_mm": null,
+  "modelled_width_mm": null,
+  "assumed": "",
+  "note": "BOQ W=4260 D=500 H=3000 @ TV area; the west wall is 4260 long but is interrupted by a 1000 mm window - see V-02."
+ },
+ {
+  "object": "JOI_TV_Run_S_Upr00_RailB",
+  "type": "MESH",
+  "material": "WD_Beech_Veneer_Stain",
+  "boq_item": "R1-M.A.740-26/33",
+  "status": "Confirmed",
+  "dims_mm": [
+   18,
+   720,
+   70
+  ],
+  "boq_width_mm": null,
+  "boq_length_mm": null,
+  "modelled_width_mm": null,
+  "assumed": "",
+  "note": "BOQ W=4260 D=500 H=3000 @ TV area; the west wall is 4260 long but is interrupted by a 1000 mm window - see V-02."
+ },
+ {
+  "object": "JOI_TV_Run_S_Upr00_RailL",
+  "type": "MESH",
+  "material": "WD_Beech_Veneer_Stain",
+  "boq_item": "R1-M.A.740-26/33",
+  "status": "Confirmed",
+  "dims_mm": [
+   18,
+   70,
+   455
+  ],
+  "boq_width_mm": null,
+  "boq_length_mm": null,
+  "modelled_width_mm": null,
+  "assumed": "",
+  "note": "BOQ W=4260 D=500 H=3000 @ TV area; the west wall is 4260 long but is interrupted by a 1000 mm window - see V-02."
+ },
+ {
+  "object": "JOI_TV_Run_S_Upr00_RailR",
+  "type": "MESH",
+  "material": "WD_Beech_Veneer_Stain",
+  "boq_item": "R1-M.A.740-26/33",
+  "status": "Confirmed",
+  "dims_mm": [
+   18,
+   70,
+   455
+  ],
+  "boq_width_mm": null,
+  "boq_length_mm": null,
+  "modelled_width_mm": null,
+  "assumed": "",
+  "note": "BOQ W=4260 D=500 H=3000 @ TV area; the west wall is 4260 long but is interrupted by a 1000 mm window - see V-02."
+ },
+ {
+  "object": "JOI_TV_Run_S_Upr00_RailT",
+  "type": "MESH",
+  "material": "WD_Beech_Veneer_Stain",
+  "boq_item": "R1-M.A.740-26/33",
+  "status": "Confirmed",
+  "dims_mm": [
+   18,
+   720,
+   70
+  ],
+  "boq_width_mm": null,
+  "boq_length_mm": null,
+  "modelled_width_mm": null,
+  "assumed": "",
+  "note": "BOQ W=4260 D=500 H=3000 @ TV area; the west wall is 4260 long but is interrupted by a 1000 mm window - see V-02."
+ },
+ {
+  "object": "JOI_TV_Run_S_Upr01_RailB",
+  "type": "MESH",
+  "material": "WD_Beech_Veneer_Stain",
+  "boq_item": "R1-M.A.740-26/33",
+  "status": "Confirmed",
+  "dims_mm": [
+   18,
+   720,
+   70
+  ],
+  "boq_width_mm": null,
+  "boq_length_mm": null,
+  "modelled_width_mm": null,
+  "assumed": "",
+  "note": "BOQ W=4260 D=500 H=3000 @ TV area; the west wall is 4260 long but is interrupted by a 1000 mm window - see V-02."
+ },
+ {
+  "object": "JOI_TV_Run_S_Upr01_RailL",
+  "type": "MESH",
+  "material": "WD_Beech_Veneer_Stain",
+  "boq_item": "R1-M.A.740-26/33",
+  "status": "Confirmed",
+  "dims_mm": [
+   18,
+   70,
+   455
+  ],
+  "boq_width_mm": null,
+  "boq_length_mm": null,
+  "modelled_width_mm": null,
+  "assumed": "",
+  "note": "BOQ W=4260 D=500 H=3000 @ TV area; the west wall is 4260 long but is interrupted by a 1000 mm window - see V-02."
+ },
+ {
+  "object": "JOI_TV_Run_S_Upr01_RailR",
+  "type": "MESH",
+  "material": "WD_Beech_Veneer_Stain",
+  "boq_item": "R1-M.A.740-26/33",
+  "status": "Confirmed",
+  "dims_mm": [
+   18,
+   70,
+   455
+  ],
+  "boq_width_mm": null,
+  "boq_length_mm": null,
+  "modelled_width_mm": null,
+  "assumed": "",
+  "note": "BOQ W=4260 D=500 H=3000 @ TV area; the west wall is 4260 long but is interrupted by a 1000 mm window - see V-02."
+ },
+ {
+  "object": "JOI_TV_Run_S_Upr01_RailT",
+  "type": "MESH",
+  "material": "WD_Beech_Veneer_Stain",
+  "boq_item": "R1-M.A.740-26/33",
+  "status": "Confirmed",
+  "dims_mm": [
+   18,
+   720,
+   70
+  ],
+  "boq_width_mm": null,
+  "boq_length_mm": null,
+  "modelled_width_mm": null,
+  "assumed": "",
+  "note": "BOQ W=4260 D=500 H=3000 @ TV area; the west wall is 4260 long but is interrupted by a 1000 mm window - see V-02."
+ },
+ {
+  "object": "PH2_TV_Run_N_Dwr10_Panel",
+  "type": "MESH",
+  "material": "PH2_MBR_door_leaf_panel_wallpaper_or_fabric",
+  "boq_item": "R1-M.A.740-26/33",
+  "status": "Phase 2",
+  "dims_mm": [
+   8,
+   700,
+   622
+  ],
+  "boq_width_mm": null,
+  "boq_length_mm": null,
+  "modelled_width_mm": null,
+  "assumed": "",
+  "note": "Door-leaf panel is wallpaper or fabric, priced separately"
+ },
+ {
+  "object": "PH2_TV_Run_N_Dwr11_Panel",
+  "type": "MESH",
+  "material": "PH2_MBR_door_leaf_panel_wallpaper_or_fabric",
+  "boq_item": "R1-M.A.740-26/33",
+  "status": "Phase 2",
+  "dims_mm": [
+   8,
+   700,
+   622
+  ],
+  "boq_width_mm": null,
+  "boq_length_mm": null,
+  "modelled_width_mm": null,
+  "assumed": "",
+  "note": "Door-leaf panel is wallpaper or fabric, priced separately"
+ },
+ {
+  "object": "PH2_TV_Run_N_Dwr12_Panel",
+  "type": "MESH",
+  "material": "PH2_MBR_door_leaf_panel_wallpaper_or_fabric",
+  "boq_item": "R1-M.A.740-26/33",
+  "status": "Phase 2",
+  "dims_mm": [
+   8,
+   700,
+   622
+  ],
+  "boq_width_mm": null,
+  "boq_length_mm": null,
+  "modelled_width_mm": null,
+  "assumed": "",
+  "note": "Door-leaf panel is wallpaper or fabric, priced separately"
+ },
+ {
+  "object": "PH2_TV_Run_N_Leaf00_Panel",
+  "type": "MESH",
+  "material": "PH2_MBR_door_leaf_panel_wallpaper_or_fabric",
+  "boq_item": "R1-M.A.740-26/33",
+  "status": "Phase 2",
+  "dims_mm": [
+   8,
+   700,
+   2155
+  ],
+  "boq_width_mm": null,
+  "boq_length_mm": null,
+  "modelled_width_mm": null,
+  "assumed": "",
+  "note": "Door-leaf panel is wallpaper or fabric, priced separately"
+ },
+ {
+  "object": "PH2_TV_Run_N_Upr00_Panel",
+  "type": "MESH",
+  "material": "PH2_MBR_door_leaf_panel_wallpaper_or_fabric",
+  "boq_item": "R1-M.A.740-26/33",
+  "status": "Phase 2",
+  "dims_mm": [
+   8,
+   700,
+   455
+  ],
+  "boq_width_mm": null,
+  "boq_length_mm": null,
+  "modelled_width_mm": null,
+  "assumed": "",
+  "note": "Door-leaf panel is wallpaper or fabric, priced separately"
+ },
+ {
+  "object": "PH2_TV_Run_N_Upr01_Panel",
+  "type": "MESH",
+  "material": "PH2_MBR_door_leaf_panel_wallpaper_or_fabric",
+  "boq_item": "R1-M.A.740-26/33",
+  "status": "Phase 2",
+  "dims_mm": [
+   8,
+   700,
+   455
+  ],
+  "boq_width_mm": null,
+  "boq_length_mm": null,
+  "modelled_width_mm": null,
+  "assumed": "",
+  "note": "Door-leaf panel is wallpaper or fabric, priced separately"
+ },
+ {
+  "object": "PH2_TV_Run_S_Dwr00_Panel",
+  "type": "MESH",
+  "material": "PH2_MBR_door_leaf_panel_wallpaper_or_fabric",
+  "boq_item": "R1-M.A.740-26/33",
+  "status": "Phase 2",
+  "dims_mm": [
+   8,
+   580,
+   622
+  ],
+  "boq_width_mm": null,
+  "boq_length_mm": null,
+  "modelled_width_mm": null,
+  "assumed": "",
+  "note": "Door-leaf panel is wallpaper or fabric, priced separately"
+ },
+ {
+  "object": "PH2_TV_Run_S_Dwr01_Panel",
+  "type": "MESH",
+  "material": "PH2_MBR_door_leaf_panel_wallpaper_or_fabric",
+  "boq_item": "R1-M.A.740-26/33",
+  "status": "Phase 2",
+  "dims_mm": [
+   8,
+   580,
+   622
+  ],
+  "boq_width_mm": null,
+  "boq_length_mm": null,
+  "modelled_width_mm": null,
+  "assumed": "",
+  "note": "Door-leaf panel is wallpaper or fabric, priced separately"
+ },
+ {
+  "object": "PH2_TV_Run_S_Dwr02_Panel",
+  "type": "MESH",
+  "material": "PH2_MBR_door_leaf_panel_wallpaper_or_fabric",
+  "boq_item": "R1-M.A.740-26/33",
+  "status": "Phase 2",
+  "dims_mm": [
+   8,
+   580,
+   622
+  ],
+  "boq_width_mm": null,
+  "boq_length_mm": null,
+  "modelled_width_mm": null,
+  "assumed": "",
+  "note": "Door-leaf panel is wallpaper or fabric, priced separately"
+ },
+ {
+  "object": "PH2_TV_Run_S_Leaf01_Panel",
+  "type": "MESH",
+  "material": "PH2_MBR_door_leaf_panel_wallpaper_or_fabric",
+  "boq_item": "R1-M.A.740-26/33",
+  "status": "Phase 2",
+  "dims_mm": [
+   8,
+   580,
+   2155
+  ],
+  "boq_width_mm": null,
+  "boq_length_mm": null,
+  "modelled_width_mm": null,
+  "assumed": "",
+  "note": "Door-leaf panel is wallpaper or fabric, priced separately"
+ },
+ {
+  "object": "PH2_TV_Run_S_Upr00_Panel",
+  "type": "MESH",
+  "material": "PH2_MBR_door_leaf_panel_wallpaper_or_fabric",
+  "boq_item": "R1-M.A.740-26/33",
+  "status": "Phase 2",
+  "dims_mm": [
+   8,
+   580,
+   455
+  ],
+  "boq_width_mm": null,
+  "boq_length_mm": null,
+  "modelled_width_mm": null,
+  "assumed": "",
+  "note": "Door-leaf panel is wallpaper or fabric, priced separately"
+ },
+ {
+  "object": "PH2_TV_Run_S_Upr01_Panel",
+  "type": "MESH",
+  "material": "PH2_MBR_door_leaf_panel_wallpaper_or_fabric",
+  "boq_item": "R1-M.A.740-26/33",
+  "status": "Phase 2",
+  "dims_mm": [
+   8,
+   580,
+   455
+  ],
+  "boq_width_mm": null,
+  "boq_length_mm": null,
+  "modelled_width_mm": null,
+  "assumed": "",
+  "note": "Door-leaf panel is wallpaper or fabric, priced separately"
+ },
+ {
+  "object": "CEIL_MasterBedroom",
+  "type": "MESH",
+  "material": "PNT_Wall_Ceiling_Offwhite",
+  "boq_item": "R1-M.A.740-26/NONE",
+  "status": "Assumed",
+  "dims_mm": [
+   4395,
+   4740,
+   40
+  ],
+  "boq_width_mm": null,
+  "boq_length_mm": null,
+  "modelled_width_mm": null,
+  "assumed": "ceiling height 3000 mm derived from BOQ items 31/33 (H=3000 floor-to-ceiling joinery); no section or elevation supplied",
+  "note": "No separate ceiling-paint line for this room in the BOQ"
+ },
+ {
+  "object": "WALL_East_Pier_N",
+  "type": "MESH",
+  "material": "PNT_Wall_Ceiling_Offwhite",
+  "boq_item": "R1-M.A.740-26/NONE",
+  "status": "Assumed",
+  "dims_mm": [
+   240,
+   1235,
+   3000
+  ],
+  "boq_width_mm": null,
+  "boq_length_mm": null,
+  "modelled_width_mm": null,
+  "assumed": "ceiling height 3000 mm derived from BOQ items 31/33 (H=3000 floor-to-ceiling joinery); no section or elevation supplied",
+  "note": ""
+ },
+ {
+  "object": "WALL_East_Pier_S",
+  "type": "MESH",
+  "material": "PNT_Wall_Ceiling_Offwhite",
+  "boq_item": "R1-M.A.740-26/NONE",
+  "status": "Assumed",
+  "dims_mm": [
+   240,
+   875,
+   3000
+  ],
+  "boq_width_mm": null,
+  "boq_length_mm": null,
+  "modelled_width_mm": null,
+  "assumed": "ceiling height 3000 mm derived from BOQ items 31/33 (H=3000 floor-to-ceiling joinery); no section or elevation supplied",
+  "note": ""
+ },
+ {
+  "object": "WALL_East_RecessBack",
+  "type": "MESH",
+  "material": "PNT_Wall_Ceiling_Offwhite",
+  "boq_item": "R1-M.A.740-26/NONE",
+  "status": "Assumed",
+  "dims_mm": [
+   240,
+   2630,
+   3000
+  ],
+  "boq_width_mm": null,
+  "boq_length_mm": null,
+  "modelled_width_mm": null,
+  "assumed": "ceiling height 3000 mm derived from BOQ items 31/33 (H=3000 floor-to-ceiling joinery); no section or elevation supplied",
+  "note": ""
+ },
+ {
+  "object": "WALL_North_External",
+  "type": "MESH",
+  "material": "PNT_Wall_Ceiling_Offwhite",
+  "boq_item": "R1-M.A.740-26/NONE",
+  "status": "Assumed",
+  "dims_mm": [
+   3435,
+   240,
+   3000
+  ],
+  "boq_width_mm": null,
+  "boq_length_mm": null,
+  "modelled_width_mm": null,
+  "assumed": "ceiling height 3000 mm derived from BOQ items 31/33 (H=3000 floor-to-ceiling joinery); no section or elevation supplied",
+  "note": "Wall build-up measured from plan; no paint line for this room"
+ },
+ {
+  "object": "WALL_South_Partition",
+  "type": "MESH",
+  "material": "PNT_Wall_Ceiling_Offwhite",
+  "boq_item": "R1-M.A.740-26/NONE",
+  "status": "Assumed",
+  "dims_mm": [
+   3435,
+   240,
+   3000
+  ],
+  "boq_width_mm": null,
+  "boq_length_mm": null,
+  "modelled_width_mm": null,
+  "assumed": "window sill 900 / head 2400 mm; door height 2100 mm",
+  "note": "Wall build-up measured from plan; no paint line for this room"
+ },
+ {
+  "object": "WALL_West_External",
+  "type": "MESH",
+  "material": "PNT_Wall_Ceiling_Offwhite",
+  "boq_item": "R1-M.A.740-26/NONE",
+  "status": "Assumed",
+  "dims_mm": [
+   240,
+   4260,
+   3000
+  ],
+  "boq_width_mm": null,
+  "boq_length_mm": null,
+  "modelled_width_mm": null,
+  "assumed": "window sill 900 / head 2400 mm; door height 2100 mm",
+  "note": "Wall build-up measured from plan; no paint line for this room"
+ }
+]

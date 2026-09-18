@@ -1,4 +1,21 @@
 object,material,boq_ref,qty_modelled,qty_boq,variance,status
-NOT MODELLED - room not located (C-03),,R1-M.A.740-26/31,,1.0,,Blocked - awaiting room identification
-NOT MODELLED - room not located (C-03),,R1-M.A.740-26/32,,1.0,,Blocked - awaiting room identification
-NOT MODELLED - room not located (C-03),,R1-M.A.740-26/33,,1.0,,Blocked - awaiting room identification
+FLR_MasterBedroom,POR_Floor_600x1200,NONE,3435x4260x40 mm,,,Confirmed
+GLZ_Window_West,GLS_Clear_6mm,NONE,16x1000x1500 mm,,,Assumed
+PH2_Downlight_01,,NONE,1 no.,,,Phase 2
+PH2_Downlight_02,,NONE,1 no.,,,Phase 2
+PH2_Downlight_03,,NONE,1 no.,,,Phase 2
+PH2_Downlight_04,,NONE,1 no.,,,Phase 2
+SUN_Daylight,,NONE,1 no.,,,Assumed
+JOI_Wardrobe_Run,PH2_MBR_door_leaf_panel_wallpaper_or_fabric + WD_Beech_Veneer_Stain,R1-M.A.740-26/31,2630 mm,4260 mm,-38.3%,Confirmed + Phase 2 panels
+JOI_Headboard,FAB_Headboard_Upholstery,R1-M.A.740-26/32,2600 mm,2600 mm,+0.0%,Confirmed
+PH2_LED_Over_Headboard,,R1-M.A.740-26/32,1 no.,1.0,,Phase 2
+JOI_TV_Run_N,PH2_MBR_door_leaf_panel_wallpaper_or_fabric + WD_Beech_Veneer_Stain,R1-M.A.740-26/33,1690 mm,4260 mm,see combined row,Confirmed + Phase 2 panels
+JOI_TV_Run_S,PH2_MBR_door_leaf_panel_wallpaper_or_fabric + WD_Beech_Veneer_Stain,R1-M.A.740-26/33,1450 mm,4260 mm,see combined row,Confirmed + Phase 2 panels
+CEIL_MasterBedroom,PNT_Wall_Ceiling_Offwhite,R1-M.A.740-26/NONE,4395x4740x40 mm,,,Assumed
+WALL_East_Pier_N,PNT_Wall_Ceiling_Offwhite,R1-M.A.740-26/NONE,240x1235x3000 mm,,,Assumed
+WALL_East_Pier_S,PNT_Wall_Ceiling_Offwhite,R1-M.A.740-26/NONE,240x875x3000 mm,,,Assumed
+WALL_East_RecessBack,PNT_Wall_Ceiling_Offwhite,R1-M.A.740-26/NONE,240x2630x3000 mm,,,Assumed
+WALL_North_External,PNT_Wall_Ceiling_Offwhite,R1-M.A.740-26/NONE,3435x240x3000 mm,,,Assumed
+WALL_South_Partition,PNT_Wall_Ceiling_Offwhite,R1-M.A.740-26/NONE,3435x240x3000 mm,,,Assumed
+WALL_West_External,PNT_Wall_Ceiling_Offwhite,R1-M.A.740-26/NONE,240x4260x3000 mm,,,Assumed
+-- combined for R1-M.A.740-26/33 (2 pieces),PH2_MBR_door_leaf_panel_wallpaper_or_fabric + WD_Beech_Veneer_Stain,R1-M.A.740-26/33,3140 mm,4260 mm,-26.3%,Confirmed + Phase 2 panels

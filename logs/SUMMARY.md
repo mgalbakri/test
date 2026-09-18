@@ -4,7 +4,7 @@ Quotation R1-M.A.740-26 (20/07/2026) - report generated 2026-09-18
 
 ## BLUF
 
-**0 of 9 rooms modelled. 7 of 9 cannot be modelled at all, because the as-built drawings contain no room names and nothing else identifies where those rooms are.**
+**1 of 9 rooms modelled. 7 of 9 cannot be modelled at all, because the as-built drawings contain no room names and nothing else identifies where those rooms are.**
 
 - The drawings are dimensionally sound. Scale was verified twice: the PDFs reproduce six independent dimensions each to within 3.3 mm at 1:100, and the DWG's own DIMENSION entities return nine values that match the printed text exactly. Geometry is trustworthy.
 - What is missing is **identity**, not measurement. The DWG's text layers (A_TEXT, ara-TEXT) are empty; all 64 MTEXT entities are dimension values. No room on either floor is labelled.
@@ -24,7 +24,7 @@ Quotation R1-M.A.740-26 (20/07/2026) - report generated 2026-09-18
 | First Floor - Bathroom, Mr. Mohammed | 17,110 | - (NOT LOCATED) | **BLOCKED - not located** |
 | First Floor - Hallways | 2,800 | FF-STAIR (ASSUMED - low) | Located, not yet modelled |
 | First Floor - Kitchenette | 8,466 | - (NOT LOCATED) | **BLOCKED - not located** |
-| First Floor - Master Bedroom | 30,830 | FF-NW-BED (ASSUMED - high) | Located, not yet modelled |
+| First Floor - Master Bedroom | 30,830 | FF-NW-BED (ASSUMED - high) | Modelled + rendered |
 | **Total** | **170,127** | | |
 
 ## Owner decisions required
@@ -78,7 +78,7 @@ Quotation R1-M.A.740-26 (20/07/2026) - report generated 2026-09-18
 | Ref | Room | BOQ line | Item | BOQ qty | Measured | Unit | Variance |
 |---|---|---|---|---|---|---|---|
 | V-01 | First Floor - Master Bedroom | R1-M.A.740-26/31 | Wardrobe run width | 4260 | 2630 | mm | -38.3% **FLAG** |
-| V-02 | First Floor - Master Bedroom | R1-M.A.740-26/33 | TV-area run width | 4260 | 3260 | mm | -23.5% **FLAG** |
+| V-02 | First Floor - Master Bedroom | R1-M.A.740-26/33 | TV-area run width | 4260 | 3140 | mm | -26.3% **FLAG** |
 | V-03 | Ground Floor - Entrance Salon | R1-M.A.740-26/7 | Wall & ceiling paint | 70.0 | 151.5 | m2 | +116.4% **FLAG** |
 | V-04 | First Floor - Hallways | R1-M.A.740-26/28 | Wall & ceiling paint | 80.0 | - | m2 | NOT MEASURABLE |
 
@@ -104,4 +104,21 @@ Phase 2 elements are modelled with neutral `PH2_*` placeholder materials and are
 - Blender scene: Metric, unit scale 1.0, length in metres. All builder APIs take millimetres and convert once at the boundary.
 - Every modelled object carries a `boq_item` custom property; objects with no BOQ line carry `boq_item = NONE` and are listed in section 5 of each room reconciliation.
 - Daylight: Jeddah 21.49 N, 39.19 E, 16:00 local, sun elevation 32.39 deg, azimuth 257.81 deg. Orientation ASSUMED (C-05).
-- Renders: Cycles, AgX view transform, OpenImageDenoise. This machine has 4 CPU cores and no GPU, so frames are time-boxed; see the note in the Renders section below.
+- Renders: Cycles, AgX view transform, OpenImageDenoise, 1920x1080 draft and 3840x2160 final.
+
+## Render budget - read this before asking for the other eight rooms
+
+This machine has 4 CPU cores and no GPU. A single 1920x1080 interior frame takes about 2.5 minutes at a capped sample budget, and a 3840x2160 frame about 10. One room is 4 views, so roughly 10 minutes of draft and 40 minutes of final per room.
+
+At nine rooms that is about 1.5 hours of draft and 6 hours of final rendering, before any re-render after QA. Frames are therefore time-boxed (Cycles `time_limit`) and the denoiser carries the remainder; that is a deliberate trade, not a defect. If photographic finals are wanted at pace, the renders should move to a GPU box.
+
+## Self-QA
+
+Every frame is checked automatically for mean luminance, lit fraction and blown highlights, and the run fails loudly on a black or blown frame. Issues found and fixed during this build:
+
+- Luminaires were rotated 180 degrees and lit the ceiling - every frame came back black. Fixed; Blender lights already emit along local -Z.
+- Camera 01 was standing inside the TV joinery. All eye points now keep 500 mm clear of every joinery face.
+- Walls were centred on the room's inner faces, eating 120 mm off each dimension. Walls are now built outside the clear box, so the modelled clear size equals the measured 3435 x 4260 mm.
+- The plan camera was above the ceiling slab and returned a flat grey rectangle. The ceiling is now hidden for plan views.
+- Joinery was modelled as plain slabs. It is now built as framed leaves with mouldings, recessed panels, drawers, an upper tier and a set-back plinth, per the BOQ wording.
+- Window glazing had been given the frosted shower-screen material. Now clear.

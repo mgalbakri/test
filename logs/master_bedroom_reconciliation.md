@@ -25,7 +25,7 @@ Quotation R1-M.A.740-26 - generated 2026-09-18
 | Ref | BOQ line | Item | BOQ qty | Measured | Unit | Variance | Note |
 |---|---|---|---|---|---|---|---|
 | V-01 | R1-M.A.740-26/31 | Wardrobe run width | 4260 | 2630 | mm | -38.3%  **FLAG** | BOQ specifies W=4260 mm. The wardrobe recess in FF-NW-BED measures 2630 x 480 mm. A 4260 mm run does not fit the recess. |
-| V-02 | R1-M.A.740-26/33 | TV-area run width | 4260 | 3260 | mm | -23.5%  **FLAG** | BOQ specifies W=4260 mm on the TV wall. The facing west wall is 4260 mm long but is interrupted by a 1000 mm window, leaving 1450 + 1810 mm in two pieces. |
+| V-02 | R1-M.A.740-26/33 | TV-area run width | 4260 | 3140 | mm | -26.3%  **FLAG** | BOQ specifies W=4260 mm on the TV wall. The facing west wall is 4260 mm long but is interrupted by a 1000 mm window, leaving 3260 mm of wall in two pieces. 120 mm at the north end is held clear of the headboard, so 3140 mm is installable: 1450 + 1690. |
 
 ## 4. BOQ items with no location
 
@@ -33,7 +33,22 @@ All lines above are assigned to the space named in section 1, subject to that as
 
 ## 5. Render elements with no BOQ line
 
-Not applicable - no model built for this room.
+| Object | Material | Status | Why |
+|---|---|---|---|
+| FLR_MasterBedroom | POR_Floor_600x1200 | Confirmed | Floor finish not in BOQ scope for this room (no flooring line item) |
+| GLZ_Window_West | GLS_Clear_6mm | Assumed | Existing window, not in BOQ scope |
+| PH2_Downlight_01 |  | Phase 2 | Lighting excluded from BOQ (note: "all lighting are not included") |
+| PH2_Downlight_02 |  | Phase 2 | Lighting excluded from BOQ (note: "all lighting are not included") |
+| PH2_Downlight_03 |  | Phase 2 | Lighting excluded from BOQ (note: "all lighting are not included") |
+| PH2_Downlight_04 |  | Phase 2 | Lighting excluded from BOQ (note: "all lighting are not included") |
+| SUN_Daylight |  | Assumed | Daylight; site 21.49N 39.19E |
+| CEIL_MasterBedroom | PNT_Wall_Ceiling_Offwhite | Assumed | No separate ceiling-paint line for this room in the BOQ |
+| WALL_East_Pier_N | PNT_Wall_Ceiling_Offwhite | Assumed | no BOQ line covers this element |
+| WALL_East_Pier_S | PNT_Wall_Ceiling_Offwhite | Assumed | no BOQ line covers this element |
+| WALL_East_RecessBack | PNT_Wall_Ceiling_Offwhite | Assumed | no BOQ line covers this element |
+| WALL_North_External | PNT_Wall_Ceiling_Offwhite | Assumed | Wall build-up measured from plan; no paint line for this room |
+| WALL_South_Partition | PNT_Wall_Ceiling_Offwhite | Assumed | Wall build-up measured from plan; no paint line for this room |
+| WALL_West_External | PNT_Wall_Ceiling_Offwhite | Assumed | Wall build-up measured from plan; no paint line for this room |
 
 ## 6. Phase 2 (unpriced) in this room
 

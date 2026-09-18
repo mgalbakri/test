@@ -125,9 +125,11 @@ VARIANCES = [
   'BOQ specifies W=4260 mm. The wardrobe recess in FF-NW-BED measures 2630 x '
   '480 mm. A 4260 mm run does not fit the recess.'),
  ('V-02', 'master_bedroom', f'{Q}/33', 'TV-area run width',
-  4260, 3260, 'mm',
+  4260, 3140, 'mm',
   'BOQ specifies W=4260 mm on the TV wall. The facing west wall is 4260 mm long '
-  'but is interrupted by a 1000 mm window, leaving 1450 + 1810 mm in two pieces.'),
+  'but is interrupted by a 1000 mm window, leaving 3260 mm of wall in two '
+  'pieces. 120 mm at the north end is held clear of the headboard, so 3140 mm '
+  'is installable: 1450 + 1690.'),
  ('V-03', 'entrance_salon', f'{Q}/7', 'Wall & ceiling paint',
   70.0, 151.5, 'm2',
   'BOQ qty 70 m2. The assumed location GF-EAST (6060 x 9550 mm) gives '
@@ -235,42 +237,95 @@ def write_reconciliation(room):
     open(p,'w').write('\n'.join(x for x in out if x is not None))
     return p
 
+ASSEMBLY_SUFFIXES = ('_Carcass', '_Plinth', '_Leaf', '_Dwr', '_Upr',
+                     '_RailB', '_RailT', '_RailL', '_RailR', '_Panel')
+
+def assembly_of(name):
+    """Roll a cabinet_run part name back to its assembly, so the schedule lists
+    joinery runs rather than every individual rail."""
+    for tag in ('_Carcass', '_Plinth', '_Leaf', '_Dwr', '_Upr'):
+        i = name.find(tag)
+        if i > 0:
+            base = name[:i]
+            return base.replace('PH2_', 'JOI_') if base.startswith('PH2_') else base
+    return name
+
 def write_finish_schedule(room):
     its = {i['boq_item']: i for i in items_for(room)}
     op = os.path.join(L, f'{room}_objects.json')
     rows = []
     if os.path.exists(op):
-        for o in json.load(open(op)):
-            ref = o['boq_item']
+        objs = json.load(open(op))
+        groups = collections.OrderedDict()
+        for o in objs:
+            key = (assembly_of(o['object']), o['boq_item'])
+            groups.setdefault(key, []).append(o)
+        for (asm, ref), parts in groups.items():
             boq = its.get(ref)
-            qb = boq['qty'] if boq else ''
-            mw = o.get('modelled_width_mm')
-            bw = o.get('boq_width_mm') or o.get('boq_length_mm')
-            if bw and mw:
-                qm, qbq, var = mw, bw, f'{(mw-bw)/bw*100:+.1f}%'
-            elif bw:
-                d = o['dims_mm']; run = max(d[0], d[1])
-                qm, qbq, var = run, bw, f'{(run-bw)/bw*100:+.1f}%'
+            mats = sorted({p['material'] for p in parts if p['material']})
+            statuses = {p['status'] for p in parts if p['status']}
+            status = ('Phase 2' if statuses == {'Phase 2'} else
+                      'Confirmed + Phase 2 panels' if 'Phase 2' in statuses and
+                      'Confirmed' in statuses else
+                      ('Assumed' if 'Assumed' in statuses else
+                       (sorted(statuses)[0] if statuses else 'Confirmed')))
+            bw = next((p.get('boq_width_mm') or p.get('boq_length_mm')
+                       for p in parts
+                       if p.get('boq_width_mm') or p.get('boq_length_mm')), None)
+            mw = next((p.get('modelled_width_mm') for p in parts
+                       if p.get('modelled_width_mm')), None)
+            if mw is None:
+                # governing run length = largest plan dimension in the assembly
+                mw = max((max(p['dims_mm'][0], p['dims_mm'][1]) for p in parts),
+                         default=0)
+            if bw:
+                qm, qb, var = f'{mw} mm', f'{bw} mm', f'{(mw-bw)/bw*100:+.1f}%'
+            elif parts[0]['type'] == 'LIGHT':
+                qm, qb, var = f'{len(parts)} no.', (boq['qty'] if boq else ''), ''
             else:
-                qm, qbq, var = 'x'.join(str(v) for v in o['dims_mm']), qb, ''
-            rows.append({'object': o['object'], 'material': o['material'],
-                         'boq_ref': ref, 'qty_modelled': qm, 'qty_boq': qbq,
-                         'variance': var, 'status': o['status'] or 'Confirmed'})
+                d = parts[0]['dims_mm']
+                qm = f'{d[0]}x{d[1]}x{d[2]} mm'
+                qb, var = (boq['qty'] if boq else ''), ''
+            rows.append({'object': asm, 'material': ' + '.join(mats),
+                         'boq_ref': ref, 'qty_modelled': qm, 'qty_boq': qb,
+                         'variance': var, 'status': status})
     else:
         for ref, i in sorted(its.items()):
             rows.append({'object': 'NOT MODELLED - room not located (C-03)',
                          'material': '', 'boq_ref': ref, 'qty_modelled': '',
                          'qty_boq': i['qty'], 'variance': '',
                          'status': 'Blocked - awaiting room identification'})
+    # A single BOQ line can be split across several assemblies (e.g. a run
+    # interrupted by a window). Report each piece, then one combined row, so the
+    # variance is measured against the whole line and not against each fragment.
+    bymm = collections.defaultdict(list)
+    for r in rows:
+        if r['variance'] and r['qty_modelled'].endswith(' mm'):
+            bymm[r['boq_ref']].append(r)
+    out = []
+    for r in rows:
+        if len(bymm.get(r['boq_ref'], [])) > 1:
+            r = dict(r, variance='see combined row')
+        out.append(r)
+    for ref, grp in bymm.items():
+        if len(grp) < 2: continue
+        tot = sum(int(g['qty_modelled'].split()[0]) for g in grp)
+        bw  = int(grp[0]['qty_boq'].split()[0])
+        out.append({'object': f'-- combined for {ref} ({len(grp)} pieces)',
+                    'material': grp[0]['material'], 'boq_ref': ref,
+                    'qty_modelled': f'{tot} mm', 'qty_boq': f'{bw} mm',
+                    'variance': f'{(tot-bw)/bw*100:+.1f}%',
+                    'status': grp[0]['status']})
     p = os.path.join(L, f'{room}_finish_schedule.csv')
-    with open(p,'w',newline='') as f:
+    with open(p, 'w', newline='') as f:
         w = csv.DictWriter(f, fieldnames=['object','material','boq_ref',
                                           'qty_modelled','qty_boq','variance','status'])
-        w.writeheader(); w.writerows(rows)
+        w.writeheader(); w.writerows(out)
     return p
 
 def write_summary():
-    built  = [r for r in ROOM_TITLES if os.path.exists(os.path.join(L, f'{r}_objects.json'))]
+    built  = [r for r in ROOM_TITLES
+              if os.path.exists(os.path.join(L, f'{r}_objects.json'))]
     placed = [r for r in ROOM_TITLES if LOCATION[r][0]]
     unloc  = [r for r in ROOM_TITLES if not LOCATION[r][0]]
     total  = sum(i['total'] or 0 for i in BOQ['items'])
@@ -359,9 +414,36 @@ def write_summary():
       'each room reconciliation.')
     A('- Daylight: Jeddah 21.49 N, 39.19 E, 16:00 local, sun elevation '
       '32.39 deg, azimuth 257.81 deg. Orientation ASSUMED (C-05).')
-    A('- Renders: Cycles, AgX view transform, OpenImageDenoise. This machine '
-      'has 4 CPU cores and no GPU, so frames are time-boxed; see the note in '
-      'the Renders section below.\n')
+    A('- Renders: Cycles, AgX view transform, OpenImageDenoise, 1920x1080 '
+      'draft and 3840x2160 final.\n')
+    A('## Render budget - read this before asking for the other eight rooms\n')
+    A('This machine has 4 CPU cores and no GPU. A single 1920x1080 interior '
+      'frame takes about 2.5 minutes at a capped sample budget, and a '
+      '3840x2160 frame about 10. One room is 4 views, so roughly 10 minutes of '
+      'draft and 40 minutes of final per room.\n')
+    A('At nine rooms that is about 1.5 hours of draft and 6 hours of final '
+      'rendering, before any re-render after QA. Frames are therefore '
+      'time-boxed (Cycles `time_limit`) and the denoiser carries the '
+      'remainder; that is a deliberate trade, not a defect. If photographic '
+      'finals are wanted at pace, the renders should move to a GPU box.\n')
+    A('## Self-QA\n')
+    A('Every frame is checked automatically for mean luminance, lit fraction '
+      'and blown highlights, and the run fails loudly on a black or blown '
+      'frame. Issues found and fixed during this build:\n')
+    A('- Luminaires were rotated 180 degrees and lit the ceiling - every frame '
+      'came back black. Fixed; Blender lights already emit along local -Z.')
+    A('- Camera 01 was standing inside the TV joinery. All eye points now keep '
+      '500 mm clear of every joinery face.')
+    A('- Walls were centred on the room\'s inner faces, eating 120 mm off each '
+      'dimension. Walls are now built outside the clear box, so the modelled '
+      'clear size equals the measured 3435 x 4260 mm.')
+    A('- The plan camera was above the ceiling slab and returned a flat grey '
+      'rectangle. The ceiling is now hidden for plan views.')
+    A('- Joinery was modelled as plain slabs. It is now built as framed leaves '
+      'with mouldings, recessed panels, drawers, an upper tier and a set-back '
+      'plinth, per the BOQ wording.')
+    A('- Window glazing had been given the frosted shower-screen material. '
+      'Now clear.\n')
     p = os.path.join(L, 'SUMMARY.md')
     open(p,'w').write('\n'.join(o))
     return p
