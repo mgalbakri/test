@@ -55,6 +55,11 @@ OPEN_ITEMS = [
  ('No bed, no loose furniture.',
   'Nothing of the kind appears in the BOQ, so nothing is modelled. Adding it '
   'would put unpriced items into a package the contractor prices from.'),
+ ('Final frames took four times their stated cap on the first attempt.',
+  'Cycles applies time_limit per TILE, and the auto-tiler splits a 3840x2160 '
+  'frame into four, so a 600 s cap became 40 minutes a frame. Auto-tiling is '
+  'now off for finals, so the cap is per frame and the whole image converges '
+  'evenly.'),
  ('Frames are time-boxed.',
   'Cycles runs on 4 CPU cores with no GPU here, so each frame is capped and '
   'the denoiser carries the rest. Fine detail is softer than a full sample '

@@ -52,6 +52,11 @@ def set_quality(draft=True, samples=None, time_limit=None):
         sc.cycles.samples = samples or 1024
         sc.cycles.time_limit = time_limit if time_limit is not None else 600.0
     sc.render.resolution_percentage = 100
+    # Cycles applies time_limit PER TILE. At 3840x2160 the auto-tiler splits
+    # the frame into four, so a 600 s cap silently becomes 40 minutes a frame.
+    # Render the frame as a single tile so the cap means what it says and the
+    # whole image converges evenly. Peak memory at 4K stays well under 2 GB.
+    sc.cycles.use_auto_tile = False
     sc.cycles.use_adaptive_sampling = True
     sc.cycles.adaptive_threshold = 0.01
     sc.cycles.max_bounces = 8
