@@ -58,6 +58,21 @@ Quotation R1-M.A.740-26 (20/07/2026) - report generated 2026-09-18
 
 **4. Identify the "G.F. Guests Bathroom"** priced in item 5 but absent from the nine-room register (C-08).
 
+## Deliverables in this package
+
+| File | What it is |
+|---|---|
+| `logs/space_key_GF.png, logs/space_key_FF.png` | The as-built plans with every measured space labelled. **Mark these up to unblock the remaining eight rooms.** |
+| `logs/change_note_master_bedroom_joinery.md` | Re-measure change note for items 31 and 33, for the contractor to re-quote (decision D-02). |
+| `logs/<room>_reconciliation.md` | Per room: location and its basis, every BOQ line, quantity variances, items with no location, modelled elements with no BOQ line, and Phase 2 scope. |
+| `logs/<room>_finish_schedule.csv` | object / material / BOQ ref / qty modelled / qty BOQ / variance / status, generated from the model rather than retyped. |
+| `logs/master_bedroom_qa.md` | Self-QA: automated per-frame checks plus what was found, fixed and deliberately left. |
+| `logs/room_schedule.json` | Every measured space with its bounds, area and how much of each side is backed by a real wall. |
+| `logs/asbuilt_geometry.json` | Walls, doors, windows, stairs and fixtures extracted from the DWG, in millimetres. |
+| `logs/boq_parsed.csv, logs/boq_parsed.json` | The governing BOQ sheet parsed to 34 line items across 9 rooms, totalling SAR 170,127 excl. VAT. |
+| `scenes/master_bedroom.blend` | The room model. Every object carries a boq_item property. |
+| `renders/master_bedroom_cam01..03.png, _plan.png` | Three eye-level views at 1.60 m plus the top-down plan. |
+
 ## Owner decisions taken
 
 | Ref | Subject | Decision |
