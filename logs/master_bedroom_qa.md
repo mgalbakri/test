@@ -17,8 +17,10 @@ Every frame is checked automatically for mean luminance, lit fraction and blown 
 
 | Frame | Seconds | Mean luminance | Lit | Blown | Verdict |
 |---|---|---|---|---|---|
-| master_bedroom_cam01 | 961 | 0.560 | 99.9% | 0.00% | pass |
-| master_bedroom_cam02 | 948 | 0.560 | 100.0% | 0.00% | pass |
+| master_bedroom_cam01 | 954 | 0.560 | 99.9% | 0.00% | pass |
+| master_bedroom_cam02 | 955 | 0.559 | 100.0% | 0.00% | pass |
+| master_bedroom_cam03 | 961 | 0.551 | 100.0% | 0.00% | pass |
+| master_bedroom_plan | 983 | 0.600 | 74.0% | 0.00% | pass |
 
 ## Found and fixed
 

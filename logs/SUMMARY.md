@@ -131,9 +131,9 @@ Phase 2 elements are modelled with neutral `PH2_*` placeholder materials and are
 
 ## Render budget - read this before asking for the other eight rooms
 
-This machine has 4 CPU cores and no GPU. A single 1920x1080 interior frame takes about 2.5 minutes at a capped sample budget, and a 3840x2160 frame about 10. One room is 4 views, so roughly 10 minutes of draft and 40 minutes of final per room.
+This machine has 4 CPU cores and no GPU. Measured on the master bedroom: a 1920x1080 draft frame takes **162-168 s**, and a 3840x2160 final **954-983 s**. One room is 4 views, so about **11 minutes of draft and 64 minutes of final per room**.
 
-At nine rooms that is about 1.5 hours of draft and 6 hours of final rendering, before any re-render after QA. Frames are therefore time-boxed (Cycles `time_limit`) and the denoiser carries the remainder; that is a deliberate trade, not a defect. If photographic finals are wanted at pace, the renders should move to a GPU box.
+At nine rooms that is about **1.7 hours of draft and 9.6 hours of final** rendering, before any re-render after QA - and this room needed a full re-render when a material fault showed up only at 4K. Frames are time-boxed (Cycles `time_limit`, with auto-tiling off so the cap is per frame rather than per tile) and the denoiser carries the remainder. At 3840x2160 the cap binds around 45 samples, so broad surfaces and lighting hold up but the finest grain is softened. That is the trade this hardware forces. If photographic finals are wanted at pace, the rendering should move to a GPU box.
 
 ## Self-QA
 
