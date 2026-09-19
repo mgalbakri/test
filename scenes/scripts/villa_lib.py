@@ -369,6 +369,45 @@ def mat_mirror(name='MIR_Clear_6mm'):
 def mat_fabric(name, base=(0.36,0.33,0.30), rough=0.85):
     return _principled(name, base, rough=rough, spec=0.2)
 
+# --- Bathroom finishes per BOQ R1-M.A.740-26. Every ASSUMED value below is
+# --- recorded in logs/bathroom_material_schedule.md with its risk reference.
+
+def mat_marble_rosso_levanto(name='MRB_RossoLevanto_20mm', slab_mm=1100):
+    """Items 14 / 24. BOQ spells it "Rossi Levanto" (R-08). 20 mm thick.
+    Vein scale is tied to the 1100 mm slab so the figure reads at real size."""
+    m = mat_marble(name, base=(0.055, 0.028, 0.032), vein=(0.88, 0.87, 0.85),
+                   tile_mm=slab_mm, rough=0.07)
+    m['boq_item'] = 'R1-M.A.740-26/14, /24'
+    m['thickness_mm'] = 20
+    m['ASSUMED'] = 'finish polished; edge profile and basin cut-out not specified'
+    return m
+
+def mat_marble_verde_guatemala(name='MRB_VerdeGuatemala_20mm', slab_mm=1090):
+    """Item 29, kitchenette bar. BOQ spells it "Verde Guatemale" (R-08)."""
+    m = mat_marble(name, base=(0.035, 0.075, 0.055), vein=(0.80, 0.85, 0.78),
+                   tile_mm=slab_mm, rough=0.08)
+    m['boq_item'] = 'R1-M.A.740-26/29'
+    m['thickness_mm'] = 20
+    return m
+
+def mat_porcelain_bathroom(name='POR_Bathroom_600x1200'):
+    """Items 11 / 23. The BOQ gives no size, colour, finish or slip rating, so
+    600 x 1200 satin in a light warm grey is ASSUMED - see risk R-01, which
+    also questions whether the tile is in the price at all."""
+    m = mat_porcelain_tile(name, base=(0.78, 0.76, 0.73),
+                           tile_mm=(600, 1200), rough=0.14)
+    m['boq_item'] = 'R1-M.A.740-26/11, /23'
+    m['ASSUMED'] = ('600 x 1200 mm, light warm grey, satin; BOQ specifies no '
+                    'size, colour, finish, slip rating or manufacturer')
+    return m
+
+def mat_cement_board(name='CEM_Board_BasePaint'):
+    """Item 5, G.F. Guests Bathroom. Cement board with base paint - this room
+    gets no porcelain at all."""
+    m = _principled(name, (0.74, 0.73, 0.71), rough=0.72)
+    m['boq_item'] = 'R1-M.A.740-26/5'
+    return m
+
 def mat_phase2(item):
     """Neutral placeholder for unpriced (Phase 2) scope."""
     name = f'PH2_{item}'
