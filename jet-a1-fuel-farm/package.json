@@ -1,0 +1,7 @@
+{
+  "name": "jet-a1-fuel-farm-3d",
+  "private": true,
+  "type": "module",
+  "scripts": { "render": "node tools/render.mjs" },
+  "dependencies": { "playwright-core": "^1.55.0", "three": "^0.180.0" }
+}

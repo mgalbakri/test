@@ -1,0 +1,273 @@
+{
+ "fps": 24,
+ "end": 81.275,
+ "frames": 1951,
+ "scenes": [
+  {
+   "key": "overview",
+   "start": 1.6,
+   "dur": 10.121,
+   "sentences": [
+    {
+     "t0": 1.62,
+     "t1": 7.76,
+     "text": "Every litre of Jet A-1 at this airport passes through a fuel farm built to JIG standards."
+    },
+    {
+     "t0": 8.2,
+     "t1": 11.7,
+     "text": "Its job: deliver clean, dry fuel, and prove it."
+    }
+   ]
+  },
+  {
+   "key": "receipt",
+   "start": 12.821,
+   "dur": 9.178,
+   "sentences": [
+    {
+     "t0": 12.821,
+     "t1": 14.101,
+     "text": "Step one, receipt."
+    },
+    {
+     "t0": 14.601,
+     "t1": 18.041,
+     "text": "Fuel arrives by pipeline with a refinery certificate."
+    },
+    {
+     "t0": 18.501,
+     "t1": 21.981,
+     "text": "It is filtered on the way in, and sampled against that certificate."
+    }
+   ]
+  },
+  {
+   "key": "storage",
+   "start": 23.099,
+   "dur": 9.665,
+   "sentences": [
+    {
+     "t0": 23.099,
+     "t1": 24.799,
+     "text": "Step two, storage."
+    },
+    {
+     "t0": 25.279,
+     "t1": 27.399,
+     "text": "Tank floors slope down to a sump."
+    },
+    {
+     "t0": 27.919,
+     "t1": 32.759,
+     "text": "Water is heavier than fuel, so it sinks, settles, and is drained away."
+    }
+   ]
+  },
+  {
+   "key": "release",
+   "start": 33.864,
+   "dur": 7.474,
+   "sentences": [
+    {
+     "t0": 33.864,
+     "t1": 35.424,
+     "text": "Step three, release."
+    },
+    {
+     "t0": 35.884,
+     "t1": 41.324,
+     "text": "Only after settling and a passed test does an authorised person release the tank for use."
+    }
+   ]
+  },
+  {
+   "key": "filtration",
+   "start": 42.438,
+   "dur": 12.301,
+   "sentences": [
+    {
+     "t0": 42.438,
+     "t1": 44.438,
+     "text": "Step four, filtration."
+    },
+    {
+     "t0": 44.918,
+     "t1": 47.858,
+     "text": "A floating suction draws fuel from near the top."
+    },
+    {
+     "t0": 48.378,
+     "t1": 54.738,
+     "text": "Filter water separators then strip out remaining water and dirt, while gauges monitor every filter."
+    }
+   ]
+  },
+  {
+   "key": "delivery",
+   "start": 55.839,
+   "dur": 9.007,
+   "sentences": [
+    {
+     "t0": 55.839,
+     "t1": 57.459,
+     "text": "Step five, delivery."
+    },
+    {
+     "t0": 58.019,
+     "t1": 64.839,
+     "text": "Fuel flows through the underground hydrant network to the aircraft stand, and a dispenser filters it once more into the wing."
+    }
+   ]
+  },
+  {
+   "key": "control",
+   "start": 65.946,
+   "dur": 11.329,
+   "sentences": [
+    {
+     "t0": 65.946,
+     "t1": 71.766,
+     "text": "Every day, sumps are drained, samples must be clear and bright, and every result is recorded."
+    },
+    {
+     "t0": 72.226,
+     "t1": 77.266,
+     "text": "Because water left in jet fuel can freeze at altitude, each step is a barrier."
+    }
+   ]
+  }
+ ],
+ "captions": [
+  {
+   "t0": 1.62,
+   "t1": 7.76,
+   "text": "Every litre of Jet A-1 at this airport passes through a fuel farm built to JIG standards."
+  },
+  {
+   "t0": 8.2,
+   "t1": 11.7,
+   "text": "Its job: deliver clean, dry fuel, and prove it."
+  },
+  {
+   "t0": 12.821,
+   "t1": 14.101,
+   "text": "Step one, receipt."
+  },
+  {
+   "t0": 14.601,
+   "t1": 18.041,
+   "text": "Fuel arrives by pipeline with a refinery certificate."
+  },
+  {
+   "t0": 18.501,
+   "t1": 21.981,
+   "text": "It is filtered on the way in, and sampled against that certificate."
+  },
+  {
+   "t0": 23.099,
+   "t1": 24.799,
+   "text": "Step two, storage."
+  },
+  {
+   "t0": 25.279,
+   "t1": 27.399,
+   "text": "Tank floors slope down to a sump."
+  },
+  {
+   "t0": 27.919,
+   "t1": 32.759,
+   "text": "Water is heavier than fuel, so it sinks, settles, and is drained away."
+  },
+  {
+   "t0": 33.864,
+   "t1": 35.424,
+   "text": "Step three, release."
+  },
+  {
+   "t0": 35.884,
+   "t1": 41.324,
+   "text": "Only after settling and a passed test does an authorised person release the tank for use."
+  },
+  {
+   "t0": 42.438,
+   "t1": 44.438,
+   "text": "Step four, filtration."
+  },
+  {
+   "t0": 44.918,
+   "t1": 47.858,
+   "text": "A floating suction draws fuel from near the top."
+  },
+  {
+   "t0": 48.378,
+   "t1": 52.532,
+   "text": "Filter water separators then strip out remaining water and dirt,"
+  },
+  {
+   "t0": 52.532,
+   "t1": 54.738,
+   "text": "while gauges monitor every filter."
+  },
+  {
+   "t0": 55.839,
+   "t1": 57.459,
+   "text": "Step five, delivery."
+  },
+  {
+   "t0": 58.019,
+   "t1": 62.034,
+   "text": "Fuel flows through the underground hydrant network to the aircraft stand,"
+  },
+  {
+   "t0": 62.034,
+   "t1": 64.839,
+   "text": "and a dispenser filters it once more into the wing."
+  },
+  {
+   "t0": 65.946,
+   "t1": 69.931,
+   "text": "Every day, sumps are drained, samples must be clear and bright,"
+  },
+  {
+   "t0": 69.931,
+   "t1": 71.766,
+   "text": "and every result is recorded."
+  },
+  {
+   "t0": 72.226,
+   "t1": 77.266,
+   "text": "Because water left in jet fuel can freeze at altitude, each step is a barrier."
+  }
+ ],
+ "vo": [
+  {
+   "t": 1.6,
+   "file": "build/vo/0_overview.wav"
+  },
+  {
+   "t": 12.821,
+   "file": "build/vo/1_receipt.wav"
+  },
+  {
+   "t": 23.099,
+   "file": "build/vo/2_storage.wav"
+  },
+  {
+   "t": 33.864,
+   "file": "build/vo/3_release.wav"
+  },
+  {
+   "t": 42.438,
+   "file": "build/vo/4_filtration.wav"
+  },
+  {
+   "t": 55.839,
+   "file": "build/vo/5_delivery.wav"
+  },
+  {
+   "t": 65.946,
+   "file": "build/vo/6_control.wav"
+  }
+ ]
+}

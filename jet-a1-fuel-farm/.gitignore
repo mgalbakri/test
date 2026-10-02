@@ -1,2 +1,5 @@
-build/
+build/*
+!build/timeline.json
+node_modules/
 __pycache__/
+*.mp4

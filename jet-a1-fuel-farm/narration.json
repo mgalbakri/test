@@ -1,9 +1,9 @@
 [
- ["hook","Every litre of jet fuel at this airport arrives already certified. So why does the fuel farm spend hours refusing to use it?"],
- ["world","Here's the farm. Fuel arrives by pipeline, rests in big storage tanks, then flows out through filters to the aircraft. In, rest, out."],
- ["disruption","But overnight, the air cools. The tanks breathe in damp air, and water dissolved in the fuel comes out as tiny droplets."],
- ["mechanism","Water is heavier than fuel, so it sinks. JIG design is built on that. Tank floors slope down to a drain called a sump. New fuel must settle before it moves. And a floating suction draws only from near the top."],
- ["discovery","So the waiting isn't slowness. It's gravity doing the cleaning. Every day, sumps are drained, and a sample jar must look clear and bright, with no free water."],
- ["consequence","Skip a step, and water rides along. At cruising altitude it can freeze into ice crystals that clog an aircraft's fuel filters."],
- ["recap","A final filter water separator strips the last drops, and every release is signed and recorded. Gravity, time, and testing. That is how a fuel farm keeps water out of the wing."]
+ ["overview",   "Every litre of Jet A-1 at this airport passes through a fuel farm built to JIG standards. Its job: deliver clean, dry fuel, and prove it."],
+ ["receipt",    "Step one, receipt. Fuel arrives by pipeline with a refinery certificate. It is filtered on the way in, and sampled against that certificate."],
+ ["storage",    "Step two, storage. Tank floors slope down to a sump. Water is heavier than fuel, so it sinks, settles, and is drained away."],
+ ["release",    "Step three, release. Only after settling and a passed test does an authorised person release the tank for use."],
+ ["filtration", "Step four, filtration. A floating suction draws fuel from near the top. Filter water separators then strip out remaining water and dirt, while gauges monitor every filter."],
+ ["delivery",   "Step five, delivery. Fuel flows through the underground hydrant network to the aircraft stand, and a dispenser filters it once more into the wing."],
+ ["control",    "Every day, sumps are drained, samples must be clear and bright, and every result is recorded. Because water left in jet fuel can freeze at altitude, each step is a barrier."]
 ]

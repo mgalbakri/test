@@ -1,154 +1,127 @@
-# Keeping Water Out of the Wing
-**How a Jet A-1 fuel farm works under JIG standards: an 86-second explainer for the board**
+# Jet A-1 Fuel Farm: Five Controlled Steps
+**A 3D technical explainer of airport depot operations to JIG 2, for the board**
 
 | | |
 |---|---|
-| Deliverable | `jet-a1-fuel-farm.mp4`: 1920×1080, 24 fps, H.264 + AAC stereo, 86.5 s, open captions burned in |
+| Deliverable | `jet-a1-fuel-farm.mp4`: 1920×1080, 24 fps, H.264 (CRF 16) + AAC 192 kb/s stereo, 81.3 s, captions burned in |
 | Audience | Board members: non-specialist, decision-level |
-| Core idea (cause → effect) | **Water is heavier than fuel, so it sinks. JIG design and routine let gravity, time and testing remove it before fuel reaches an aircraft.** |
-| Opening question | "Fuel arrives certified. Why does the farm spend hours refusing to use it?" |
-| Surprising reveal | The waiting *is* the cleaning. Gravity does the work, and the tank is designed around it. |
-| Final image | The narrator holds up one sample jar against a rising paper sun: clear, bright, nothing at the bottom. |
-| Narration | 191 words, ~148 wpm while speaking, ~132 wpm across the runtime (target 135) |
+| Core idea (cause → effect) | Water and dirt are the threat to jet fuel. **Each compartment of the farm is a barrier that removes them, and each step is proven before fuel moves on.** |
+| Opening question | What has to happen before a litre of Jet A-1 is allowed into a wing? |
+| Reveal | The tank is designed around gravity: water sinks to a sump, and fuel is drawn from the top. |
+| Final image | An aerial view of the whole farm with one amber fuel path from pipeline to wing, and five teal numbered barriers along it. |
+| Narration | 173 words, ~150 wpm while speaking, 128 wpm across the runtime (target 135). Male voice, measured and serious. |
 
----
+## Look and feel (production calls)
 
-## Production calls I made
-
-- **Narrator voice:** Piper neural TTS (`en_US-lessac-high`), slowed 20% with 0.45 s sentence pauses for a warm, unhurried read. Swap in a human VO by replacing `build/vo/*.wav` and re-running `audio.py` and `render.py`. The timing re-flows from the new audio automatically.
-- **One continuous paper world.** Every scene lives on the same diorama, and a camera moves between them, so there are no cuts at all. The narrator bot is drawn in screen space at a fixed 100×100 px (10 px cells), so its scale never changes even when the camera zooms 2×.
-- **Boil:** every paper edge, crayon line and letter is re-jittered every 3 frames ("on threes", 8 drawings/s), by 1–2 px.
-- **Palette:** coral `#E4705A`, mustard `#E3A83A`, teal `#2F8C88`, cream `#F3E8CF`, charcoal `#2D2A28`, plus tints of these only. Fuel = pale mustard, water = teal, everywhere.
-- **Captions** sit on a cream paper strip at y 900–1004, inside the 90% title-safe area (bottom margin ≥ 54 px, side margin ≥ 330 px).
-- **On-screen labels** only add facts the narration doesn't say: spec numbers, densities, temperatures, standard references. None of them repeats a narration line.
-- **Scene 6 (consequence)** is kept because it is the "why it matters" for a board: it's the only place the risk to an aircraft is shown.
+- **Real-time 3D (Three.js, physically based materials)** rendered headless at 1080p and 24 fps, with ACES tone mapping, soft directional key light and shadows, and image-based fill.
+- **One continuous camera flight** through one modelled facility, following the fuel's own route: pipeline → receipt filter → bunded tank compound → QC lab → pumps and filter water separators → buried hydrant main → dispenser → wing. There are no cuts. Every transition travels along the pipe that connects the two compartments.
+- **Cutaways** use live section planes. Tank T-101 and filter water separator FWS-1 open up to show the internals: the cone-down floor and sump, the water layer, the floating suction, and the coalescer and separator elements.
+- **Colour is functional, not decorative.** Amber = fuel flow, teal = water and barriers, coral = valves and alerts. Equipment is neutral white or steel on a graphite ground with a faint survey grid. Tanks carry the EI 1542 grade marking (black band, white "JET A-1").
+- **Graphics:** a step chip top-left (STEP 0x + name), a five-step tracker top-right, leader-line callouts that name components and specs the voice does not say, data panels (certificate, recertification test, daily control), and captions bottom-centre inside title-safe.
+- **Sound:** a low tonal pad (one chord per section), facility room tone, a pump hum under filtration, soft UI ticks on callouts and checks, a low thud on the release stamp, and soft air whooshes on camera moves. All of it is ducked under the voice. Mix integrated loudness is −15.3 LUFS.
+- **What the paper version had and this one drops:** the hand-made textures, boil and pixel-bot narrator, as requested.
 
 ---
 
 ## Timestamped storyboard
 
-Times are mm:ss.s from the start of the film. "VO" marks the narration line spoken in that scene.
-
-### 1 · HOOK: 00:00.0 – 00:09.6
-| Time | Picture | On-screen text (non-narrated) | Sound |
+### 0 · OVERVIEW: 00:00.0 – 00:12.8
+| Time | Picture | On-screen graphics | Sound |
 |---|---|---|---|
-| 00:00.4 | A torn-paper **Certificate of Quality** slides onto the stage over cardboard hills. The bot watches from the right. | `CERTIFICATE OF QUALITY` · `Jet A-1 · DEF STAN 91-091 / AFQRJOS` · test rows: density @ 15 °C 801.4 kg/m³, freezing point −51 °C, flash point 42 °C, appearance clear & bright | paper rustle |
-| 00:03.2 | A teal **REFINERY ✓** stamp lands. | `REFINERY` | soft thump |
-| 00:05.7 | The bot shrugs. A coral **?** pops above it. | (glyph only) | tap |
-| 00:07.5 | A mustard **padlock** clips onto the certificate: the fuel is on hold. | (icon only) | tap |
-| **Transition** 00:09.4 – 00:11.0 | **Lines become paths:** the certificate's four ruled result lines stretch and thicken into the farm's four pipelines, and the certificate shrinks away into the inlet. | | pencil drag |
+| 00:00 | Fade up on a high aerial of the whole depot: the pipeline from the left, receipt filter, bunded compound with two fixed-roof tanks, QC lab, pump and filter skid, and the apron with an aircraft on stand and a hydrant dispenser. Slow drift. | Title: **Jet A-1 Fuel Farm**, with *JIG 2 · Airport depot operations* and *From pipeline to wing: five controlled steps* | Pad fades in, room tone |
+| 00:03.0 – 00:05.0 | Five station markers rise one by one. | 01 RECEIPT · 02 STORAGE · 03 RELEASE · 04 FILTRATION · 05 DELIVERY | |
+| **Move** 00:11.0 – 00:14.4 | The camera dives down to pipeline level and settles beside the incoming line. | | whoosh |
 
-### 2 · FAMILIAR WORLD: 00:10.6 – 00:21.6
-| Time | Picture | On-screen text | Sound |
+### 1 · RECEIPT: 00:12.8 – 00:23.1
+| Time | Picture | On-screen graphics | Sound |
 |---|---|---|---|
-| 00:10.7 | Paper pieces drop onto the pipes in order: receipt filter, two white storage tanks (grade plates `JET A-1`, sight gauges), filter water separator with ΔP gauge, hydrant pit and hose, aircraft, depot sign. The bot hops left and points. | `JIG 2 · airport depot` | six small rustles, hop taps |
-| 00:12.3 | Mustard flow-dashes run in through the receipt filter to both tanks. | | |
-| 00:14.2 | The tank sight gauges rise. | | |
-| 00:16.6 | Flow runs out through the separator to the aircraft. | | |
-| 00:19.9 | Three zone labels are pencilled under the diorama, one per beat of "In, rest, out." | `receipt` · `storage` · `issue` | three pencil marks |
-| **Transition** 00:20.6 – 00:23.4 | The sun sinks behind the hills and the moon rises (night tint). The camera pushes into Tank 1, and its front panel **peels down like paper**, revealing a cutaway full of fuel. | | long rustle |
+| 00:12.8 | Tracking along the pipeline toward the receipt filter. | STEP 01 RECEIPT · tracker | |
+| 00:14.8 | Amber flow chevrons run along the pipeline. | Callout: *Cross-country pipeline — Jet A-1 batch from refinery*. Panel: **Certificate of Quality**, Jet A-1 · DEF STAN 91-091 / AFQRJOS, batch 0427, density 801.4 kg/m³, freezing point −51 °C, flash point 42 °C | ticks |
+| 00:18.6 | Flow passes through the receipt filter and runs on to the tank manifold. | Callouts: *Receipt filtration — removes water and particulates on intake*; *Sample point — density vs certificate · Δ ≤ 3.0 kg/m³* | ticks |
+| **Move** 00:22.5 – 00:25.3 | The camera follows the inlet line into the bund and swings round to face T-101. | | whoosh |
 
-### 3 · DISRUPTION: 00:22.4 – 00:31.1
-| Time | Picture | On-screen text | Sound |
+### 2 · STORAGE & SETTLING: 00:23.1 – 00:33.9
+| Time | Picture | On-screen graphics | Sound |
 |---|---|---|---|
-| 00:22.4 | Beside the tank, a paper thermometer's coral column falls. | | |
-| 00:25.0 | Teal crayon wisps of damp air curl in through the roof vent. Condensation beads on the inner walls above the fuel. | `vent` | pencil |
-| 00:27.3 – 00:30.4 | Tiny teal droplets appear throughout the fuel: water coming out of solution. | | |
-| **Transition** 00:31.0 – 00:32.1 | **Particles regroup:** droplets start to fall, and the flat tank floor tilts into a cone-down slope. | | |
+| 00:23.7 – 00:25.5 | A section plane sweeps through T-101, opening the front half. Inside: fuel, the cone-down floor, the sump, and the floating suction arm. Teal droplets appear through the fuel. | STEP 02 | |
+| 00:25.4 | | Callouts: *Cone-down floor — low point at the tank centre*; *Epoxy-lined shell — fixed roof · free-vent* | ticks |
+| 00:28.0 – 31.5 | The droplets sink, slide down the slope to the centre, and build a teal water layer in the sump. | *Jet A-1 — ρ 775–840 kg/m³* (amber); *Free water — ρ ≈ 1000 kg/m³* (teal) | ticks |
+| 00:31.5 – 00:34.0 | The drain valve turns, teal flow runs out of the sump line, and the water layer shrinks. The camera pushes low toward the sump. | *Water drain-off — sump drained to slops* | tick |
 
-### 4 · MECHANISM: 00:31.5 – 00:47.6
-| Time | Picture | On-screen text | Sound |
+### 3 · RELEASE: 00:33.9 – 00:42.4
+| Time | Picture | On-screen graphics | Sound |
 |---|---|---|---|
-| 00:31.5 | Droplets sink, slide down the slope and pool as a teal layer at the bottom. Two paper tags on strings appear. | `Jet A-1 ≈ 0.80 kg/L` · `water 1.00 kg/L` | two rustles |
-| 00:34.8 | Dashed pencil construction lines and a dimension line sketch over the tank (the design). The bot points. | | pencil |
-| 00:38.0 | Pencil arrows run down both floor slopes. A coral ring circles the low point, and the sump drain and valve appear. | | tap |
-| 00:41.6 | A paper hourglass flips, and its sand runs while the last slow droplets settle. | | rustle |
-| 00:44.7 | The floating-suction arm swings up from the floor on its pivot, its coral float riding the surface. Fuel flows from near the top, out through the wall. | | tap |
-| **Transition** 00:47.6 – 00:49.4 | **Line becomes path:** the sump drain line extends past the valve and rises to a sampling spout. The camera eases back. | | pencil |
+| 00:33.9 – 00:36.5 | The camera rises and pulls back to frame T-101 with the QC laboratory in the foreground. A coral status tag sits above the tank. | Callout: *Quality control laboratory*. Tag: **T-101 · QUARANTINE** | whoosh |
+| 00:35.7 – 00:38.6 | The recertification panel builds row by row with teal checks. | **Recertification test · T-101**: settling period complete ✓ · appearance clear & bright ✓ · free water (detector) pass ✓ · density @ 15 °C 801.2 kg/m³ (Δ 0.2) ✓ | four ticks |
+| 00:38.1 – 00:39.2 | A signature is drawn and a stamp lands. The tank tag flips to teal. | **RELEASED FOR ISSUE** · **T-101 · RELEASED** | low thud |
 
-### 5 · DISCOVERY: 00:48.4 – 00:59.6
-| Time | Picture | On-screen text | Sound |
+### 4 · FILTRATION: 00:42.4 – 00:55.8
+| Time | Picture | On-screen graphics | Sound |
 |---|---|---|---|
-| 00:48.4 | The hourglass holds center frame. | | |
-| 00:50.8 | It hands off to a heavy charcoal **gravity arrow** drawn down through the fuel onto the water layer. | | pencil |
-| 00:52.4 | Day returns: the sun rises and the tint lifts. | | |
-| 00:53.4 | A strip of seven paper day-squares is ticked off one by one. | (checks only) | seven soft taps |
-| 00:55.2 | The coral valve turns. Water drips from the spout into a slops bucket, and the tank's water layer empties. | | valve tap, drips |
-| 00:56.5 | A glass jar slides under the spout and fills with pale, bright fuel. Paper glints appear. | | rustle |
-| 00:58.0 | Two test tags pop up with drawn checkmarks. | `water detector ✓` · `density @ 15 °C ✓` | two taps |
-| **Transition** 00:59.6 – 01:01.6 | A dashed pencil **flight path** leaves the tank outlet. One teal droplet (the one that "skipped a step") rides it up and out. The camera follows into the sky. | | pencil, rustle |
+| 00:42.4 – 00:45.7 | The camera drops back into the open tank, low on the floating suction. The float glows briefly, and amber flow runs from the float, down the arm and out of the shell. | STEP 04 · *Pontoon float — rides the fuel surface* · *Pivoting draw-off arm — outlet clear of bottom water* | ticks, pump hum begins |
+| 00:45.7 – 00:50.4 | **Move along the issue line:** the flow leads the camera out of the bund, past the pumps, to the filter water separators. FWS-1 opens in section. | | whoosh |
+| 00:50.0 – 00:55.0 | Amber flow passes through the white coalescer elements. Teal droplets grow, fall and collect in the sump boot, while the teal separator elements stand behind. The ΔP gauge needle rises gently. | *Stage 1 · Coalescer elements — merge fine droplets into drops*; *Stage 2 · Separator elements — hydrophobic screens repel water*; *Water sump — drained and checked daily*; *Differential pressure gauge — EI 1581 vessel · ΔP logged* | ticks |
 
-### 6 · CONSEQUENCE: 01:00.5 – 01:09.4
-| Time | Picture | On-screen text | Sound |
+### 5 · DELIVERY: 00:55.8 – 01:06.0
+| Time | Picture | On-screen graphics | Sound |
 |---|---|---|---|
-| 01:01.6 | A cut-paper wing cross-section among clouds: a fuel tank between the spars, a pylon, a coral engine nacelle, and a mesh fuel filter on the feed line. The droplet and three followers enter the tank. | | |
-| 01:03.5 | Two tags appear. | `water: ice at 0 °C` · `Jet A-1 stays liquid to −47 °C` | taps |
-| 01:05.1 | **Particles regroup into objects:** each droplet shrinks and crystallizes into a teal ice star. | | four high ticks |
-| 01:06.1 | The crystals drift down onto the filter mesh, more arrive, and the screen clogs. The mustard flow to the engine slows, turns coral, and stops. | | ticks |
-| 01:08.5 | A coral warning triangle pops up. | (icon only) | low tap |
-| **Transition** 01:09.2 – 01:11.2 | The flight path retracts back down to the farm, and the camera pulls out to the full diorama (front panel restored). | | rustle |
+| 00:55.8 – 00:58.8 | The camera follows the outlet line as it dives below grade. The ground turns translucent to reveal the buried hydrant main, and amber flow races toward the apron. T-101's cutaway closes behind. | STEP 05 · *Hydrant main — buried · cathodically protected* | whoosh |
+| 00:60.4 – 01:06.0 | The camera arrives under the left wing. Flow rises through the pit valve and the inlet hose into the hydrant dispenser, then through its filter and up the delivery hose to the underwing coupling. | *Hydrant pit valve* · *Hydrant dispenser — filter · meter · deadman control* · *Wing refuelling coupling — pressure refuel, underwing* | ticks |
 
-### 7 · RECAP: 01:10.3 – 01:26.5
-| Time | Picture | On-screen text | Sound |
+### 6 · DAILY CONTROL & RECAP: 01:06.0 – 01:21.3
+| Time | Picture | On-screen graphics | Sound |
 |---|---|---|---|
-| 01:10.3 | A paper magnifier opens over the separator: coalescer elements with small drops merging and falling into its sump while fuel flows through. | `EI 1581` | rustle, tap |
-| 01:13.3 | A clipboard drops in. Four checks are ticked, a signature is scribbled, and a teal stamp lands. | `Batch 0427 · Tank 1` · appearance / water / density / filter pressure | pencil, pencil, thump |
-| 01:17.1 | Three paper icons pop up in turn: **gravity arrow, hourglass, sample jar**. | (icons only) | three taps |
-| 01:19.7 – 01:21.1 | **Objects regroup:** the arrow and hourglass slide into the jar. A fresh cream sheet slides up over the farm, and the bot hops to center and raises its arms. | | long rustle, hop |
-| 01:20.9 – 01:26.5 | **FINAL IMAGE:** the jar settles into the bot's hands above its head as a big gouache sun rises behind it and crayon rays draw on. The fuel is clear and bright, with nothing at the bottom. Hold, then a soft paper fade. | | bed resolves to D |
+| 01:05.6 – 01:11.5 | The camera rises steadily from the wing into a full aerial of the depot. | Panel: **Daily quality control**: tank & vessel low-point samples ✓ · chemical water detector ✓ · filter ΔP readings trended ✓ · hydrant low-point drains ✓ · records signed & retained ✓ | five ticks |
+| 01:11.6 – 01:15.0 | The whole route lights up in amber at once, from the pipeline to the wing. | Numbered teal barriers rise one by one: **1** Receipt filter · **2** Settling & sump · **3** Release test · **4** Filter water separator · **5** Dispenser filter | five rising ticks |
+| 01:15.8 – 01:21.3 | **Final image:** the aerial holds on one amber path with five teal barriers. Fade to graphite. | CLEAN · DRY · ON-SPECIFICATION · PROVEN | low thud, pad resolves |
 
 ---
 
 ## Final narration script
 
-| Scene | Time in | Line |
+| Section | Time in | Line |
 |---|---|---|
-| 1 · Hook | 00:01.1 | Every litre of jet fuel at this airport arrives already certified. |
-| 1 · Hook | 00:05.7 | So why does the fuel farm spend hours refusing to use it? |
-| 2 · Familiar world | 00:10.7 | Here's the farm. |
-| 2 · Familiar world | 00:12.3 | Fuel arrives by pipeline, rests in big storage tanks, then flows out through filters to the aircraft. |
-| 2 · Familiar world | 00:19.9 | In, rest, out. |
-| 3 · Disruption | 00:22.5 | But overnight, the air cools. |
-| 3 · Disruption | 00:25.1 | The tanks breathe in damp air, and water dissolved in the fuel comes out as tiny droplets. |
-| 4 · Mechanism | 00:31.6 | Water is heavier than fuel, so it sinks. |
-| 4 · Mechanism | 00:34.8 | JIG design is built on that. |
-| 4 · Mechanism | 00:38.0 | Tank floors slope down to a drain called a sump. |
-| 4 · Mechanism | 00:41.6 | New fuel must settle before it moves. |
-| 4 · Mechanism | 00:44.7 | And a floating suction draws only from near the top. |
-| 5 · Discovery | 00:48.4 | So the waiting isn't slowness. |
-| 5 · Discovery | 00:50.9 | It's gravity doing the cleaning. |
-| 5 · Discovery | 00:53.4 | Every day, sumps are drained, and a sample jar must look clear and bright, with no free water. |
-| 6 · Consequence | 01:00.5 | Skip a step, and water rides along. |
-| 6 · Consequence | 01:03.5 | At cruising altitude it can freeze into ice crystals that clog an aircraft's fuel filters. |
-| 7 · Recap | 01:10.4 | A final filter water separator strips the last drops, and every release is signed and recorded. |
-| 7 · Recap | 01:17.1 | Gravity, time, and testing. |
-| 7 · Recap | 01:20.0 | That is how a fuel farm keeps water out of the wing. |
+| Overview | 00:01.6 | Every litre of Jet A-1 at this airport passes through a fuel farm built to JIG standards. |
+| Overview | 00:08.2 | Its job: deliver clean, dry fuel, and prove it. |
+| 1 · Receipt | 00:12.8 | Step one, receipt. |
+| 1 · Receipt | 00:14.6 | Fuel arrives by pipeline with a refinery certificate. |
+| 1 · Receipt | 00:18.5 | It is filtered on the way in, and sampled against that certificate. |
+| 2 · Storage | 00:23.1 | Step two, storage. |
+| 2 · Storage | 00:25.3 | Tank floors slope down to a sump. |
+| 2 · Storage | 00:27.9 | Water is heavier than fuel, so it sinks, settles, and is drained away. |
+| 3 · Release | 00:33.9 | Step three, release. |
+| 3 · Release | 00:35.9 | Only after settling and a passed test does an authorised person release the tank for use. |
+| 4 · Filtration | 00:42.4 | Step four, filtration. |
+| 4 · Filtration | 00:44.9 | A floating suction draws fuel from near the top. |
+| 4 · Filtration | 00:48.4 | Filter water separators then strip out remaining water and dirt, while gauges monitor every filter. |
+| 5 · Delivery | 00:55.8 | Step five, delivery. |
+| 5 · Delivery | 00:58.0 | Fuel flows through the underground hydrant network to the aircraft stand, and a dispenser filters it once more into the wing. |
+| Control & recap | 01:05.9 | Every day, sumps are drained, samples must be clear and bright, and every result is recorded. |
+| Control & recap | 01:12.2 | Because water left in jet fuel can freeze at altitude, each step is a barrier. |
 
 ---
 
-## Accuracy notes (for a reviewer)
+## Technical accuracy notes (for review by the fuel QA lead)
 
-- **JIG 2** is the JIG standard for airport depots (fuel farms). It works alongside EI/JIG 1530 (quality assurance from manufacture to airport) and EI 1581 (filter water separator specification). Jet A-1 is supplied to DEF STAN 91-091 / the AFQRJOS checklist, with a refinery Certificate of Quality.
-- **The hold on receipt is real.** Product received into depot storage is quarantined. It settles, the tank is sampled and tested (appearance, water, and density checked against the certificate), and an authorized person releases it before issue. The film's "refusing to use it" refers to this. It does not quote a specific settling time, because the required time depends on tank design and fuel depth under the applicable standard.
-- **Water sources shown:** cooling lowers how much water fuel can hold, so dissolved water comes out as free droplets, and tanks "breathe" moist air through their vents as they cool.
-- **Densities:** Jet A-1 is 775–840 kg/m³ at 15 °C (≈ 0.80 kg/L); water is ≈ 1.00 kg/L. That difference is why water sinks.
-- **Tank design shown:** a cone-down (sloped) floor to a low-point sump drain, and a floating suction that draws from the upper layer. Both are standard features of JIG depot storage.
-- **Daily checks:** daily sump draining and a visual "clear and bright" sample check with a chemical water detector are routine JIG depot checks.
-- **Consequence:** Jet A-1's maximum freezing point is −47 °C, but free water freezes at 0 °C. At cruise, fuel in the wing can be well below 0 °C, and ice crystals can restrict aircraft fuel filters and heat exchangers. This was a factor in the 2008 BA38 accident.
-- **Illustrative values:** the certificate values (801.4 kg/m³, −51 °C, 42 °C) and "Batch 0427" are illustrative but within specification. They are not from a real batch.
-- **Simplifications:** the farm has two tanks and one separator. Real depots also have receipt filtration specs, product recovery tanks, bonding, and more checks on the filter/ΔP side. Those were left out because they don't serve the one cause-and-effect idea.
+- **Standards referenced:** JIG 2 (airport depots), EI/JIG 1530 (quality assurance from refinery to airport), DEF STAN 91-091 / AFQRJOS (Jet A-1 specification and checklist), EI 1581 (filter water separators) and EI 1542 (product identification marking).
+- **Receipt:** product arrives with a refinery Certificate of Quality and is filtered into storage. Receipt samples are compared with the certificate. The 3.0 kg/m³ density-difference criterion shown is the usual EI/JIG 1530 comparison limit. **Please confirm it against your site's current QA manual.**
+- **Storage:** the cone-down floor and sump are drawn **exaggerated** so they read on screen (real slopes are shallow). The film deliberately states no settling duration, because the requirement depends on tank configuration and the applicable standard.
+- **Release:** the tank stays in quarantine until settling is complete and a recertification test passes (appearance, free water, density), after which an authorised person releases it. All values shown are illustrative but within specification. Batch 0427 is fictitious.
+- **Filtration:** issue is via a floating suction, then filter water separators to EI 1581 (coalescer stage + separator stage + water sump), with differential pressure monitored.
+- **Delivery:** the buried hydrant main runs to a pit valve, and a hydrant dispenser (with its own filtration, meter and deadman control) pressure-refuels through the underwing coupling.
+- **Consequence:** free water can freeze into ice in aircraft fuel systems at altitude. That is why every barrier exists.
+- **Simplifications:** a single tank and FWS are shown in section, with no product-recovery or slops system detail, no bonding or lightning protection, no fire systems, and a single generic narrowbody aircraft.
 
 ---
 
 ## Rebuilding
 
 ```bash
-pip install pillow numpy scipy piper-tts      # + ffmpeg
-cd src
-python3 timeline.py      # prints scene starts and caption chunks
-python3 audio.py         # build/mix.wav
-WORKERS=4 python3 render.py
-python3 stills.py 17 46.5 85   # optional: preview single frames
+npm install                                   # three + playwright-core (uses /opt/pw-browsers chromium)
+pip install numpy scipy piper-tts
+python3 tools/tts.py path/to/en_US-ryan-high.onnx   # → build/vo/*.wav + build/timeline.json
+python3 tools/audio.py                        # → build/mix.wav
+WORKERS=4 node tools/render.mjs all           # → jet-a1-fuel-farm.mp4
+node tools/render.mjs stills 17 46 79.5       # optional: preview frames into build/
 ```
-Narration text lives in `narration.json`. Piper voices are not committed; regenerate with
-`python3 -m piper -m en_US-lessac-high.onnx --length-scale 1.2 --sentence-silence 0.45 -f build/vo/<i>_<scene>.wav`.
+The narration lives in `narration.json`. Every graphic, flow and camera beat is anchored to the measured sentence times in `build/timeline.json`, so editing a line and re-running the three steps re-times the whole film. A human voice-over can replace the synthetic one. Record the seven lines, adjust `tools/tts.py` to read those WAVs instead of synthesizing, and re-run all three steps. The timing and every visual beat will follow the new read.
