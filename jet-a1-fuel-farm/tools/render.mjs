@@ -43,14 +43,16 @@ if (mode === 'stills') {
     while (next < jobs.length) {
       const [i, f0, f1] = jobs[next++];
       const out = path.join(BUILD, `seg_${String(i).padStart(2, '0')}.mp4`);
+      if (fs.existsSync(out)) { console.log('skip segment', i); done += f1 - f0; continue; }
+      const part = out.replace('.mp4', '.part.mp4');
       const ff = spawn('ffmpeg', ['-y', '-loglevel', 'error', '-f', 'image2pipe', '-framerate', '24', '-c:v', 'mjpeg', '-i', '-',
-        '-c:v', 'libx264', '-preset', 'slow', '-crf', '16', '-pix_fmt', 'yuv420p', '-r', '24', out], { stdio: ['pipe', 'inherit', 'inherit'] });
+        '-c:v', 'libx264', '-preset', 'slow', '-crf', '16', '-pix_fmt', 'yuv420p', '-r', '24', part], { stdio: ['pipe', 'inherit', 'inherit'] });
       for (let f = f0; f < f1; f++) {
         const url = await p.evaluate(t => renderAt(t), f / 24);
         if (!ff.stdin.write(decode(url))) await new Promise(r => ff.stdin.once('drain', r));
         done++; if (done % 48 === 0) console.log(`${done}/${N} frames  ${((Date.now() - t00) / 1000).toFixed(0)}s`);
       }
-      ff.stdin.end(); await new Promise(r => ff.on('close', r));
+      ff.stdin.end(); await new Promise(r => ff.on('close', r)); fs.renameSync(part, out);
     }
     await b.close();
   }
